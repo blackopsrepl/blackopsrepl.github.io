@@ -1,0 +1,26 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "vdistefano.studio"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+logo = "ouro.png"
+
+[[params.author.links]]
+email = "mailto:info@vdistefano.studio"
+
+[[params.author.links]]
+github = "https://github.com/blackopsrepl"
+
+[[params.author.links]]
+linkedin = "https://www.linkedin.com/in/vdistefano"
+
+["params.author"]
+name = "Vittorio Distefano"
+headline = "Software Engineer"
+bio = "Software Engineer specialized in optimization and machine learning."
