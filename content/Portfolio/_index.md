@@ -33,13 +33,16 @@ It is work with real constraints, meaningful tradeoffs, and enough complexity to
 The largest and most representative project here.
 A constraint solver and ecosystem spanning modeling, runtime design, performance work, developer tooling, and documentation.
 
-### Yuga Planner
-A more exploratory project at the boundary of orchestration, planning, and AI.
-Useful less as a finished product than as a compact experiment in combining LLM decomposition with constraint solving.
+### Meridian
+The clearest desktop-product example.
+An offline-native application where the calculation contract, local data, packaging, and day-to-day interaction all have to hold together.
 
-### trex
-A smaller project, but a sharp one.
-Useful for seeing Rust implementation style, CLI/TUI interaction design, and how much complexity can be removed from a developer tool.
+### AITD:TNN PC Overhaul
+A preservation project with a deliberately narrow boundary.
+Useful for seeing how reverse engineering, runtime integration, installer ownership, and visual restraint can serve an existing work rather than overwrite it.
+
+### Tools around the work
+For compact examples of operability, look at trex, SolverForge Calendar, and computer-use-sway: each makes a complex system easier to inspect and control without hiding its state.
 
 ---
 
