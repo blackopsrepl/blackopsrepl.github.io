@@ -6,29 +6,76 @@ description: "A local-first Ratatui calendar with Google sync, event dependencie
 tags: ["Rust", "TUI", "SQLite", "Calendar", "CLI"]
 showHero: false
 showTableOfContents: true
+showBreadcrumbs: true
+showReadingTime: true
+showWordCount: true
 ---
 
 {{< lead >}}
-A fast terminal calendar that treats scheduling as an operable system: a human-facing TUI, an agent-facing JSON CLI, local persistence, and explicit event dependencies.
+A local-first calendar with two deliberate interfaces: a fast terminal UI for people and a strict JSON CLI for agents and automation.
 {{< /lead >}}
 
-## More than dates on a grid
-
-Month, week, day, and agenda views share a local SQLite model with recurring events, iCalendar import/export, desktop notifications, and incremental two-way Google Calendar sync. Events can form a directed acyclic graph, with cycle detection and topological ordering built into the model.
+SolverForge Calendar treats time as structured, operable data. It combines month, week, day, and agenda views with recurring events, local persistence, Google Calendar synchronization, and dependency links between events.
 
 {{< keywordList >}}
-{{< keyword icon="calendar" >}} Multiple calendar views {{< /keyword >}}
+{{< keyword icon="calendar" >}} Four calendar views {{< /keyword >}}
 {{< keyword icon="share-nodes" >}} Dependency-aware events {{< /keyword >}}
-{{< keyword icon="terminal" >}} JSON-first companion CLI {{< /keyword >}}
+{{< keyword icon="terminal" >}} JSON companion CLI {{< /keyword >}}
 {{< keyword icon="rotate" >}} Incremental Google sync {{< /keyword >}}
+{{< keyword icon="bell" >}} Desktop reminders {{< /keyword >}}
 {{< /keywordList >}}
 
-## Designed for visible control
+## The terminal calendar
 
-Background workers keep database and API operations off the interactive terminal loop. Destructive CLI operations require explicit flags, and OAuth tokens remain in the operating system keyring rather than the calendar database.
+The TUI keeps navigation, calendar visibility, event editing, quick-add, and synchronization available from the keyboard while background work stays out of the render loop.
 
-## Links
+{{< gallery >}}
+  <img src="calendar-tui.png" class="grid-w100 md:grid-w100" loading="lazy" decoding="async" alt="SolverForge Calendar month view in the Ratatui terminal interface" />
+{{< /gallery >}}
+
+## Human and automation surfaces
+
+{{< alert icon="lightbulb" >}}
+The TUI and CLI are peers over the same model. Automation does not scrape the visual interface, and people do not have to operate a machine-oriented command protocol.
+{{< /alert >}}
+
+The companion CLI exposes calendars, projects, events, dependencies, and Google sync as JSON-first commands. Successful operations write JSON to standard output; failures write JSON to standard error. Destructive operations require explicit flags such as `--cascade-events` or `--detach-events` instead of hiding consequences behind a prompt.
+
+```bash
+solverforge-calendar-cli events create \
+  --calendar-id <calendar-id> \
+  --title "Planning session" \
+  --start-at "2026-08-24 15:00:00" \
+  --end-at "2026-08-24 16:00:00"
+```
+
+## Events can depend on one another
+
+Dependencies form a directed acyclic graph. Cycle detection prevents an impossible chain from entering the model, while topological ordering makes the relationship usable by higher-level planning and automation.
+
+{{< mermaid >}}
+flowchart LR
+    tui[Ratatui TUI] --> model[Calendar model]
+    cli[JSON CLI] --> model
+    model --> db[(Local SQLite)]
+    model --> dag[Event dependency DAG]
+    model --> workers[Background worker pool]
+    workers --> google[Google Calendar]
+    workers --> notify[Desktop notifications]
+{{< /mermaid >}}
+
+## Operational choices
+
+- RFC 5545 recurrence and iCalendar import/export keep the data interoperable.
+- Incremental sync uses Google sync tokens rather than repeatedly downloading an entire calendar.
+- OAuth credentials live in the operating system keyring, not in the SQLite database.
+- Channel-based workers isolate database and network latency from terminal input and rendering.
+- The terminal palette can follow the surrounding SolverForge Linux environment.
+
+## Repository
+
+{{< github repo="blackopsrepl/solverforge-calendar" showThumbnail=false >}}
 
 {{< button href="https://github.com/blackopsrepl/solverforge-calendar" target="_blank" >}}
-{{< icon "github" >}} Source
+{{< icon "github" >}} Source and installation
 {{< /button >}}
