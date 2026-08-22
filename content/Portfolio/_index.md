@@ -64,4 +64,4 @@ Look for patterns:
 - Want interactive examples? → [Demos](/Demos/)
 - Want background and context? → [About](/about/)
 - Want the broader product/docs ecosystem? → [SolverForge](https://solverforge.org)
-- Want commercial work? → [SolverForge AI](https://solverforge.ai)
+- Want SolverForge implementation or integration work? → [SolverForge](https://solverforge.org)

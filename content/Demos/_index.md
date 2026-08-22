@@ -54,4 +54,4 @@ If you are evaluating the work, pay attention to the domains, the decisions expo
 - Want selected project writeups? → [Portfolio](/Portfolio/)
 - Want founder background and context? → [About](/about/)
 - Want the product/docs ecosystem? → [SolverForge](https://solverforge.org)
-- Want commercial work? → [SolverForge AI](https://solverforge.ai)
+- Need SolverForge implementation or integration work? → [SolverForge](https://solverforge.org)

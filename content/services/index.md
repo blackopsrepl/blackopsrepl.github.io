@@ -15,7 +15,7 @@ I work best at the early and decisive stages of technically difficult projects: 
 This is not a generic agency services page.
 It is a focused offer for teams that want direct founder-level thinking on hard systems problems.
 
-For larger implementation or broader commercial engagements, visit **[SolverForge AI](https://solverforge.ai)**.
+For larger implementation or integration work, visit **[SolverForge](https://solverforge.org)**.
 
 {{< mermaid >}}
 flowchart LR
@@ -86,10 +86,9 @@ It comes directly from building real systems, shipping them, and living with the
 
 If you want direct input on a hard technical problem, email **[info@vdistefano.studio](mailto:info@vdistefano.studio)** with a short description of the situation.
 
-If the need is a larger implementation, integration, or commercial engagement, the right path is **[SolverForge AI](https://solverforge.ai)**.
+If the need is a larger implementation or integration, the right path is **[SolverForge](https://solverforge.org)**.
 
 {{< keywordList >}}
 {{< keyword icon="email" >}} [Email Vittorio](mailto:info@vdistefano.studio) {{< /keyword >}}
-{{< keyword icon="building" >}} [Go to SolverForge AI](https://solverforge.ai) {{< /keyword >}}
 {{< keyword icon="shield" >}} [Explore SolverForge](https://solverforge.org) {{< /keyword >}}
 {{< /keywordList >}}

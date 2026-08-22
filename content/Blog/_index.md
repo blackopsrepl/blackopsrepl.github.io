@@ -29,4 +29,4 @@ Usually that means optimization in practice, system design under real constraint
 
 - SolverForge product and docs → [solverforge.org](https://solverforge.org)
 - Founder background and selected work → [About](/about/) and [Portfolio](/Portfolio/)
-- Commercial engagements → [solverforge.ai](https://solverforge.ai)
+- SolverForge implementation and integration → [solverforge.org](https://solverforge.org)
