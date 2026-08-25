@@ -92,7 +92,33 @@ flowchart LR
 
 ## Where SolverForge could fit
 
-Meridian already includes electional search: it evaluates a bounded time range at a chosen interval, calculates a complete chart for every instant, and ranks the candidates from visible testimonies and cautions. This is intentionally transparent—the result is not presented as an oracle, and every score component remains available for inspection.
+**Electional astrology means choosing a time for something you already intend to do.** It does not ask when an event will mysteriously occur. It compares the possible start times for a wedding, journey, contract, medical treatment, property purchase, or other undertaking according to a defined set of astrological rules.
+
+Meridian already performs that comparison: it evaluates a bounded time range at a chosen interval, calculates a complete chart for every instant, and ranks the candidates from visible testimonies and cautions. This is intentionally transparent—the result is not presented as an oracle, and every score component remains available for inspection.
+
+### A concrete example: scheduling a wedding
+
+Suppose a couple is choosing among three ceremony slots offered by a venue: **14:00, 15:30, or 17:00**.
+
+Meridian evaluates those times under its *Marriage & union* model. It considers the condition of Venus, the Moon, the ruler of the seventh house, the Ascendant ruler, applying lunar aspects, and cautions such as strongly placed malefics. Imagine that it ranks the slots in this order:
+
+| Meridian rank | Ceremony time | Astrological result |
+| --- | --- | --- |
+| 1 | 14:00 | Strongest testimonies |
+| 2 | 15:30 | Good, with one caution |
+| 3 | 17:00 | Acceptable, but less preferred |
+
+The couple's real life adds a second set of facts:
+
+- essential family members cannot reach the venue before 14:30;
+- the photographer is unavailable from 15:15 to 16:15;
+- the ceremony lasts 45 minutes;
+- the reception must begin between 60 and 90 minutes after the ceremony;
+- the venue, registrar, photographer, and reception room must all be available for the chosen sequence.
+
+The **14:00** slot is astrologically strongest but impossible for the family. The **15:30** slot conflicts with the photographer. The **17:00** slot has the lower Meridian score, yet it may be the best feasible choice.
+
+For three fixed slots, a person could check this by hand. The problem becomes an optimization problem when there are hundreds of candidate instants, several participants and resources, travel buffers, costs, dependencies, and preferences that can be relaxed at a penalty. SolverForge could model the non-negotiable requirements as **hard constraints**, the preferences as **soft constraints**, and Meridian's ranking as one part of the objective.
 
 That search is adequate when the question is simply “which instants rank best under this electional model?” A SolverForge integration becomes useful when the selected time must also satisfy a real planning problem:
 
