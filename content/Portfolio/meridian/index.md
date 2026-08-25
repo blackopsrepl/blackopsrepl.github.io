@@ -120,20 +120,37 @@ The **14:00** slot is astrologically strongest but impossible for the family. Th
 
 For three fixed slots, a person could check this by hand. The problem becomes an optimization problem when there are hundreds of candidate instants, several participants and resources, travel buffers, costs, dependencies, and preferences that can be relaxed at a penalty. SolverForge could model the non-negotiable requirements as **hard constraints**, the preferences as **soft constraints**, and Meridian's ranking as one part of the objective.
 
-That search is adequate when the question is simply “which instants rank best under this electional model?” A SolverForge integration becomes useful when the selected time must also satisfy a real planning problem:
+### The business parallel: maintenance planning
+
+The same decision pattern appears in ordinary operations. Imagine a manufacturer that must schedule four hours of preventive maintenance on a packaging line.
+
+An asset-health system ranks **Tuesday at 02:00** as the best intervention window because the machine's condition is expected to deteriorate after that point. But the replacement part will not arrive until Wednesday. **Wednesday at 22:00** is the next-best window, but the only certified technician would violate a rest rule. **Thursday at 01:00** carries a slightly higher equipment-risk score, yet the part, technician, production gap, and safety team are all available.
+
+That is structurally the same problem as the wedding example:
+
+| Specialist knowledge | Operational reality | Optimized decision |
+| --- | --- | --- |
+| Meridian ranks times from an electional model | People, venue, travel, and event dependencies | Choose the best feasible ceremony plan |
+| An asset-health model ranks maintenance urgency | Technicians, parts, production orders, safety rules, and downtime cost | Choose the best feasible maintenance window |
+
+The business value does not depend on astrology. The reusable pattern is **domain intelligence plus constrained decision-making**. A forecasting, risk, medical, engineering, or pricing model can say which options look desirable in its own vocabulary; SolverForge can determine which of those options the organization can actually execute, optimize the compromises, and report why the winning plan was chosen.
+
+For the reader, Meridian is therefore more than a niche desktop application. It demonstrates the difficult first half of that architecture: turning specialist knowledge into structured, inspectable candidate facts instead of an opaque recommendation. SolverForge provides the complementary planning layer when those facts must survive contact with resources, rules, costs, and commitments.
+
+Within Meridian alone, its current search is adequate when the question is simply “which instants rank best under this electional model?” Across both the wedding and maintenance examples, the integration pattern has the same four responsibilities:
 
 {{< timeline >}}
 
-{{< timelineItem icon="globe" header="Meridian generates domain facts" badge="Calculation" subheader="Candidate instants with complete chart conditions" >}}
-Meridian would remain responsible for ephemeris calculation, house construction, doctrine, and the explainable testimony attached to each candidate.
+{{< timelineItem icon="globe" header="The specialist system generates domain facts" badge="Scoring" subheader="Candidate options with evidence attached" >}}
+Meridian would remain responsible for ephemeris calculation, doctrine, and the testimony attached to each time. In another business domain, the source might instead be a forecast, risk model, sensor system, or pricing engine.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="list" header="The user defines practical constraints" badge="Planning" subheader="Availability, location, duration, dependencies, and exclusions" >}}
-A usable election often involves more than celestial conditions: participants must be available, a venue may have opening hours, travel may be required, and one event may have to precede another.
+{{< timelineItem icon="list" header="The organization defines practical constraints" badge="Planning" subheader="Availability, resources, duration, dependencies, rules, and exclusions" >}}
+These are the conditions a domain score cannot settle by itself: staff availability, resource capacity, opening hours, travel or setup time, legal rules, budgets, and activities that must occur in sequence.
 {{< /timelineItem >}}
 
 {{< timelineItem icon="scale-balanced" header="SolverForge selects a feasible optimum" badge="Optimization" subheader="Hard constraints and competing soft preferences" >}}
-SolverForge could combine those operational requirements with Meridian’s ranked testimonies, reject infeasible choices, and optimize the remaining tradeoffs across one event or an entire sequence.
+SolverForge could combine those operational requirements with the specialist rankings, reject infeasible choices, and optimize the remaining tradeoffs across one decision or an entire schedule.
 {{< /timelineItem >}}
 
 {{< timelineItem icon="eye" header="The result stays explainable" badge="Inspection" subheader="Why this time, what it satisfies, and what was traded away" >}}
