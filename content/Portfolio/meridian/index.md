@@ -74,7 +74,7 @@ New calculations enter a local archive automatically. A `.meridian` document rem
 
 ## Calculation integrity
 
-{{< alert icon="circle-info" >}}
+{{< alert icon="circle-info" cardColor="#092218" iconColor="#39ff88" textColor="#d9ffe8" >}}
 Meridian reports missing precision data as an error. It does not silently substitute an analytical ephemeris or call a remote service.
 {{< /alert >}}
 
@@ -149,8 +149,8 @@ Meridian would remain responsible for ephemeris calculation, doctrine, and the t
 These are the conditions a domain score cannot settle by itself: staff availability, resource capacity, opening hours, travel or setup time, legal rules, budgets, and activities that must occur in sequence.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="scale-balanced" header="SolverForge selects a feasible optimum" badge="Optimization" subheader="Hard constraints and competing soft preferences" >}}
-SolverForge could combine those operational requirements with the specialist rankings, reject infeasible choices, and optimize the remaining tradeoffs across one decision or an entire schedule.
+{{< timelineItem icon="scale-balanced" header="SolverForge searches for a feasible, high-quality plan" badge="Optimization" subheader="Hard constraints and competing soft preferences" >}}
+SolverForge could combine those operational requirements with the specialist rankings, reject infeasible choices, and search the remaining tradeoffs across one decision or an entire schedule. With a metaheuristic, the result is a high-quality feasible plan—not a proof that no better plan exists.
 {{< /timelineItem >}}
 
 {{< timelineItem icon="eye" header="The result stays explainable" badge="Inspection" subheader="Why this time, what it satisfies, and what was traded away" >}}
@@ -159,7 +159,7 @@ The boundary preserves the strength of both systems: Meridian explains the domai
 
 {{< /timeline >}}
 
-{{< alert icon="circle-info" >}}
+{{< alert icon="circle-info" cardColor="#092218" iconColor="#39ff88" textColor="#d9ffe8" >}}
 **Current versus potential:** Meridian’s election ranking exists today. The SolverForge planning layer described here is a natural integration path, not a claim that the two applications are already connected.
 {{< /alert >}}
 
