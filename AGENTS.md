@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to OpenAI Codex when working with code in this repository.
 
 ## Project Overview
 
@@ -39,8 +39,9 @@ hugo new Portfolio/my-project/index.md
 - `content/Portfolio/` - Portfolio items
 - `content/images/` - Content images
 
-### Theme base
+### Theme Base
 Blowfish remains the base theme at `themes/blowfish/`. Update with:
+
 ```bash
 git submodule update --remote --merge
 ```
