@@ -2,219 +2,389 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on vdistefano.studio</title>
-    <link>https://www.vdistefano.studio/tags/</link>
+    <link>http://localhost:1314/tags/</link>
     <description>Recent content in Tags on vdistefano.studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Vittorio Distefano</copyright>
-    <lastBuildDate>Wed, 11 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.vdistefano.studio/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1314/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Agentic Systems</title>
-      <link>https://www.vdistefano.studio/tags/agentic-systems/</link>
-      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <title>C&#43;&#43;</title>
+      <link>http://localhost:1314/tags/c&#43;&#43;/</link>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/agentic-systems/</guid>
+      <guid>http://localhost:1314/tags/c&#43;&#43;/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>AI</title>
-      <link>https://www.vdistefano.studio/tags/ai/</link>
-      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Game Preservation</title>
+      <link>http://localhost:1314/tags/game-preservation/</link>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/ai/</guid>
+      <guid>http://localhost:1314/tags/game-preservation/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Automation</title>
-      <link>https://www.vdistefano.studio/tags/automation/</link>
-      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <title>OpenGL</title>
+      <link>http://localhost:1314/tags/opengl/</link>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/automation/</guid>
+      <guid>http://localhost:1314/tags/opengl/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Developer Tools</title>
-      <link>https://www.vdistefano.studio/tags/developer-tools/</link>
-      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Reverse Engineering</title>
+      <link>http://localhost:1314/tags/reverse-engineering/</link>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/developer-tools/</guid>
+      <guid>http://localhost:1314/tags/reverse-engineering/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://www.vdistefano.studio/tags/python/</link>
-      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <title>Windows</title>
+      <link>http://localhost:1314/tags/windows/</link>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/python/</guid>
+      <guid>http://localhost:1314/tags/windows/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Optimization</title>
-      <link>https://www.vdistefano.studio/tags/optimization/</link>
-      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+      <title>Desktop</title>
+      <link>http://localhost:1314/tags/desktop/</link>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/optimization/</guid>
+      <guid>http://localhost:1314/tags/desktop/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Native UI</title>
+      <link>http://localhost:1314/tags/native-ui/</link>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/native-ui/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Offline First</title>
+      <link>http://localhost:1314/tags/offline-first/</link>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/offline-first/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Rust</title>
-      <link>https://www.vdistefano.studio/tags/rust/</link>
-      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+      <link>http://localhost:1314/tags/rust/</link>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/rust/</guid>
+      <guid>http://localhost:1314/tags/rust/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>SolverForge</title>
-      <link>https://www.vdistefano.studio/tags/solverforge/</link>
-      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+      <title>SQLite</title>
+      <link>http://localhost:1314/tags/sqlite/</link>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/solverforge/</guid>
+      <guid>http://localhost:1314/tags/sqlite/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Aviation</title>
-      <link>https://www.vdistefano.studio/tags/aviation/</link>
-      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      <title>Calendar</title>
+      <link>http://localhost:1314/tags/calendar/</link>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/aviation/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Demo</title>
-      <link>https://www.vdistefano.studio/tags/demo/</link>
-      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.vdistefano.studio/tags/demo/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://www.vdistefano.studio/tags/java/</link>
-      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.vdistefano.studio/tags/java/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Constraint Programming</title>
-      <link>https://www.vdistefano.studio/tags/constraint-programming/</link>
-      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.vdistefano.studio/tags/constraint-programming/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Timefold</title>
-      <link>https://www.vdistefano.studio/tags/timefold/</link>
-      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.vdistefano.studio/tags/timefold/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>PyO3</title>
-      <link>https://www.vdistefano.studio/tags/pyo3/</link>
-      <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.vdistefano.studio/tags/pyo3/</guid>
+      <guid>http://localhost:1314/tags/calendar/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>CLI</title>
-      <link>https://www.vdistefano.studio/tags/cli/</link>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <link>http://localhost:1314/tags/cli/</link>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/cli/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Tmux</title>
-      <link>https://www.vdistefano.studio/tags/tmux/</link>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.vdistefano.studio/tags/tmux/</guid>
+      <guid>http://localhost:1314/tags/cli/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>TUI</title>
-      <link>https://www.vdistefano.studio/tags/tui/</link>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <link>http://localhost:1314/tags/tui/</link>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/tui/</guid>
+      <guid>http://localhost:1314/tags/tui/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Hackathon</title>
-      <link>https://www.vdistefano.studio/tags/hackathon/</link>
-      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <title>Linux</title>
+      <link>http://localhost:1314/tags/linux/</link>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/hackathon/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>HuggingFace</title>
-      <link>https://www.vdistefano.studio/tags/huggingface/</link>
-      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.vdistefano.studio/tags/huggingface/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>LLM</title>
-      <link>https://www.vdistefano.studio/tags/llm/</link>
-      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.vdistefano.studio/tags/llm/</guid>
+      <guid>http://localhost:1314/tags/linux/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>MCP</title>
-      <link>https://www.vdistefano.studio/tags/mcp/</link>
+      <link>http://localhost:1314/tags/mcp/</link>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/mcp/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1314/tags/python/</link>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/python/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Sway</title>
+      <link>http://localhost:1314/tags/sway/</link>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/sway/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Wayland</title>
+      <link>http://localhost:1314/tags/wayland/</link>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/wayland/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>AI Agents</title>
+      <link>http://localhost:1314/tags/ai-agents/</link>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/ai-agents/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Community Systems</title>
+      <link>http://localhost:1314/tags/community-systems/</link>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/community-systems/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Rails</title>
+      <link>http://localhost:1314/tags/rails/</link>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/rails/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>http://localhost:1314/tags/ruby/</link>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/ruby/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Webhooks</title>
+      <link>http://localhost:1314/tags/webhooks/</link>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/webhooks/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Agentic Systems</title>
+      <link>http://localhost:1314/tags/agentic-systems/</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/agentic-systems/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>AI</title>
+      <link>http://localhost:1314/tags/ai/</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/ai/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Automation</title>
+      <link>http://localhost:1314/tags/automation/</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/automation/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Developer Tools</title>
+      <link>http://localhost:1314/tags/developer-tools/</link>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/developer-tools/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Optimization</title>
+      <link>http://localhost:1314/tags/optimization/</link>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/optimization/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SolverForge</title>
+      <link>http://localhost:1314/tags/solverforge/</link>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/solverforge/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Aviation</title>
+      <link>http://localhost:1314/tags/aviation/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/aviation/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Demo</title>
+      <link>http://localhost:1314/tags/demo/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/demo/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1314/tags/java/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/java/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Constraint Programming</title>
+      <link>http://localhost:1314/tags/constraint-programming/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/constraint-programming/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Timefold</title>
+      <link>http://localhost:1314/tags/timefold/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/timefold/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Tmux</title>
+      <link>http://localhost:1314/tags/tmux/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/tmux/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hackathon</title>
+      <link>http://localhost:1314/tags/hackathon/</link>
       <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/tags/mcp/</guid>
+      <guid>http://localhost:1314/tags/hackathon/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>HuggingFace</title>
+      <link>http://localhost:1314/tags/huggingface/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/huggingface/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>LLM</title>
+      <link>http://localhost:1314/tags/llm/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/tags/llm/</guid>
       <description></description>
       
     </item>

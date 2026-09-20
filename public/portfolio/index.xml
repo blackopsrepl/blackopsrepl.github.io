@@ -2,51 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Portfolio on vdistefano.studio</title>
-    <link>https://www.vdistefano.studio/portfolio/</link>
+    <link>http://localhost:1314/portfolio/</link>
     <description>Recent content in Portfolio on vdistefano.studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Vittorio Distefano</copyright>
-    <lastBuildDate>Wed, 11 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.vdistefano.studio/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1314/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AITD:TNN PC Overhaul</title>
+      <link>http://localhost:1314/portfolio/aitdtnn-pc-overhaul/</link>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/portfolio/aitdtnn-pc-overhaul/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1314/portfolio/aitdtnn-pc-overhaul/featured.png" />
+    </item>
+    
+    <item>
+      <title>Meridian</title>
+      <link>http://localhost:1314/portfolio/meridian/</link>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/portfolio/meridian/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1314/portfolio/meridian/featured.png" />
+    </item>
+    
+    <item>
+      <title>SolverForge Calendar</title>
+      <link>http://localhost:1314/portfolio/solverforge-calendar/</link>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/portfolio/solverforge-calendar/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1314/portfolio/solverforge-calendar/featured.png" />
+    </item>
+    
+    <item>
+      <title>computer-use-sway</title>
+      <link>http://localhost:1314/portfolio/computer-use-sway/</link>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/portfolio/computer-use-sway/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1314/portfolio/computer-use-sway/featured.png" />
+    </item>
+    
+    <item>
+      <title>Elphame</title>
+      <link>http://localhost:1314/portfolio/elphame/</link>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1314/portfolio/elphame/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1314/portfolio/elphame/featured.png" />
+    </item>
     
     <item>
       <title>Zoyd</title>
-      <link>https://www.vdistefano.studio/portfolio/zoyd/zoyd/</link>
+      <link>http://localhost:1314/portfolio/zoyd/zoyd/</link>
       <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/portfolio/zoyd/zoyd/</guid>
+      <guid>http://localhost:1314/portfolio/zoyd/zoyd/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://www.vdistefano.studio/portfolio/zoyd/zoyd/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1314/portfolio/zoyd/zoyd/featured.png" />
     </item>
     
     <item>
       <title>SolverForge</title>
-      <link>https://www.vdistefano.studio/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/</link>
+      <link>http://localhost:1314/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/</link>
       <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/</guid>
+      <guid>http://localhost:1314/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://www.vdistefano.studio/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1314/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/featured.png" />
     </item>
     
     <item>
       <title>trex</title>
-      <link>https://www.vdistefano.studio/portfolio/trex/</link>
+      <link>http://localhost:1314/portfolio/trex/</link>
       <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/portfolio/trex/</guid>
+      <guid>http://localhost:1314/portfolio/trex/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://www.vdistefano.studio/portfolio/trex/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1314/portfolio/trex/featured.png" />
     </item>
     
     <item>
       <title>Yuga Planner</title>
-      <link>https://www.vdistefano.studio/portfolio/yuga-planner/</link>
+      <link>http://localhost:1314/portfolio/yuga-planner/</link>
       <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/portfolio/yuga-planner/</guid>
+      <guid>http://localhost:1314/portfolio/yuga-planner/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://www.vdistefano.studio/portfolio/yuga-planner/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1314/portfolio/yuga-planner/featured.png" />
     </item>
     
   </channel>

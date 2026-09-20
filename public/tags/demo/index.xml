@@ -2,109 +2,109 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Demo on vdistefano.studio</title>
-    <link>https://www.vdistefano.studio/tags/demo/</link>
+    <link>http://localhost:1314/tags/demo/</link>
     <description>Recent content in Demo on vdistefano.studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Vittorio Distefano</copyright>
-    <lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.vdistefano.studio/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1314/tags/demo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Employee Scheduling (Python)</title>
-      <link>https://www.vdistefano.studio/demos/employee-scheduling/</link>
+      <link>http://localhost:1314/demos/employee-scheduling/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/demos/employee-scheduling/</guid>
+      <guid>http://localhost:1314/demos/employee-scheduling/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Employee Scheduling (Rust)</title>
-      <link>https://www.vdistefano.studio/demos/employee-scheduling-rust/</link>
+      <link>http://localhost:1314/demos/employee-scheduling-rust/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/demos/employee-scheduling-rust/</guid>
+      <guid>http://localhost:1314/demos/employee-scheduling-rust/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Flight Crew Scheduling (Java)</title>
-      <link>https://www.vdistefano.studio/demos/flight-crew-scheduling-java/</link>
+      <link>http://localhost:1314/demos/flight-crew-scheduling-java/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/demos/flight-crew-scheduling-java/</guid>
+      <guid>http://localhost:1314/demos/flight-crew-scheduling-java/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Maintenance Scheduling (Python)</title>
-      <link>https://www.vdistefano.studio/demos/maintenance-scheduling/</link>
+      <link>http://localhost:1314/demos/maintenance-scheduling/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/demos/maintenance-scheduling/</guid>
+      <guid>http://localhost:1314/demos/maintenance-scheduling/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Meeting Scheduling (Python)</title>
-      <link>https://www.vdistefano.studio/demos/meeting-scheduling/</link>
+      <link>http://localhost:1314/demos/meeting-scheduling/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/demos/meeting-scheduling/</guid>
+      <guid>http://localhost:1314/demos/meeting-scheduling/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Order Picking (Python)</title>
-      <link>https://www.vdistefano.studio/demos/order-picking/</link>
+      <link>http://localhost:1314/demos/order-picking/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/demos/order-picking/</guid>
+      <guid>http://localhost:1314/demos/order-picking/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Portfolio Optimization (Python)</title>
-      <link>https://www.vdistefano.studio/demos/portfolio-optimization/</link>
+      <link>http://localhost:1314/demos/portfolio-optimization/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/demos/portfolio-optimization/</guid>
+      <guid>http://localhost:1314/demos/portfolio-optimization/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Vehicle Routing (Python)</title>
-      <link>https://www.vdistefano.studio/demos/vehicle-routing/</link>
+      <link>http://localhost:1314/demos/vehicle-routing/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/demos/vehicle-routing/</guid>
+      <guid>http://localhost:1314/demos/vehicle-routing/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Vehicle Routing (Rust, pre-release)</title>
-      <link>https://www.vdistefano.studio/demos/vehicle-routing-rust/</link>
+      <link>http://localhost:1314/demos/vehicle-routing-rust/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/demos/vehicle-routing-rust/</guid>
+      <guid>http://localhost:1314/demos/vehicle-routing-rust/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Virtual Machine Placement (Python)</title>
-      <link>https://www.vdistefano.studio/demos/vm-placement/</link>
+      <link>http://localhost:1314/demos/vm-placement/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/demos/vm-placement/</guid>
+      <guid>http://localhost:1314/demos/vm-placement/</guid>
       <description></description>
       
     </item>

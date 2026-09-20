@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Timefold on vdistefano.studio</title>
-    <link>https://www.vdistefano.studio/tags/timefold/</link>
+    <link>http://localhost:1314/tags/timefold/</link>
     <description>Recent content in Timefold on vdistefano.studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Vittorio Distefano</copyright>
-    <lastBuildDate>Sat, 13 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.vdistefano.studio/tags/timefold/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1314/tags/timefold/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Implementing EASA Flight Time Limitations in Constraint-Based Crew Scheduling</title>
-      <link>https://www.vdistefano.studio/blog/easa-ftl-constraints-flight-crew-scheduling/</link>
+      <link>http://localhost:1314/blog/easa-ftl-constraints-flight-crew-scheduling/</link>
       <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/blog/easa-ftl-constraints-flight-crew-scheduling/</guid>
+      <guid>http://localhost:1314/blog/easa-ftl-constraints-flight-crew-scheduling/</guid>
       <description></description>
       
     </item>

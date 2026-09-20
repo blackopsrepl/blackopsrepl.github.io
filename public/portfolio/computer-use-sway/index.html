@@ -1,0 +1,1915 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>computer-use-sway &middot; vdistefano.studio</title>
+    <meta name="title" content="computer-use-sway &middot; vdistefano.studio">
+  
+
+  
+  
+    <meta name="description" content="A local MCP server for inspecting and operating a Sway desktop session">
+  
+  
+    <meta name="keywords" content="Python,MCP,Linux,Wayland,Sway,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1314/portfolio/computer-use-sway/">
+  
+
+  
+  
+    <meta name="author" content="Vittorio Distefano">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/blackopsrepl" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/vdistefano" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1314/portfolio/computer-use-sway/">
+  <meta property="og:site_name" content="vdistefano.studio">
+  <meta property="og:title" content="computer-use-sway">
+  <meta property="og:description" content="A local MCP server for inspecting and operating a Sway desktop session">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="portfolio">
+    <meta property="article:published_time" content="2026-07-31T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-31T00:00:00+00:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="MCP">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Wayland">
+    <meta property="article:tag" content="Sway">
+    <meta property="og:image" content="http://localhost:1314/portfolio/computer-use-sway/featured.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1314/portfolio/computer-use-sway/featured.png">
+  <meta name="twitter:title" content="computer-use-sway">
+  <meta name="twitter:description" content="A local MCP server for inspecting and operating a Sway desktop session">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.cc2a787ae05a34c97043b57da97806fc800c01a164d9e374721495017e42c1c1bd27f362e017dd476ae73c42d26cfb4f738abf020a05615a3d552c78a231d2e0.css"
+    integrity="sha512-zCp4euBaNMlwQ7V9qXgG/IAMAaFk2eN0chSVAX5CwcG9J/Ni4BfdR2rnPELSbPtPc4q/AgoFYVo9VSx4ojHS4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.1f6df36ad2d50aa99e395d7d409f165a20d0b0c257539042220439099ff5c9558693bb078622df5af66a465d63845512e18454d777266cf81363499abf39ee77.js"
+      integrity="sha512-H23zatLVCqmeOV19QJ8WWiDQsMJXU5BCIgQ5CZ/1yVWGk7sHhiLfWvZqRl1jhFUS4YRU13cmbPgTY0mavznudw=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+  
+  
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="/js/mermaid.bundle.c665dce0e0188a6039dbc9fe5d5a15b728dc821b99036b8567b7414b968edc56b4616e3d36a76f9a630a617ca06787395cd2f844528d48fb50f9a0f41fabf8ea.js"
+    integrity="sha512-xmXc4OAYimA528n&#43;XVoVtyjcghuZA2uFZ7dBS5aO3Fa0YW49NqdvmmMKYXygZ4c5XNL4RFKNSPtQ&#43;aD0H6v46g=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/components/gallery.a340929bbb811e8e4d4a0f98c05ad907342e2adef8546efa14cc42546f8a8b87827e0e981916da043c388dfc064eeaa0812a210e6cf70be45e22cd385a560ba1.css"
+    integrity="sha512-o0CSm7uBHo5NSg&#43;YwFrZBzQuKt74VG76FMxCVG&#43;Ki4eCfg6YGRbaBDw4jfwGTuqggSohDmz3C&#43;ReIs04WlYLoQ==">
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="/lib/packery/packery.pkgd.min.8b0cbb30a72acb6a0188f690a3768e9c531f056dcf18df8d739ececb994387d28137ed684b2f23da6df5a0c416eb4f8818d5db4493419a9b97c7452ac602fbd4.js"
+    integrity="sha512-iwy7MKcqy2oBiPaQo3aOnFMfBW3PGN&#43;Nc57Oy5lDh9KBN&#43;1oSy8j2m31oMQW60&#43;IGNXbRJNBmpuXx0UqxgL71A=="></script>
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/shortcodes/gallery.min.066f04f8dacc3930df93010e4f91004c55c8971379324510b9703d5f02dcb9c0379e0d9be24c4da79e2a004cdf006f5d2990ef8899c528459515d1833b5c9459.js"
+    integrity="sha512-Bm8E&#43;NrMOTDfkwEOT5EATFXIlxN5MkUQuXA9XwLcucA3ng2b4kxNp54qAEzfAG9dKZDviJnFKEWVFdGDO1yUWQ=="></script>
+
+
+
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/components/carousel.8e65f2c27285218feed8ca2a6e12a80ec2fb4be8f774b7c74d9642f1bc528a3352288a700a64a0e1e3c38a40b74c978b5dbbeb38346202b5f7613d8fc023e3c9.css"
+    integrity="sha512-jmXywnKFIY/u2MoqbhKoDsL7S&#43;j3dLfHTZZC8bxSijNSKIpwCmSg4ePDikC3TJeLXbvrODRiArX3YT2PwCPjyQ==">
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="/lib/tw-elements/index.min.5ffccf337b773ee831515cdde152c8039e972dd479f7dffb0532a79de9a6de5926154ae2587f181ed6c06a99aee25667096bcf6495da5aa86e235d98baee5943.js"
+    integrity="sha512-X/zPM3t3PugxUVzd4VLIA56XLdR599/7BTKnnemm3lkmFUriWH8YHtbAapmu4lZnCWvPZJXaWqhuI12Yuu5ZQw=="></script>
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+      
+      
+    
+  
+    
+      
+    
+  
+
+  
+  
+  
+
+  <link rel="stylesheet" href="/portfolio/computer-use-sway/repo-cards.min.4ae5b5ba58e47eec6bb063f962002d0f9a2f9a1ab4f2d399a027aa800787524b1451e0a48893370c0b98a9d1f01078d0903ad5b4940c0f0a358ca43f9055e6b0.css" integrity="sha512-SuW1uljkfuxrsGP5YgAtD5ovmhq08tOZoCeqgAeHUksUUeCkiJM3DAuYqdHwEHjQkDrVtJQMDwo1jKQ/kFXmsA==">
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Portfolio",
+    "name": "computer-use-sway",
+    "headline": "computer-use-sway",
+    "description": "A local MCP server for inspecting and operating a Sway desktop session",
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1314\/portfolio\/computer-use-sway\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Vittorio Distefano"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-07-31T00:00:00\u002b00:00",
+    "datePublished": "2026-07-31T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-07-31T00:00:00\u002b00:00",
+    
+    "keywords": ["Python","MCP","Linux","Wayland","Sway"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "358"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+    
+    
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">vdistefano.studio</span>
+          
+            <img
+              src="/logo.png"
+              width="100"
+              height="100"
+              class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom"
+              alt="">
+          
+        </a>
+      </div>
+    
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3 items-center">
+      
+      
+        <a href="/" class="block nozoom">
+          <span class="sr-only">vdistefano.studio</span>
+          <span class="logo-text"><svg width="174" height="24" viewBox="0 0 174 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pixel art text: vdistefano.studio -->
+  <!-- 3px pixels -->
+
+  <!-- v -->
+  <rect x="0" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="6" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="0" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="6" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="0" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="6" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="3" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- d (stem on right) -->
+  <rect x="18" y="0" width="3" height="3" fill="#059669"/>
+  <rect x="18" y="3" width="3" height="3" fill="#10b981"/>
+  <rect x="12" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="15" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="18" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="12" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="18" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="12" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="18" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="12" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="15" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="18" y="15" width="3" height="3" fill="#10b981"/>
+
+  <!-- i -->
+  <rect x="24" y="3" width="3" height="3" fill="#22c55e"/>
+  <rect x="24" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="24" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="24" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- s -->
+  <rect x="30" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="33" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="30" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="36" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="30" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="33" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- t -->
+  <rect x="42" y="3" width="3" height="3" fill="#059669"/>
+  <rect x="39" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="42" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="45" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="42" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="42" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="42" y="15" width="3" height="3" fill="#10b981"/>
+  <rect x="45" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- e -->
+  <rect x="51" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="54" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="51" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="54" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="57" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="51" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="51" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="54" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- f -->
+  <rect x="63" y="3" width="3" height="3" fill="#22c55e"/>
+  <rect x="66" y="3" width="3" height="3" fill="#22c55e"/>
+  <rect x="63" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="60" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="63" y="9" width="3" height="3" fill="#22c55e"/>
+  <rect x="66" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="63" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="63" y="15" width="3" height="3" fill="#10b981"/>
+
+  <!-- a -->
+  <rect x="72" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="75" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="78" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="72" y="9" width="3" height="3" fill="#22c55e"/>
+  <rect x="75" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="72" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="78" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="72" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="75" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="78" y="15" width="3" height="3" fill="#10b981"/>
+
+  <!-- n -->
+  <rect x="84" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="87" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="84" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="90" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="84" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="90" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="84" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="90" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- o -->
+  <rect x="96" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="99" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="96" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="102" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="96" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="102" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="96" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="99" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- . (red dot) -->
+  <rect x="108" y="15" width="3" height="3" fill="#ef4444"/>
+
+  <!-- s -->
+  <rect x="114" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="117" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="114" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="120" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="114" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="117" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- t -->
+  <rect x="126" y="3" width="3" height="3" fill="#059669"/>
+  <rect x="123" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="126" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="129" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="126" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="126" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="126" y="15" width="3" height="3" fill="#10b981"/>
+  <rect x="129" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- u -->
+  <rect x="135" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="141" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="135" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="141" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="135" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="141" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="135" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="138" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="141" y="15" width="3" height="3" fill="#10b981"/>
+
+  <!-- d (stem on right) -->
+  <rect x="153" y="0" width="3" height="3" fill="#059669"/>
+  <rect x="153" y="3" width="3" height="3" fill="#10b981"/>
+  <rect x="147" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="150" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="153" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="147" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="153" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="147" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="153" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="147" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="150" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="153" y="15" width="3" height="3" fill="#10b981"/>
+
+  <!-- i -->
+  <rect x="159" y="3" width="3" height="3" fill="#22c55e"/>
+  <rect x="159" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="159" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="159" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- o -->
+  <rect x="165" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="168" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="165" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="171" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="165" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="171" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="165" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="168" y="15" width="3" height="3" fill="#22c55e"/>
+</svg></span>
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/about/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="About"
+  title="About">
+  
+  
+    <p class="text-base font-medium">
+      About
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/portfolio/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Portfolio"
+  title="Portfolio">
+  
+  
+    <p class="text-base font-medium">
+      Portfolio
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/demos/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Demos"
+  title="Demos">
+  
+  
+    <p class="text-base font-medium">
+      Demos
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/blog/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Blog"
+  title="Blog">
+  
+  
+    <p class="text-base font-medium">
+      Blog
+    </p>
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/about/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="About"
+    title="About">
+    
+    
+      <p class="text-bg font-bg">
+        About
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/portfolio/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Portfolio"
+    title="Portfolio">
+    
+    
+      <p class="text-bg font-bg">
+        Portfolio
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/demos/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Demos"
+    title="Demos">
+    
+    
+      <p class="text-bg font-bg">
+        Demos
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/blog/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Blog"
+    title="Blog">
+    
+    
+      <p class="text-bg font-bg">
+        Blog
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >Vittorio Distefano</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/portfolio/"
+      >Portfolio</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/portfolio/computer-use-sway/"
+      >computer-use-sway</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        computer-use-sway
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-07-31T00:00:00&#43;00:00">31 July 2026</time><span class="px-2 text-primary-500">&middot;</span><span>358 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/python/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Python
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/mcp/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    MCP
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/linux/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Linux
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/wayland/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Wayland
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/sway/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Sway
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Vittorio Distefano
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">Founder of SolverForge. Engineer across optimization, systems engineering, and applied AI.</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:info@vdistefano.studio"
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/blackopsrepl"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.linkedin.com/in/vdistefano"
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-the-client-can-see-and-do">What the client can see and do</a></li>
+    <li><a href="#a-narrow-local-bridge">A narrow local bridge</a></li>
+    <li><a href="#project-identity">Project identity</a></li>
+    <li><a href="#repository">Repository</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-the-client-can-see-and-do">What the client can see and do</a></li>
+    <li><a href="#a-narrow-local-bridge">A narrow local bridge</a></li>
+    <li><a href="#project-identity">Project identity</a></li>
+    <li><a href="#repository">Repository</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <div class="lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl">
+  Give a trusted AI client useful control of a real Sway desktop—without adding a network service or pretending the security boundary does not exist.
+</div>
+
+<p>computer-use-sway is a local MCP stdio server for inspecting and operating the current Wayland session through Sway-native tools. It turns the desktop into a small explicit capability surface instead of an opaque remote-control channel.</p>
+<div class="flex flex-row flex-wrap items-center space-x-2">
+
+<div class="flex mt-2">
+  <span
+    class="keyword-pill rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center">
+      
+        <span class="mr-1"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></span>
+      
+      <span>Screen and window inspection</span>
+    </span>
+  </span>
+</div>
+
+
+<div class="flex mt-2">
+  <span
+    class="keyword-pill rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center">
+      
+        <span class="mr-1"></span>
+      
+      <span>Pointer control</span>
+    </span>
+  </span>
+</div>
+
+
+<div class="flex mt-2">
+  <span
+    class="keyword-pill rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center">
+      
+        <span class="mr-1"></span>
+      
+      <span>Text and key chords</span>
+    </span>
+  </span>
+</div>
+
+
+<div class="flex mt-2">
+  <span
+    class="keyword-pill rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center">
+      
+        <span class="mr-1"></span>
+      
+      <span>Clipboard access</span>
+    </span>
+  </span>
+</div>
+
+
+<div class="flex mt-2">
+  <span
+    class="keyword-pill rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center">
+      
+        <span class="mr-1"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.7 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"/></svg></span></span>
+      
+      <span>Local stdio transport</span>
+    </span>
+  </span>
+</div>
+
+</div>
+
+
+<h2 class="relative group">What the client can see and do
+    <div id="what-the-client-can-see-and-do" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-the-client-can-see-and-do" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol class="timeline border-s-2 border-primary-500 dark:border-primary-300 list-none">
+
+
+
+
+
+
+<li class="timeline-item">
+  <div class="timeline-item-row flex">
+    <div
+      class="timeline-item-icon bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full mt-5">
+      
+    </div>
+    <div class="timeline-item-card block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+          <h2 class="mt-0">Observe the session</h2>
+        
+        
+          <h3 class="">
+            <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Read
+  </span>
+</span>
+
+          </h3>
+        
+      </div>
+      
+        <h4 class="mt-0">
+          Outputs, seats, focused windows, and required binaries
+        </h4>
+      
+      <div class="mb-6">
+        
+The server returns the state needed to reason about the current desktop before acting. A simplified Sway tree provides stable window identity without exposing the full compositor structure as raw noise.
+
+      </div>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+
+<li class="timeline-item">
+  <div class="timeline-item-row flex">
+    <div
+      class="timeline-item-icon bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full mt-5">
+      
+    </div>
+    <div class="timeline-item-card block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+          <h2 class="mt-0">Capture the screen</h2>
+        
+        
+          <h3 class="">
+            <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Image
+  </span>
+</span>
+
+          </h3>
+        
+      </div>
+      
+        <h4 class="mt-0">
+          Screenshots as MCP image content or data URLs
+        </h4>
+      
+      <div class="mb-6">
+        
+The client can receive a current visual surface through `grim`, then combine it with structured focus and window information.
+
+      </div>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+
+<li class="timeline-item">
+  <div class="timeline-item-row flex">
+    <div
+      class="timeline-item-icon bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full mt-5">
+      
+    </div>
+    <div class="timeline-item-card block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+          <h2 class="mt-0">Operate deliberately</h2>
+        
+        
+          <h3 class="">
+            <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Write
+  </span>
+</span>
+
+          </h3>
+        
+      </div>
+      
+        <h4 class="mt-0">
+          Focus, point, click, drag, scroll, type, and send chords
+        </h4>
+      
+      <div class="mb-6">
+        
+Window targeting works by container ID, app ID, class, or title. Pointer and keyboard actions use native Wayland tools rather than an X11 compatibility path.
+
+      </div>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+
+<li class="timeline-item">
+  <div class="timeline-item-row flex">
+    <div
+      class="timeline-item-icon bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full mt-5">
+      
+    </div>
+    <div class="timeline-item-card block p-6 rounded-lg shadow-2xl flex-1 ms-6 mb-10 break-words">
+      <div class="flex justify-between">
+        
+          <h2 class="mt-0">Exchange text</h2>
+        
+        
+          <h3 class="">
+            <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Clipboard
+  </span>
+</span>
+
+          </h3>
+        
+      </div>
+      
+        <h4 class="mt-0">
+          Read and write the text clipboard
+        </h4>
+      
+      <div class="mb-6">
+        
+Clipboard capabilities use `wl-clipboard` and remain separate from keyboard entry, so the client can choose the least disruptive mechanism for a task.
+
+      </div>
+    </div>
+  </div>
+</li>
+
+
+</ol>
+
+
+<h2 class="relative group">A narrow local bridge
+    <div id="a-narrow-local-bridge" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-narrow-local-bridge" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+  
+  
+  
+  
+
+
+
+<div
+  
+    class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900"
+  
+  >
+  <span
+    
+      class="text-primary-400 pe-3 flex items-center"
+    
+    >
+    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+</span>
+  </span>
+
+  <span
+    
+      class="dark:text-neutral-300"
+    
+    >This server gives an MCP client practical control of the active desktop. It should only be registered with local clients the user trusts.</span>
+</div>
+
+<p>There is no HTTP listener and no remote account. The MCP host launches the server over stdio. When that host starts with a sanitized environment, the server reconstructs <code>XDG_RUNTIME_DIR</code>, <code>SWAYSOCK</code>, and <code>WAYLAND_DISPLAY</code> from the active local session, then diagnoses the required tools before accepting desktop work.</p>
+<pre class="not-prose mermaid">
+sequenceDiagram
+    participant Client as Trusted MCP client
+    participant Server as computer-use-sway
+    participant Sway as Sway / Wayland tools
+    Client->>Server: Inspect session
+    Server->>Sway: swaymsg / grim
+    Sway-->>Server: Tree, focus, screenshot
+    Server-->>Client: Structured state + image
+    Client->>Server: Explicit input action
+    Server->>Sway: wtype / pointer / clipboard
+</pre>
+
+
+<h2 class="relative group">Project identity
+    <div id="project-identity" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#project-identity" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+
+  <div id="gallery-c7309c130d6bcddc56a39f2aa3910c55" class="gallery">
+  
+  <img src="/portfolio/computer-use-sway/mascot.png" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="computer-use-sway mascot operating a Sway desktop" />
+</div>
+
+
+<h2 class="relative group">Repository
+    <div id="repository" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#repository" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="github-card-wrapper">
+    <a id="github-3569eabb4fb8ab0e2fac131c0ee29b9e" target="_blank" href="https://github.com/blackopsrepl/computer-use-sway" class="cursor-pointer">
+      <div
+        class="w-full md:w-auto p-0 m-0 border border-neutral-200 dark:border-neutral-700 border rounded-md shadow-2xl"><div class="w-full md:w-auto pt-3 p-5">
+          <div class="flex items-center">
+            <span class="text-2xl text-neutral-800 dark:text-neutral me-2">
+              <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+            </span>
+            <div
+              id="github-3569eabb4fb8ab0e2fac131c0ee29b9e-full_name"
+              class="m-0 font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral">
+              blackopsrepl/computer-use-sway
+            </div>
+          </div>
+
+          <p id="github-3569eabb4fb8ab0e2fac131c0ee29b9e-description" class="m-0 mt-2 text-md text-neutral-800 dark:text-neutral">
+            Use your Sway session from Codex
+          </p>
+
+          <div class="m-0 mt-2 flex items-center">
+            
+            
+            
+            <span
+              class="mr-1 inline-block h-3 w-3 rounded-full language-dot"
+              data-language="Python"></span>
+            <div class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
+              Python
+            </div>
+
+            <span class="text-md mr-1 text-neutral-800 dark:text-neutral">
+              <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M287.9 0C297.1 0 305.5 5.25 309.5 13.52L378.1 154.8L531.4 177.5C540.4 178.8 547.8 185.1 550.7 193.7C553.5 202.4 551.2 211.9 544.8 218.2L433.6 328.4L459.9 483.9C461.4 492.9 457.7 502.1 450.2 507.4C442.8 512.7 432.1 513.4 424.9 509.1L287.9 435.9L150.1 509.1C142.9 513.4 133.1 512.7 125.6 507.4C118.2 502.1 114.5 492.9 115.1 483.9L142.2 328.4L31.11 218.2C24.65 211.9 22.36 202.4 25.2 193.7C28.03 185.1 35.5 178.8 44.49 177.5L197.7 154.8L266.3 13.52C270.4 5.249 278.7 0 287.9 0L287.9 0zM287.9 78.95L235.4 187.2C231.9 194.3 225.1 199.3 217.3 200.5L98.98 217.9L184.9 303C190.4 308.5 192.9 316.4 191.6 324.1L171.4 443.7L276.6 387.5C283.7 383.7 292.2 383.7 299.2 387.5L404.4 443.7L384.2 324.1C382.9 316.4 385.5 308.5 391 303L476.9 217.9L358.6 200.5C350.7 199.3 343.9 194.3 340.5 187.2L287.9 78.95z"/></svg></span>
+            </span>
+            <div id="github-3569eabb4fb8ab0e2fac131c0ee29b9e-stargazers" class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
+              3
+            </div>
+
+            <span class="text-md mr-1 text-neutral-800 dark:text-neutral">
+              <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M80 104c13.3 0 24-10.7 24-24s-10.7-24-24-24S56 66.7 56 80s10.7 24 24 24zm80-24c0 32.8-19.7 61-48 73.3V192c0 17.7 14.3 32 32 32H304c17.7 0 32-14.3 32-32V153.3C307.7 141 288 112.8 288 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V192c0 53-43 96-96 96H256v70.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3V288H144c-53 0-96-43-96-96V153.3C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80zm208 24c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24zM248 432c0-13.3-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24s24-10.7 24-24z"/></svg></span>
+            </span>
+            <div id="github-3569eabb4fb8ab0e2fac131c0ee29b9e-forks" class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
+              0
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <script
+        async
+        type="text/javascript"
+        src="/js/fetch-repo.min.dc5533c50cefd50405344b235937142271f26229fe39cbee27fd4960e8bb897a0beebfad77a1091ca91cd0d1fb14e70fc37cc114dd9674fb2c32e0ab512ec8a4.js"
+        integrity="sha512-3FUzxQzv1QQFNEsjWTcUInHyYin&#43;OcvuJ/1JYOi7iXoL7r&#43;td6EJHKkc0NH7FOcPw3zBFN2WdPssMuCrUS7IpA=="
+        data-repo-url="https://api.github.com/repos/blackopsrepl/computer-use-sway"
+        data-repo-id="github-3569eabb4fb8ab0e2fac131c0ee29b9e"></script>
+    </a>
+  </div>
+<a
+  class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
+  href="https://github.com/blackopsrepl/computer-use-sway"
+  target="_blank"
+  
+  role="button">
+  
+<span class="relative inline-block align-text-bottom icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Source and setup
+
+</a>
+
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_Portfolio/computer-use-sway/index.md"
+          data-oid-likes="likes_Portfolio/computer-use-sway/index.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/portfolio/elphame/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Elphame
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-07-17T00:00:00&#43;00:00">17 July 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/portfolio/solverforge-calendar/">
+              <span class="leading-6">
+                SolverForge Calendar&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-08-05T00:00:00&#43;00:00">5 August 2026</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="site-footer print:hidden">
+  <div class="footer-shell">
+    <div class="footer-brand" data-reveal>
+      
+        <a href="/" class="footer-wordmark nozoom" aria-label="vdistefano.studio">
+          <svg width="174" height="24" viewBox="0 0 174 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pixel art text: vdistefano.studio -->
+  <!-- 3px pixels -->
+
+  <!-- v -->
+  <rect x="0" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="6" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="0" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="6" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="0" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="6" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="3" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- d (stem on right) -->
+  <rect x="18" y="0" width="3" height="3" fill="#059669"/>
+  <rect x="18" y="3" width="3" height="3" fill="#10b981"/>
+  <rect x="12" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="15" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="18" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="12" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="18" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="12" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="18" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="12" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="15" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="18" y="15" width="3" height="3" fill="#10b981"/>
+
+  <!-- i -->
+  <rect x="24" y="3" width="3" height="3" fill="#22c55e"/>
+  <rect x="24" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="24" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="24" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- s -->
+  <rect x="30" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="33" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="30" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="36" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="30" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="33" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- t -->
+  <rect x="42" y="3" width="3" height="3" fill="#059669"/>
+  <rect x="39" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="42" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="45" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="42" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="42" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="42" y="15" width="3" height="3" fill="#10b981"/>
+  <rect x="45" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- e -->
+  <rect x="51" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="54" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="51" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="54" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="57" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="51" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="51" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="54" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- f -->
+  <rect x="63" y="3" width="3" height="3" fill="#22c55e"/>
+  <rect x="66" y="3" width="3" height="3" fill="#22c55e"/>
+  <rect x="63" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="60" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="63" y="9" width="3" height="3" fill="#22c55e"/>
+  <rect x="66" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="63" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="63" y="15" width="3" height="3" fill="#10b981"/>
+
+  <!-- a -->
+  <rect x="72" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="75" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="78" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="72" y="9" width="3" height="3" fill="#22c55e"/>
+  <rect x="75" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="72" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="78" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="72" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="75" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="78" y="15" width="3" height="3" fill="#10b981"/>
+
+  <!-- n -->
+  <rect x="84" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="87" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="84" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="90" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="84" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="90" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="84" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="90" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- o -->
+  <rect x="96" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="99" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="96" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="102" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="96" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="102" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="96" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="99" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- . (red dot) -->
+  <rect x="108" y="15" width="3" height="3" fill="#ef4444"/>
+
+  <!-- s -->
+  <rect x="114" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="117" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="114" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="120" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="114" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="117" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- t -->
+  <rect x="126" y="3" width="3" height="3" fill="#059669"/>
+  <rect x="123" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="126" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="129" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="126" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="126" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="126" y="15" width="3" height="3" fill="#10b981"/>
+  <rect x="129" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- u -->
+  <rect x="135" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="141" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="135" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="141" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="135" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="141" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="135" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="138" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="141" y="15" width="3" height="3" fill="#10b981"/>
+
+  <!-- d (stem on right) -->
+  <rect x="153" y="0" width="3" height="3" fill="#059669"/>
+  <rect x="153" y="3" width="3" height="3" fill="#10b981"/>
+  <rect x="147" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="150" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="153" y="6" width="3" height="3" fill="#10b981"/>
+  <rect x="147" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="153" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="147" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="153" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="147" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="150" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="153" y="15" width="3" height="3" fill="#10b981"/>
+
+  <!-- i -->
+  <rect x="159" y="3" width="3" height="3" fill="#22c55e"/>
+  <rect x="159" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="159" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="159" y="15" width="3" height="3" fill="#22c55e"/>
+
+  <!-- o -->
+  <rect x="165" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="168" y="6" width="3" height="3" fill="#22c55e"/>
+  <rect x="165" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="171" y="9" width="3" height="3" fill="#10b981"/>
+  <rect x="165" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="171" y="12" width="3" height="3" fill="#10b981"/>
+  <rect x="165" y="15" width="3" height="3" fill="#22c55e"/>
+  <rect x="168" y="15" width="3" height="3" fill="#22c55e"/>
+</svg>
+        </a>
+      
+      <p class="footer-copy">
+        Optimization systems, developer tooling, and applied AI.
+      </p>
+    </div>
+
+    <nav class="footer-links" aria-label="Primary">
+      <a href="/about/" data-reveal>About</a>
+      <a href="/Portfolio/" data-reveal>Portfolio</a>
+      <a href="/Demos/" data-reveal>Demos</a>
+      <a href="/Blog/" data-reveal>Blog</a>
+    </nav>
+
+    <nav class="footer-links" aria-label="External">
+      <a href="https://solverforge.org" target="_blank" rel="noopener noreferrer" data-reveal>SolverForge</a>
+      <a href="mailto:info@vdistefano.studio" data-reveal>Email</a>
+      <a href="https://github.com/blackopsrepl" target="_blank" rel="noopener noreferrer" data-reveal>GitHub</a>
+    </nav>
+  </div>
+
+  <div class="footer-meta">
+    <p>&copy; 2026 Vittorio Distefano</p>
+    <p>Built with Hugo. No tracking.</p>
+  </div>
+
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+
+  
+    
+
+  
+  <script src="/js/custom.min.8fc638b702f11ccca4bbc9e5050d39eb66605b7d6c15ca1ec5a97f8db9063375.js" integrity="sha256-j8Y4twLxHMyku8nlBQ0562ZgW31sFcoexal/jbkGM3U=" defer></script>
+
+
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1314/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

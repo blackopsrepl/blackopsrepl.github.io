@@ -3,72 +3,102 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://www.vdistefano.studio/portfolio/</loc>
+    <loc>http://localhost:1314/portfolio/aitdtnn-pc-overhaul/</loc>
+    <lastmod>2026-08-20T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1314/portfolio/</loc>
+    <lastmod>2026-08-20T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1314/</loc>
+    <lastmod>2026-08-20T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1314/portfolio/meridian/</loc>
+    <lastmod>2026-08-15T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1314/portfolio/solverforge-calendar/</loc>
+    <lastmod>2026-08-05T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1314/portfolio/computer-use-sway/</loc>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1314/portfolio/elphame/</loc>
+    <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1314/portfolio/zoyd/zoyd/</loc>
     <lastmod>2026-03-11T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.vdistefano.studio/</loc>
-    <lastmod>2026-03-11T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.vdistefano.studio/portfolio/zoyd/zoyd/</loc>
-    <lastmod>2026-03-11T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.vdistefano.studio/blog/</loc>
+    <loc>http://localhost:1314/blog/</loc>
     <lastmod>2026-01-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.vdistefano.studio/blog/implementing-late-acceptance-rust/</loc>
+    <loc>http://localhost:1314/blog/implementing-late-acceptance-rust/</loc>
     <lastmod>2026-01-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.vdistefano.studio/demos/</loc>
+    <loc>http://localhost:1314/demos/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.vdistefano.studio/blog/easa-ftl-constraints-flight-crew-scheduling/</loc>
+    <loc>http://localhost:1314/blog/easa-ftl-constraints-flight-crew-scheduling/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.vdistefano.studio/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/</loc>
+    <loc>http://localhost:1314/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/</loc>
     <lastmod>2025-12-07T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.vdistefano.studio/portfolio/trex/</loc>
+    <loc>http://localhost:1314/portfolio/trex/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.vdistefano.studio/portfolio/yuga-planner/</loc>
+    <loc>http://localhost:1314/portfolio/yuga-planner/</loc>
     <lastmod>2025-06-27T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.vdistefano.studio/about/</loc>
+    <loc>http://localhost:1314/about/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.vdistefano.studio/services/</loc>
+    <loc>http://localhost:1314/services/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

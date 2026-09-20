@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SolverForge on vdistefano.studio</title>
-    <link>https://www.vdistefano.studio/tags/solverforge/</link>
+    <link>http://localhost:1314/tags/solverforge/</link>
     <description>Recent content in SolverForge on vdistefano.studio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Vittorio Distefano</copyright>
-    <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.vdistefano.studio/tags/solverforge/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1314/tags/solverforge/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Implementing Late Acceptance in Rust</title>
-      <link>https://www.vdistefano.studio/blog/implementing-late-acceptance-rust/</link>
+      <link>http://localhost:1314/blog/implementing-late-acceptance-rust/</link>
       <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/blog/implementing-late-acceptance-rust/</guid>
+      <guid>http://localhost:1314/blog/implementing-late-acceptance-rust/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>SolverForge</title>
-      <link>https://www.vdistefano.studio/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/</link>
+      <link>http://localhost:1314/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/</link>
       <pubDate>Sun, 07 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.vdistefano.studio/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/</guid>
+      <guid>http://localhost:1314/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://www.vdistefano.studio/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1314/portfolio/1765120232288-solverforge---a-constraint-programming-framework-for-rust-and-python/featured.png" />
     </item>
     
   </channel>
