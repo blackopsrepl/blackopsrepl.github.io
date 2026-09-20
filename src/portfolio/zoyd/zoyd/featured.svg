@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#000000"/>
+
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7effba;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#50fc00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38b000;stop-opacity:1" />
+    </linearGradient>
+    <!-- Subtle glow filter -->
+    <filter id="greenGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Mind Flayer rendered as vector paths -->
+  <g transform="translate(960, 340)" filter="url(#greenGlow)">
+
+    <!-- Head dome -->
+    <ellipse cx="0" cy="-100" rx="110" ry="80" fill="none" stroke="#50fc00" stroke-width="4"/>
+    <ellipse cx="0" cy="-100" rx="110" ry="80" fill="#50fc00" opacity="0.06"/>
+
+    <!-- Face plate -->
+    <rect x="-90" y="-50" width="180" height="120" rx="20" fill="none" stroke="#50fc00" stroke-width="3.5"/>
+    <rect x="-90" y="-50" width="180" height="120" rx="20" fill="#50fc00" opacity="0.04"/>
+
+    <!-- Eyes — horizontal slits -->
+    <rect x="-55" y="-20" width="36" height="12" rx="6" fill="#50fc00" opacity="0.9"/>
+    <rect x="19" y="-20" width="36" height="12" rx="6" fill="#50fc00" opacity="0.9"/>
+    <!-- Eye inner glow -->
+    <rect x="-47" y="-17" width="20" height="6" rx="3" fill="#7effba"/>
+    <rect x="27" y="-17" width="20" height="6" rx="3" fill="#7effba"/>
+
+    <!-- Tentacles (6 hanging from jaw area) -->
+    <!-- Left outer -->
+    <path d="M -60,70 C -65,120 -55,170 -70,220" fill="none" stroke="#50fc00" stroke-width="8" stroke-linecap="round"/>
+    <!-- Left mid -->
+    <path d="M -30,75 C -32,130 -25,175 -35,230" fill="none" stroke="#50fc00" stroke-width="9" stroke-linecap="round"/>
+    <!-- Left inner -->
+    <path d="M -5,78 C -3,135 -8,180 -10,240" fill="none" stroke="#50fc00" stroke-width="8" stroke-linecap="round"/>
+    <!-- Right inner -->
+    <path d="M 5,78 C 3,135 8,180 10,240" fill="none" stroke="#50fc00" stroke-width="8" stroke-linecap="round"/>
+    <!-- Right mid -->
+    <path d="M 30,75 C 32,130 25,175 35,230" fill="none" stroke="#50fc00" stroke-width="9" stroke-linecap="round"/>
+    <!-- Right outer -->
+    <path d="M 60,70 C 65,120 55,170 70,220" fill="none" stroke="#50fc00" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Subtle tentacle tips -->
+    <circle cx="-70" cy="220" r="5" fill="#50fc00" opacity="0.5"/>
+    <circle cx="-35" cy="230" r="5" fill="#50fc00" opacity="0.5"/>
+    <circle cx="-10" cy="240" r="5" fill="#50fc00" opacity="0.5"/>
+    <circle cx="10" cy="240" r="5" fill="#50fc00" opacity="0.5"/>
+    <circle cx="35" cy="230" r="5" fill="#50fc00" opacity="0.5"/>
+    <circle cx="70" cy="220" r="5" fill="#50fc00" opacity="0.5"/>
+
+    <!-- Cranial ridges -->
+    <path d="M -80,-80 C -40,-130 40,-130 80,-80" fill="none" stroke="#50fc00" stroke-width="2" opacity="0.3"/>
+    <path d="M -60,-90 C -20,-125 20,-125 60,-90" fill="none" stroke="#50fc00" stroke-width="2" opacity="0.25"/>
+
+  </g>
+
+  <!-- Text logo -->
+  <text x="960" y="730" font-family="system-ui, -apple-system, sans-serif" font-size="110" font-weight="300" letter-spacing="-0.02em" text-anchor="middle">
+    <tspan fill="#ffffff">Zoy</tspan><tspan fill="#50fc00">d</tspan>
+  </text>
+</svg>

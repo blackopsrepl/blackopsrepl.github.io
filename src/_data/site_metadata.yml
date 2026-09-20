@@ -1,0 +1,15 @@
+title: vdistefano.studio
+author: Vittorio Distefano
+description: Founder of SolverForge. Engineer across optimization, systems, and applied AI.
+email: info@vdistefano.studio
+url: https://www.vdistefano.studio
+locale: en
+navigation:
+  - name: About
+    path: /about/
+  - name: Portfolio
+    path: /portfolio/
+  - name: Demos
+    path: /demos/
+  - name: Blog
+    path: /blog/

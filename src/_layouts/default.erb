@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="<%= site.metadata.locale %>" dir="ltr" class="scroll-smooth" data-default-appearance="dark" data-auto-appearance="false">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color">
+    <title><%= data.title ? "#{data.title} · #{site.metadata.title}" : site.metadata.title %></title>
+    <meta name="title" content="<%= data.title || site.metadata.title %>">
+    <meta name="description" content="<%= data.description || site.metadata.description %>">
+    <meta name="author" content="<%= site.metadata.author %>">
+    <% canonical_path = resource.relative_url.to_s.sub(%r{\A/+}, "/") %>
+    <% canonical_path = "" if canonical_path == "/" %>
+    <link rel="canonical" href="<%= site.metadata.url.chomp("/") %><%= canonical_path %>">
+    <link rel="stylesheet" href="/css/main.bundle.min.cc2a787ae05a34c97043b57da97806fc800c01a164d9e374721495017e42c1c1bd27f362e017dd476ae73c42d26cfb4f738abf020a05615a3d552c78a231d2e0.css">
+    <link rel="stylesheet" href="/css/bridge.css">
+    <script src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"></script>
+  </head>
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute"></div>
+    <%= render "header" %>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        <%= yield %>
+      </main>
+      <%= render "scroll_to_top" %>
+      <%= render "footer" %>
+      <%= render "search" %>
+    </div>
+    <script defer src="/js/main.bundle.min.1f6df36ad2d50aa99e395d7d409f165a20d0b0c257539042220439099ff5c9558693bb078622df5af66a465d63845512e18454d777266cf81363499abf39ee77.js"></script>
+    <script defer src="/js/mermaid.bundle.c665dce0e0188a6039dbc9fe5d5a15b728dc821b99036b8567b7414b968edc56b4616e3d36a76f9a630a617ca06787395cd2f844528d48fb50f9a0f41fabf8ea.js"></script>
+    <script defer src="/js/custom.min.8fc638b702f11ccca4bbc9e5050d39eb66605b7d6c15ca1ec5a97f8db9063375.js"></script>
+  </body>
+</html>

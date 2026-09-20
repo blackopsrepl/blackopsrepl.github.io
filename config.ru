@@ -1,0 +1,3 @@
+require "bridgetown"
+
+Bridgetown.application

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#000000"/>
+
+  <defs>
+    <linearGradient id="terminalGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7effba;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#50fc00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38b000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo centered - Neural network meets calendar -->
+  <g transform="translate(960, 420)">
+    <!-- Outer circle -->
+    <circle cx="0" cy="0" r="140" stroke="url(#terminalGreen)" stroke-width="4" fill="none" opacity="0.3"/>
+
+    <!-- Neural network nodes (left) -->
+    <circle cx="-90" cy="-60" r="16" fill="none" stroke="#50fc00" stroke-width="3"/>
+    <circle cx="-90" cy="0" r="16" fill="none" stroke="#50fc00" stroke-width="3"/>
+    <circle cx="-90" cy="60" r="16" fill="none" stroke="#50fc00" stroke-width="3"/>
+
+    <!-- Middle processing layer -->
+    <circle cx="0" cy="-40" r="20" fill="none" stroke="url(#terminalGreen)" stroke-width="4"/>
+    <circle cx="0" cy="40" r="20" fill="none" stroke="url(#terminalGreen)" stroke-width="4"/>
+
+    <!-- Calendar nodes (right) -->
+    <rect x="60" y="-75" width="50" height="40" rx="4" stroke="#50fc00" stroke-width="3" fill="none"/>
+    <rect x="60" y="-20" width="50" height="40" rx="4" stroke="#50fc00" stroke-width="3" fill="none"/>
+    <rect x="60" y="35" width="50" height="40" rx="4" stroke="#50fc00" stroke-width="3" fill="none"/>
+
+    <!-- Calendar grid lines -->
+    <line x1="70" y1="-60" x2="100" y2="-60" stroke="#50fc00" stroke-width="1.5" opacity="0.6"/>
+    <line x1="70" y1="-50" x2="100" y2="-50" stroke="#50fc00" stroke-width="1.5" opacity="0.6"/>
+    <line x1="70" y1="-5" x2="100" y2="-5" stroke="#50fc00" stroke-width="1.5" opacity="0.6"/>
+    <line x1="70" y1="5" x2="100" y2="5" stroke="#50fc00" stroke-width="1.5" opacity="0.6"/>
+    <line x1="70" y1="50" x2="100" y2="50" stroke="#50fc00" stroke-width="1.5" opacity="0.6"/>
+    <line x1="70" y1="60" x2="100" y2="60" stroke="#50fc00" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Connecting lines -->
+    <line x1="-74" y1="-60" x2="-20" y2="-40" stroke="#50fc00" stroke-width="2" opacity="0.5"/>
+    <line x1="-74" y1="0" x2="-20" y2="-40" stroke="#50fc00" stroke-width="2" opacity="0.5"/>
+    <line x1="-74" y1="0" x2="-20" y2="40" stroke="#50fc00" stroke-width="2" opacity="0.5"/>
+    <line x1="-74" y1="60" x2="-20" y2="40" stroke="#50fc00" stroke-width="2" opacity="0.5"/>
+    <line x1="20" y1="-40" x2="60" y2="-55" stroke="#50fc00" stroke-width="2" opacity="0.5"/>
+    <line x1="20" y1="-40" x2="60" y2="0" stroke="#50fc00" stroke-width="2" opacity="0.5"/>
+    <line x1="20" y1="40" x2="60" y2="0" stroke="#50fc00" stroke-width="2" opacity="0.5"/>
+    <line x1="20" y1="40" x2="60" y2="55" stroke="#50fc00" stroke-width="2" opacity="0.5"/>
+
+    <!-- Center node -->
+    <circle cx="0" cy="0" r="8" fill="#50fc00"/>
+
+    <!-- Neural node fills -->
+    <circle cx="-90" cy="-60" r="6" fill="#50fc00" opacity="0.6"/>
+    <circle cx="-90" cy="0" r="6" fill="#50fc00" opacity="0.6"/>
+    <circle cx="-90" cy="60" r="6" fill="#50fc00" opacity="0.6"/>
+    <circle cx="0" cy="-40" r="8" fill="#50fc00" opacity="0.4"/>
+    <circle cx="0" cy="40" r="8" fill="#50fc00" opacity="0.4"/>
+  </g>
+
+  <!-- Text logo -->
+  <text x="960" y="720" font-family="system-ui, -apple-system, sans-serif" font-size="100" font-weight="400" letter-spacing="-0.02em" text-anchor="middle">
+    <tspan fill="#FFFFFF">Yuga</tspan><tspan fill="#50fc00">Planner</tspan>
+  </text>
+</svg>

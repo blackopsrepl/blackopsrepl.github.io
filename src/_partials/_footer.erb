@@ -1,0 +1,28 @@
+<footer id="site-footer" class="site-footer print:hidden">
+  <div class="footer-shell">
+    <div class="footer-brand" data-reveal>
+      <a href="/" class="footer-wordmark nozoom" aria-label="<%= site.metadata.title %>">
+        <span class="logo-text"><%= render "logo" %></span>
+      </a>
+      <p class="footer-copy">Optimization systems, developer tooling, and applied AI.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Primary">
+      <a href="/about/" data-reveal>About</a>
+      <a href="/portfolio/" data-reveal>Portfolio</a>
+      <a href="/demos/" data-reveal>Demos</a>
+      <a href="/blog/" data-reveal>Blog</a>
+    </nav>
+
+    <nav class="footer-links" aria-label="External">
+      <a href="https://solverforge.org" target="_blank" rel="noopener noreferrer" data-reveal>SolverForge</a>
+      <a href="mailto:info@vdistefano.studio" data-reveal>Email</a>
+      <a href="https://github.com/blackopsrepl" target="_blank" rel="noopener noreferrer" data-reveal>GitHub</a>
+    </nav>
+  </div>
+
+  <div class="footer-meta">
+    <p>&copy; <%= Time.now.utc.year %> <%= site.metadata["author"] %></p>
+    <p>Built with Bridgetown. No tracking.</p>
+  </div>
+</footer>

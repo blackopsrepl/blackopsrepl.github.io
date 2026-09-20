@@ -1,0 +1,122 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 90s Terminal/Datacenter Inspired - CRT Monitor with Code -->
+
+  <!-- Background - dark -->
+  <rect width="200" height="200" fill="#0a0f14"/>
+
+  <!-- Scanlines across whole background -->
+  <g opacity="0.1">
+    <rect y="0" width="200" height="2" fill="#22c55e"/>
+    <rect y="8" width="200" height="2" fill="#22c55e"/>
+    <rect y="16" width="200" height="2" fill="#22c55e"/>
+    <rect y="24" width="200" height="2" fill="#22c55e"/>
+    <rect y="32" width="200" height="2" fill="#22c55e"/>
+    <rect y="168" width="200" height="2" fill="#22c55e"/>
+    <rect y="176" width="200" height="2" fill="#22c55e"/>
+    <rect y="184" width="200" height="2" fill="#22c55e"/>
+    <rect y="192" width="200" height="2" fill="#22c55e"/>
+  </g>
+
+  <!-- CRT Monitor outer shell -->
+  <rect x="24" y="20" width="152" height="120" fill="#1a1a2e"/>
+  <rect x="28" y="24" width="144" height="112" fill="#16213e"/>
+
+  <!-- Monitor bezel - top -->
+  <rect x="24" y="20" width="152" height="8" fill="#2d4059"/>
+  <!-- Monitor bezel - bottom -->
+  <rect x="24" y="132" width="152" height="8" fill="#2d4059"/>
+  <!-- Monitor bezel - left -->
+  <rect x="24" y="20" width="8" height="120" fill="#2d4059"/>
+  <!-- Monitor bezel - right -->
+  <rect x="168" y="20" width="8" height="120" fill="#2d4059"/>
+
+  <!-- Screen area (CRT green glow effect) -->
+  <rect x="36" y="32" width="128" height="96" fill="#0d1a0d"/>
+  <rect x="40" y="36" width="120" height="88" fill="#0a140a"/>
+
+  <!-- Terminal text lines on screen -->
+  <!-- Line 1: prompt -->
+  <rect x="48" y="44" width="8" height="4" fill="#22c55e"/>
+  <rect x="60" y="44" width="24" height="4" fill="#10b981"/>
+  <rect x="88" y="44" width="4" height="4" fill="#22c55e"/>
+
+  <!-- Line 2: command -->
+  <rect x="48" y="52" width="4" height="4" fill="#22c55e"/>
+  <rect x="56" y="52" width="32" height="4" fill="#059669"/>
+  <rect x="92" y="52" width="16" height="4" fill="#10b981"/>
+
+  <!-- Line 3: output -->
+  <rect x="48" y="60" width="48" height="4" fill="#047857"/>
+  <rect x="100" y="60" width="24" height="4" fill="#059669"/>
+  <rect x="128" y="60" width="16" height="4" fill="#047857"/>
+
+  <!-- Line 4 -->
+  <rect x="48" y="68" width="20" height="4" fill="#10b981"/>
+  <rect x="72" y="68" width="36" height="4" fill="#059669"/>
+
+  <!-- Line 5 -->
+  <rect x="48" y="76" width="56" height="4" fill="#047857"/>
+  <rect x="108" y="76" width="28" height="4" fill="#10b981"/>
+
+  <!-- Line 6: active line with cursor -->
+  <rect x="48" y="84" width="8" height="4" fill="#22c55e"/>
+  <rect x="60" y="84" width="4" height="4" fill="#10b981"/>
+  <!-- Blinking cursor -->
+  <rect x="68" y="84" width="8" height="8" fill="#22c55e"/>
+
+  <!-- Line 7 -->
+  <rect x="48" y="96" width="40" height="4" fill="#059669"/>
+  <rect x="92" y="96" width="20" height="4" fill="#047857"/>
+
+  <!-- Line 8 -->
+  <rect x="48" y="104" width="16" height="4" fill="#10b981"/>
+  <rect x="68" y="104" width="44" height="4" fill="#059669"/>
+  <rect x="116" y="104" width="24" height="4" fill="#047857"/>
+
+  <!-- Screen glare/reflection -->
+  <rect x="44" y="40" width="32" height="4" fill="#22c55e" opacity="0.1"/>
+  <rect x="44" y="48" width="16" height="4" fill="#22c55e" opacity="0.05"/>
+
+  <!-- Monitor stand -->
+  <rect x="72" y="140" width="56" height="12" fill="#2d4059"/>
+  <rect x="76" y="148" width="48" height="8" fill="#1a1a2e"/>
+
+  <!-- Monitor base -->
+  <rect x="56" y="156" width="88" height="8" fill="#2d4059"/>
+  <rect x="52" y="164" width="96" height="4" fill="#1a1a2e"/>
+
+  <!-- LED indicator on monitor -->
+  <rect x="164" y="128" width="4" height="4" fill="#22c55e"/>
+
+  <!-- Server rack suggestion on sides -->
+  <!-- Left server lights -->
+  <rect x="8" y="40" width="4" height="4" fill="#22c55e"/>
+  <rect x="8" y="52" width="4" height="4" fill="#10b981"/>
+  <rect x="8" y="64" width="4" height="4" fill="#ef4444"/>
+  <rect x="8" y="76" width="4" height="4" fill="#22c55e"/>
+  <rect x="8" y="88" width="4" height="4" fill="#10b981"/>
+  <rect x="8" y="100" width="4" height="4" fill="#22c55e"/>
+  <rect x="8" y="112" width="4" height="4" fill="#f59e0b"/>
+  <rect x="8" y="124" width="4" height="4" fill="#22c55e"/>
+
+  <!-- Right server lights -->
+  <rect x="188" y="40" width="4" height="4" fill="#10b981"/>
+  <rect x="188" y="52" width="4" height="4" fill="#22c55e"/>
+  <rect x="188" y="64" width="4" height="4" fill="#22c55e"/>
+  <rect x="188" y="76" width="4" height="4" fill="#ef4444"/>
+  <rect x="188" y="88" width="4" height="4" fill="#10b981"/>
+  <rect x="188" y="100" width="4" height="4" fill="#f59e0b"/>
+  <rect x="188" y="112" width="4" height="4" fill="#22c55e"/>
+  <rect x="188" y="124" width="4" height="4" fill="#10b981"/>
+
+  <!-- Binary/data streams in background corners -->
+  <rect x="12" y="176" width="4" height="4" fill="#047857" opacity="0.5"/>
+  <rect x="20" y="180" width="4" height="4" fill="#059669" opacity="0.5"/>
+  <rect x="12" y="184" width="4" height="4" fill="#047857" opacity="0.5"/>
+  <rect x="20" y="188" width="4" height="4" fill="#047857" opacity="0.5"/>
+
+  <rect x="180" y="176" width="4" height="4" fill="#047857" opacity="0.5"/>
+  <rect x="188" y="180" width="4" height="4" fill="#059669" opacity="0.5"/>
+  <rect x="180" y="184" width="4" height="4" fill="#047857" opacity="0.5"/>
+  <rect x="188" y="188" width="4" height="4" fill="#047857" opacity="0.5"/>
+</svg>
