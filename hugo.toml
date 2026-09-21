@@ -1,7 +1,0 @@
-baseURL = 'https://www.vdistefano.studio'
-languageCode = 'en-us'
-title = 'vdistefano.studio'
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'

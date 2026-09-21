@@ -1,5 +1,0 @@
-{{ $customJS := resources.Get "js/custom.js" }}
-{{ if $customJS }}
-  {{ $customJS = $customJS | resources.Minify | resources.Fingerprint }}
-  <script src="{{ $customJS.RelPermalink }}" integrity="{{ $customJS.Data.Integrity }}" defer></script>
-{{ end }}
