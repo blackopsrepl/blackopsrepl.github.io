@@ -3,10 +3,6 @@ layout: page
 title: "Demos"
 description: "Interactive demos for optimization, planning, and decision systems"
 showDate: false
-showReadingTime: false
-showWordCount: false
-showAuthor: false
-showTableOfContents: false
 ---
 
 <div class="lead"><p>These demos exist because some systems are easier to understand once you can touch them.

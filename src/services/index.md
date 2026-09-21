@@ -3,10 +3,6 @@ layout: page
 title: "Advisory"
 description: "Founder-led advisory on optimization, architecture, and technically serious software"
 showDate: false
-showReadingTime: false
-showWordCount: false
-showAuthor: false
-showTableOfContents: false
 ---
 
 <div class="lead"><p>I work best at the early and decisive stages of technically difficult projects: when the team needs clarity, sharper modeling, and better architectural judgment before expensive implementation begins.</p></div>

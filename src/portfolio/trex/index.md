@@ -4,15 +4,9 @@ date: 2025-12-01
 draft: false
 description: "A fast, minimal tmux session manager with fuzzy finding and an interactive TUI. Written in Rust."
 tags: ["Rust", "CLI", "TUI", "Developer Tools", "tmux"]
-showHero: true
-heroStyle: "big"
-showTableOfContents: true
-showBreadcrumbs: true
-showReadingTime: true
-showWordCount: true
 ---
 
-<div class="lead"><p><span class="typeit">A fast, minimal tmux session manager with fuzzy finding and vim-like keybindings.</span></p></div>
+<div class="lead"><p>A fast, minimal tmux session manager with fuzzy finding and vim-like keybindings.</p></div>
 
 <div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Interactive TUI</span>
 <span class="keyword-pill"><img class="inline-icon" src="/icons/search.svg" alt="" width="16" height="16">Fuzzy Finding</span>
@@ -24,8 +18,8 @@ showWordCount: true
 
 ## Screenshots
 
-<div class="gallery"><img src="featured.png" class="grid-w50 md:grid-w50" alt="trex brand" />
-  <img src="screenshot.png" class="grid-w50 md:grid-w50" alt="trex TUI in action" /></div>
+<div class="gallery"><img src="featured.png" alt="trex brand" />
+  <img src="screenshot.png" alt="trex TUI in action" /></div>
 
 ---
 

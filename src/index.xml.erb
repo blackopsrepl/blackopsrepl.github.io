@@ -2,7 +2,8 @@
 layout: false
 permalink: /index.xml
 ---
-<% resources = site.resources.select { |item| item.data.layout == "article" && item.data.draft != true }.sort_by { |item| item.data.date ? item.data.date.to_time.to_i : 0 }.reverse.first(20) %>
+<% require "cgi" %>
+<% resources = site.resources.select { |item| item.write? && item.data.layout == "article" }.sort_by { |item| item.data.date ? item.data.date.to_time.to_i : 0 }.reverse.first(20) %>
 <% entries = resources.map do |item|
   summary = CGI.escapeHTML(item.data.description.to_s)
   "    <item><title>#{CGI.escapeHTML(item.data.title.to_s)}</title><link>#{site.metadata.url.chomp("/")}#{item.relative_url}</link><guid>#{site.metadata.url.chomp("/")}#{item.relative_url}</guid><description>#{summary}</description>#{item.data.date ? "<pubDate>#{item.data.date.rfc2822}</pubDate>" : ""}</item>"

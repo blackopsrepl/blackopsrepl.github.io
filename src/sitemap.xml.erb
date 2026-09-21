@@ -3,8 +3,7 @@ layout: false
 permalink: /sitemap.xml
 ---
 <% resources = site.resources.select { |item| item.write? && item.relative_url.end_with?("/") } %>
-<% generated_pages = site.generated_pages.map(&:relative_url).select { |path| path.end_with?("/") && !path.include?("/page/1/") } %>
-<% pages = resources.map { |item| item.relative_url == "//" ? "/" : item.relative_url } + generated_pages %>
+<% pages = resources.map { |item| item.relative_url == "//" ? "/" : item.relative_url } %>
 <% pages = (["/"] + pages).uniq.sort %>
 <% xml = pages.map { |path| "  <url><loc>#{site.metadata.url.chomp("/")}#{path}</loc></url>" }.join("\n") %>
 <%= %(<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n#{xml}\n</urlset>).html_safe %>

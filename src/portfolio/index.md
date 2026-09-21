@@ -3,10 +3,6 @@ layout: page
 title: "Portfolio"
 description: "Selected projects across optimization, systems engineering, developer tooling, and applied AI"
 showDate: false
-showReadingTime: false
-showWordCount: false
-showAuthor: false
-showTableOfContents: false
 ---
 
 <div class="lead"><p>This portfolio is a curated view of the work.

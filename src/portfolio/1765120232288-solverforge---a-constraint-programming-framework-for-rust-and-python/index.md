@@ -4,8 +4,6 @@ date: 2025-12-07
 draft: false
 description: "A native Rust planning engine with first-class Rust and Python modeling surfaces"
 tags: ["Python", "Rust", "Optimization", "Constraint Programming", "SolverForge"]
-showHero: false
-showTableOfContents: true
 ---
 
 <div class="lead"><p>SolverForge is a native planning engine for decisions that couple people, vehicles, tasks, machines, capacity, time, and cost. Model the problem in Rust or pure Python; inspect the trade-offs instead of accepting an opaque recommendation.</p></div>

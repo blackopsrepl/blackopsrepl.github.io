@@ -4,11 +4,6 @@ date: 2026-08-05
 draft: false
 description: "A local-first Ratatui calendar with Google sync, event dependencies, and an automation-first CLI"
 tags: ["Rust", "TUI", "SQLite", "Calendar", "CLI"]
-showHero: false
-showTableOfContents: true
-showBreadcrumbs: true
-showReadingTime: true
-showWordCount: true
 ---
 
 <div class="lead"><p>A local-first calendar with two deliberate interfaces: a fast terminal UI for people and a strict JSON CLI for agents and automation.</p></div>
@@ -25,7 +20,7 @@ SolverForge Calendar treats time as structured, operable data. It combines month
 
 The TUI keeps navigation, calendar visibility, event editing, quick-add, and synchronization available from the keyboard while background work stays out of the render loop.
 
-<div class="gallery"><img src="calendar-tui.png" class="grid-w100 md:grid-w100" loading="lazy" decoding="async" alt="SolverForge Calendar month view in the Ratatui terminal interface" /></div>
+<div class="gallery"><img src="calendar-tui.png" loading="lazy" decoding="async" alt="SolverForge Calendar month view in the Ratatui terminal interface" /></div>
 
 ## Human and automation surfaces
 

@@ -4,11 +4,6 @@ date: 2026-08-15
 draft: false
 description: "An offline native desktop workbench for traditional astrology"
 tags: ["Rust", "Desktop", "SQLite", "Offline First", "Native UI"]
-showHero: false
-showTableOfContents: true
-showBreadcrumbs: true
-showReadingTime: true
-showWordCount: true
 ---
 
 <div class="lead"><p>A native traditional-astrology workbench that turns a large historical rule system into inspectable calculations, local research tools, and reproducible searches.</p></div>
@@ -40,9 +35,9 @@ The difficulty is therefore not proving astrology’s premises. It is faithfully
 
 The chart wheel and inspector are one interactive surface: selecting a planet, aspect, sign, house, angle, or lot highlights every connected element and exposes its exact data. The remaining workspaces keep creation, research, timing, comparison, and retrieval close at hand.
 
-<div class="gallery"><img src="chart-workspace.png" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Meridian chart workspace with a selected house and inspector" />
-  <img src="new-chart.png" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Meridian new chart window with local time and place inputs" />
-  <img src="ephemeris.png" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Meridian planetary ephemeris and ingress table" /></div>
+<div class="gallery"><img src="chart-workspace.png" loading="lazy" decoding="async" alt="Meridian chart workspace with a selected house and inspector" />
+  <img src="new-chart.png" loading="lazy" decoding="async" alt="Meridian new chart window with local time and place inputs" />
+  <img src="ephemeris.png" loading="lazy" decoding="async" alt="Meridian planetary ephemeris and ingress table" /></div>
 
 ## One application, connected workflows
 

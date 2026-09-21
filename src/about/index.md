@@ -3,10 +3,6 @@ layout: about
 title: "About"
 description: "Founder of SolverForge. Engineer across optimization, systems, and applied AI."
 showDate: false
-showReadingTime: false
-showWordCount: false
-showAuthor: false
-showTableOfContents: false
 ---
 
 <section class="about-hero" data-reveal>

@@ -5,8 +5,6 @@ author: "Vittorio Distefano"
 draft: false
 description: "How I implemented aviation safety regulations as optimization constraints using Timefold"
 tags: ["Java", "Optimization", "Timefold", "Constraint Programming"]
-showHero: false
-showTableOfContents: true
 ---
 
 <div class="lead"><p>Translating European aviation safety regulations into constraint programming logic for automatic flight crew scheduling.</p></div>

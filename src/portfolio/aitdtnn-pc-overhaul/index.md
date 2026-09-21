@@ -4,11 +4,6 @@ date: 2026-08-20
 draft: false
 description: "A preservation and compatibility overhaul for Alone in the Dark: The New Nightmare on modern Windows"
 tags: ["C++", "Game Preservation", "Windows", "OpenGL", "Reverse Engineering"]
-showHero: false
-showTableOfContents: true
-showBreadcrumbs: true
-showReadingTime: true
-showWordCount: true
 ---
 
 <div class="lead"><p>Preserve the original PC game. Restore the parts modern hardware and an incomplete port left behind.</p></div>
@@ -25,9 +20,9 @@ AITD:TNN PC Overhaul is an independent compatibility and preservation layer for 
 
 These captures come from the supported PC build with the overhaul active: the title sequence, first playable scene, and inventory all pass through the same proportional OpenGL presentation path.
 
-<div class="gallery"><img src="title-screen.jpg" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Alone in the Dark title screen rendered through the overhaul" />
-  <img src="first-scene.jpg" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="First playable scene with proportional 4:3 presentation and CRT treatment" />
-  <img src="inventory-menu.jpg" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Original inventory interface rendered through the compatibility layer" /></div>
+<div class="gallery"><img src="title-screen.jpg" loading="lazy" decoding="async" alt="Alone in the Dark title screen rendered through the overhaul" />
+  <img src="first-scene.jpg" loading="lazy" decoding="async" alt="First playable scene with proportional 4:3 presentation and CRT treatment" />
+  <img src="inventory-menu.jpg" loading="lazy" decoding="async" alt="Original inventory interface rendered through the compatibility layer" /></div>
 
 ## What the overhaul restores
 

@@ -4,8 +4,6 @@ date: 2025-06-27
 draft: false
 description: "Intelligent scheduling with LLM-powered task decomposition and constraint-based optimization"
 tags: ["Python", "LLM", "Optimization", "Hackathon", "MCP", "HuggingFace"]
-showHero: false
-showTableOfContents: true
 ---
 
 <div class="lead"><p>A neuro-symbolic prototype combining LLM-powered task decomposition with constraint-based optimization for intelligent scheduling.

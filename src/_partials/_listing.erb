@@ -1,22 +1,24 @@
 <% items = site.resources.select do |item|
-  item.relative_url.start_with?("/#{section}/") && item.relative_url != "/#{section}/" && item.data.layout == "article" && item.data.draft != true
+  item.relative_url.start_with?("/#{section}/") && item.relative_url != "/#{section}/" && item.data.layout == "article" && item.data.draft != true && (item.write? || item.data.external_url)
 end %>
 <% items = items.sort_by { |item| item.data.date ? item.data.date.to_time.to_i : 0 }.reverse %>
 <section class="resource-list">
   <% items.group_by { |item| item.data.date ? item.data.date.year : nil }.each do |year, year_items| %>
     <h2 class="resource-year"><%= year || "Selected" %></h2>
     <div class="resource-items">
-      <% year_items.each do |item| %>
-        <% directory = item.relative_path.dirname.to_s %>
-        <% featured = File.file?(File.join(site.root_dir, "src", directory, "featured.png")) %>
-        <article class="resource-card">
-          <% if featured %>
-            <a class="resource-thumb" href="<%= item.relative_url %>" aria-label="<%= item.data.title %>">
-              <img src="<%= item.relative_url %>featured.png" alt="" loading="lazy" decoding="async">
-            </a>
-          <% end %>
+        <% year_items.each do |item| %>
+          <% directory = item.relative_path.dirname.to_s %>
+          <% featured = File.file?(File.join(site.root_dir, "src", directory, "featured.png")) %>
+          <% link_url = item.data.external_url || item.relative_url %>
+          <% external = item.data.external_url.to_s != "" %>
+          <article class="resource-card">
+            <% if featured %>
+              <a class="resource-thumb" href="<%= link_url %>"<%= ' target="_blank" rel="noopener noreferrer"' if external %> aria-label="<%= item.data.title %>">
+                <img src="<%= item.relative_url %>featured.png" alt="" loading="lazy" decoding="async">
+              </a>
+            <% end %>
           <div class="resource-card-body">
-            <h3><a href="<%= item.relative_url %>"><%= item.data.title %></a></h3>
+            <h3><a href="<%= link_url %>"<%= ' target="_blank" rel="noopener noreferrer"' if external %>><%= item.data.title %></a></h3>
             <% if item.data.date %><time datetime="<%= item.data.date.iso8601 %>"><%= item.data.date.strftime("%-d %B %Y") %></time><% end %>
             <% if item.data.description %><p><%= item.data.description %></p><% end %>
             <% if item.data.tags %>

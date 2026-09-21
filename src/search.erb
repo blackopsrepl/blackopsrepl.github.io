@@ -4,16 +4,19 @@ permalink: /index.json
 ---
 <% require "json" %>
 <% entries = site.resources.filter_map do |item|
-  next if item.relative_url == "/" || item.data.draft == true
+  next unless item.write?
+  next if item.relative_url.to_s.match?(%r{\.(xml|json)\z})
+  permalink = item.relative_url.to_s
+  permalink = "/" if permalink.empty? || permalink == "//"
 
   {
     title: item.data.title.to_s,
     section: item.relative_url.split("/")[1].to_s.capitalize,
     summary: item.data.description.to_s,
     content: item.content.to_s.gsub(/<[^>]+>/, " ").split.join(" "),
-    permalink: item.relative_url,
+    permalink: permalink,
     date: item.data.date&.strftime("%-d %B %Y"),
-    externalUrl: item.data.externalUrl,
+    external_url: item.data.external_url,
   }
 end %>
 <%= JSON.generate(entries).html_safe %>

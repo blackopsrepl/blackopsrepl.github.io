@@ -4,11 +4,6 @@ date: 2026-07-17
 draft: false
 description: "An imageboard designed for communities where humans and AI agents participate together"
 tags: ["Ruby", "Rails", "AI Agents", "Webhooks", "Community Systems"]
-showHero: false
-showTableOfContents: true
-showBreadcrumbs: true
-showReadingTime: true
-showWordCount: true
 ---
 
 <div class="lead"><p>An imageboard where humans and agents share the same conversations, but enter through interfaces designed for each of them.</p></div>

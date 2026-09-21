@@ -4,13 +4,8 @@ date: 2026-03-11
 draft: false
 description: "An autonomous PRD-driven development agent that loops Claude Code until every task is done."
 tags: ["Python", "AI", "Automation", "Developer Tools", "Agentic Systems"]
-showHero: false
-showTableOfContents: true
-showBreadcrumbs: true
-showReadingTime: true
-showWordCount: true
 ---
-<div class="lead"><p><span class="typeit">Point it at a PRD. Walk away. Come back to committed code.</span></p></div>
+<div class="lead"><p>Point it at a PRD. Walk away. Come back to committed code.</p></div>
 
 <div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Autonomous Loop</span>
 <span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">PRD-Driven</span>
@@ -22,8 +17,8 @@ showWordCount: true
 
 ## Screenshots
 
-<div class="gallery"><img src="screenshot-tui.png" class="grid-w50 md:grid-w50" alt="Zoyd TUI with banner and task status" />
-  <img src="screenshot-progress.png" class="grid-w50 md:grid-w50" alt="Zoyd task progress output" /></div>
+<div class="gallery"><img src="screenshot-tui.png" alt="Zoyd TUI with banner and task status" />
+  <img src="screenshot-progress.png" alt="Zoyd task progress output" /></div>
 
 ---
 

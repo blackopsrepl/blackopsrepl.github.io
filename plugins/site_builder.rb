@@ -9,9 +9,7 @@ class ContentRouteGenerator < Bridgetown::Generator
   priority :low
 
   def generate(site)
-    resources = site.resources.select do |resource|
-      resource.data.layout == "article" && resource.data.draft != true
-    end
+    resources = site.resources.select { |resource| resource.write? && resource.data.layout == "article" }
     tags = resources.each_with_object(Hash.new { |hash, key| hash[key] = [] }) do |resource, grouped|
       Array(resource.data.tags).each { |tag| grouped[tag] << resource }
     end

@@ -4,11 +4,6 @@ date: 2026-07-31
 draft: false
 description: "A local MCP server for inspecting and operating a Sway desktop session"
 tags: ["Python", "MCP", "Linux", "Wayland", "Sway"]
-showHero: false
-showTableOfContents: true
-showBreadcrumbs: true
-showReadingTime: true
-showWordCount: true
 ---
 
 <div class="lead"><p>Give a trusted AI client useful control of a real Sway desktop—without adding a network service or pretending the security boundary does not exist.</p></div>
@@ -77,7 +72,7 @@ There is no HTTP listener and no remote account. The MCP host launches the serve
 
 ## Project identity
 
-<div class="gallery"><img src="mascot.png" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="computer-use-sway mascot operating a Sway desktop" /></div>
+<div class="gallery"><img src="mascot.png" loading="lazy" decoding="async" alt="computer-use-sway mascot operating a Sway desktop" /></div>
 
 ## Repository
 

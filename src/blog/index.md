@@ -3,10 +3,6 @@ layout: page
 title: "Blog"
 description: "Essays on optimization, systems engineering, applied AI, and technical judgment"
 showDate: false
-showReadingTime: false
-showWordCount: false
-showAuthor: false
-showTableOfContents: false
 ---
 
 <div class="lead"><p>I write when I have something worth saying.

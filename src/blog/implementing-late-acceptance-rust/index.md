@@ -5,8 +5,6 @@ author: "Vittorio Distefano"
 draft: false
 description: "A practical guide to implementing the Late Acceptance Hill Climbing metaheuristic in Rust for optimization problems"
 tags: ["Rust", "Optimization", "SolverForge"]
-showHero: false
-showTableOfContents: true
 ---
 
 <div class="lead"><p>How to escape local optima without randomness: a deterministic alternative to Simulated Annealing.</p></div>

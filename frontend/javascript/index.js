@@ -75,8 +75,8 @@ const setupSearch = () => {
       item.className = "search-result";
       const link = document.createElement("a");
       link.className = "search-result-link";
-      link.href = entry.externalUrl || entry.permalink;
-      if (entry.externalUrl) {
+       link.href = entry.external_url || entry.permalink;
+       if (entry.external_url) {
         link.target = "_blank";
         link.rel = "noopener";
       }

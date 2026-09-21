@@ -17,7 +17,10 @@ end
 desc "Build the site in a test environment"
 task :test do
   ENV["BRIDGETOWN_ENV"] = "test"
+  Rake::Task["clean"].invoke
+  Rake::Task["frontend:build"].invoke
   Bridgetown::Commands::Build.start
+  sh "bundle exec ruby -Itest test/site_contract_test.rb"
 end
 
 desc "Build frontend assets with esbuild"
