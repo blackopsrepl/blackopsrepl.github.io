@@ -18,6 +18,7 @@ const setupMenu = () => {
   const setOpen = (open) => {
     wrapper.classList.toggle("is-open", open);
     button.setAttribute("aria-expanded", String(open));
+    wrapper.setAttribute("aria-hidden", String(!open));
     document.body.classList.toggle("menu-open", open);
   };
 

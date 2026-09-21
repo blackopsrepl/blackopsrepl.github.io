@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<header>
-  <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral"><%= data.title %></h1>
+<header class="page-header">
+  <h1 class="page-title"><%= data.title %></h1>
 </header>
-<section class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row">
-  <div class="min-w-0 min-h-0 max-w-prose">
+<section class="content-shell">
+  <div class="content-column prose">
     <%= yield %>
   </div>
 </section>

@@ -2,31 +2,31 @@
 layout: default
 ---
 <article>
-  <header id="single_header" class="mt-5 max-w-prose">
-    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral"><%= data.title %></h1>
-    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+  <header id="single_header" class="article-header">
+    <h1 class="article-title"><%= data.title %></h1>
+    <div class="article-meta">
       <% if data.date %>
-        <div class="flex flex-row flex-wrap items-center">
+        <div class="article-byline">
           <time datetime="<%= data.date.iso8601 %>"><%= data.date.strftime("%-d %B %Y") %></time>
-          <span class="px-2 text-primary-500">&middot;</span>
+          <span class="article-separator">&middot;</span>
           <% word_count = resource.content.to_s.gsub(/<[^>]+>/, " ").split.size %>
           <span><%= word_count %> words</span>
         </div>
       <% end %>
       <% if data.tags %>
-        <div class="flex flex-row flex-wrap items-center">
+        <div class="article-tags">
           <% Array(data.tags).each do |tag| %>
-            <a class="relative mt-[0.5rem] me-2" href="/tags/<%= tag.downcase.gsub(/[^a-z0-9+]+/, "-").sub(/-+$/, "") %>/">
-              <span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"><%= tag %></span></span>
+            <a class="tag-badge" href="/tags/<%= tag.downcase.gsub(/[^a-z0-9+]+/, "-").sub(/-+$/, "") %>/">
+              <%= tag %>
             </a>
           <% end %>
         </div>
       <% end %>
     </div>
   </header>
-  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
-    <div class="min-w-0 min-h-0 max-w-fit">
-      <div class="article-content max-w-prose mb-20">
+  <section class="content-shell">
+    <div class="content-column">
+      <div class="article-content prose">
         <%= yield %>
       </div>
     </div>

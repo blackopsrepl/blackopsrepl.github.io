@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="<%= site.metadata.locale %>" dir="ltr" class="dark scroll-smooth">
+<html lang="<%= site.metadata.locale %>" dir="ltr" class="dark site-document">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +11,13 @@
     <% canonical_path = resource.relative_url.to_s.sub(%r{\A/+}, "/") %>
     <% canonical_path = "" if canonical_path == "/" %>
     <link rel="canonical" href="<%= site.metadata.url.chomp("/") %><%= canonical_path %>">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/bridge.css">
+    <link rel="stylesheet" href="/css/site.css">
   </head>
-  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
-    <div id="the-top" class="absolute"></div>
+  <body class="site-body">
+    <div id="the-top"></div>
     <%= render "header" %>
-    <div class="relative flex flex-col grow">
-      <main id="main-content" class="grow">
+    <div class="site-content">
+      <main id="main-content" class="site-main">
         <%= yield %>
       </main>
       <%= render "scroll_to_top" %>
