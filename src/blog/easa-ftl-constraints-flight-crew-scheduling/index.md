@@ -9,9 +9,7 @@ showHero: false
 showTableOfContents: true
 ---
 
-{{< lead >}}
-Translating European aviation safety regulations into constraint programming logic for automatic flight crew scheduling.
-{{< /lead >}}
+<div class="lead"><p>Translating European aviation safety regulations into constraint programming logic for automatic flight crew scheduling.</p></div>
 
 ## The Challenge
 
@@ -202,24 +200,18 @@ Hard constraints ensure compliance is non-negotiable—the solver will never pro
 
 ## Tech Stack
 
-{{< keywordList >}}
-{{< keyword icon="code" >}} Java 21 {{< /keyword >}}
-{{< keyword icon="code" >}} Timefold Solver {{< /keyword >}}
-{{< keyword icon="server" >}} Quarkus {{< /keyword >}}
-{{< keyword icon="check" >}} JUnit 5 {{< /keyword >}}
-{{< /keywordList >}}
+<div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Java 21</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Timefold Solver</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Quarkus</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/check.svg" alt="" width="16" height="16">JUnit 5</span></div>
 
 ---
 
 ## Links
 
-{{< button href="https://huggingface.co/spaces/blackopsrepl/flight-crew-scheduling-java" target="_blank" >}}
-{{< icon "wand-magic-sparkles" >}} Live Demo
-{{< /button >}}
+<a class="button" href="https://huggingface.co/spaces/blackopsrepl/flight-crew-scheduling-java" target="_blank"><img class="inline-icon" src="/icons/wand-magic-sparkles.svg" alt="" width="16" height="16" /> Live Demo</a>
 
-{{< button href="https://github.com/SolverForge/solverforge-quickstarts/tree/stable/java/flight-crew-scheduling" target="_blank" >}}
-{{< icon "github" >}} Source Code
-{{< /button >}}
+<a class="button" href="https://github.com/SolverForge/solverforge-quickstarts/tree/stable/java/flight-crew-scheduling" target="_blank"><img class="inline-icon" src="/icons/github.svg" alt="" width="16" height="16" /> Source Code</a>
 
 ---
 

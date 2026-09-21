@@ -42,12 +42,10 @@ showTableOfContents: false
 I build systems where the easy approach stops working:
 planning problems with real constraints, technical products needing sharper runtime shape, and AI-assisted systems with solid boundaries underneath.
 
-{{< keywordList >}}
-{{< keyword icon="scale-balanced" >}} Optimization and planning {{< /keyword >}}
-{{< keyword icon="server" >}} Systems engineering {{< /keyword >}}
-{{< keyword icon="sparkles" >}} Applied AI {{< /keyword >}}
-{{< keyword icon="code" >}} Rust / Python / Ruby {{< /keyword >}}
-{{< /keywordList >}}
+<div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/scale-balanced.svg" alt="" width="16" height="16">Optimization and planning</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Systems engineering</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Applied AI</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Rust / Python / Ruby</span></div>
 
 <div class="about-path-grid" data-reveal>
   <div class="about-callout">
@@ -74,21 +72,31 @@ Start here for the clearest view of the work.
 
 SolverForge is the strongest public artifact here: a constraint-solving project where the modeling, runtime, and product tradeoffs are visible.
 
-{{< timeline >}}
+<div class="timeline"><article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/shield.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Continuity</h3><span class="timeline-badge">Production</span></header>
+    <div class="timeline-item-body"><p>SolverForge carries forward production constraint-solving work after an upstream ecosystem shift. That continuity ties the work to real users, not just greenfield experimentation.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="shield" header="Continuity" badge="Production" md="true" >}}
-SolverForge carries forward production constraint-solving work after an upstream ecosystem shift. That continuity ties the work to real users, not just greenfield experimentation.
-{{< /timelineItem >}}
 
-{{< timelineItem icon="code" header="Native Rust core" badge="Architecture" md="true" >}}
-A Rust solver focused on type clarity, runtime performance, and a public surface that stays comprehensible as the system grows.
-{{< /timelineItem >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Native Rust core</h3><span class="timeline-badge">Architecture</span></header>
+    <div class="timeline-item-body"><p>A Rust solver focused on type clarity, runtime performance, and a public surface that stays comprehensible as the system grows.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="globe" header="Ecosystem surface" badge="Proof" md="true" >}}
-Docs, quickstarts, demos, and blog posts turn the project from a codebase into something people can actually evaluate and use.
-{{< /timelineItem >}}
 
-{{< /timeline >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/globe.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Ecosystem surface</h3><span class="timeline-badge">Proof</span></header>
+    <div class="timeline-item-body"><p>Docs, quickstarts, demos, and blog posts turn the project from a codebase into something people can actually evaluate and use.</p></div>
+  </div>
+</article></div>
 
 ---
 
@@ -128,7 +136,7 @@ The throughline: I am comfortable where hard domains, ambiguous tradeoffs, and t
 ## Contact
 
 <div class="contact-actions">
-  <a href="mailto:info@vdistefano.studio" class="contact-btn">{{< icon "email" >}} Email</a>
-  <a href="https://solverforge.org" target="_blank" rel="noopener noreferrer" class="contact-btn">{{< icon "globe" >}} SolverForge</a>
-  <a href="/portfolio/" class="contact-btn">{{< icon "code" >}} Selected work</a>
+  <a href="mailto:info@vdistefano.studio" class="contact-btn"><img class="inline-icon" src="/icons/email.svg" alt="" width="16" height="16"> Email</a>
+  <a href="https://solverforge.org" target="_blank" rel="noopener noreferrer" class="contact-btn"><img class="inline-icon" src="/icons/globe.svg" alt="" width="16" height="16"> SolverForge</a>
+  <a href="/portfolio/" class="contact-btn"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16"> Selected work</a>
 </div>

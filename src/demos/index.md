@@ -9,10 +9,8 @@ showAuthor: false
 showTableOfContents: false
 ---
 
-{{< lead >}}
-These demos exist because some systems are easier to understand once you can touch them.
-Scheduling, routing, and allocation work becomes far more legible when you can see the constraints, inputs, and outcomes in motion.
-{{< /lead >}}
+<div class="lead"><p>These demos exist because some systems are easier to understand once you can touch them.
+Scheduling, routing, and allocation work becomes far more legible when you can see the constraints, inputs, and outcomes in motion.</p></div>
 
 I like demos that do more than decorate a project.
 The good ones reveal how a system thinks.

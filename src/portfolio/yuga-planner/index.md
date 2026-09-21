@@ -8,67 +8,69 @@ showHero: false
 showTableOfContents: true
 ---
 
-{{< lead >}}
-A neuro-symbolic prototype combining LLM-powered task decomposition with constraint-based optimization for intelligent scheduling.
-Built for the [Hugging Face Agents MCP Hackathon](https://huggingface.co/spaces/huggingface/mcp-hackathon).
-{{< /lead >}}
+<div class="lead"><p>A neuro-symbolic prototype combining LLM-powered task decomposition with constraint-based optimization for intelligent scheduling.
+Built for the <a href="https://huggingface.co/spaces/huggingface/mcp-hackathon">Hugging Face Agents MCP Hackathon</a>.</p></div>
 
 ## What it does
 
 Yuga Planner transforms project descriptions into optimized employee schedules:
 
-{{< keywordList >}}
-{{< keyword icon="wand-magic-sparkles" >}} LLM Task Decomposition {{< /keyword >}}
-{{< keyword icon="scale-balanced" >}} Constraint Optimization {{< /keyword >}}
-{{< keyword icon="code" >}} MCP Integration {{< /keyword >}}
-{{< /keywordList >}}
+<div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/wand-magic-sparkles.svg" alt="" width="16" height="16">LLM Task Decomposition</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/scale-balanced.svg" alt="" width="16" height="16">Constraint Optimization</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">MCP Integration</span></div>
 
 ---
 
 ## How it works
 
-{{< timeline >}}
+<div class="timeline"><article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/pencil.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Project Input</h3><p class="timeline-subheader">Markdown Parsing</p></header>
+    <div class="timeline-item-body"><p>Accepts project descriptions in markdown format with automatic task extraction.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="pencil" header="Project Input" subheader="Markdown Parsing" >}}
-Accepts project descriptions in markdown format with automatic task extraction.
-{{< /timelineItem >}}
 
-{{< timelineItem icon="wand-magic-sparkles" header="Task Decomposition" subheader="LlamaIndex + Nebius AI" >}}
-Breaks down projects into actionable tasks, analyzing skill requirements and dependencies.
-{{< /timelineItem >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/wand-magic-sparkles.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Task Decomposition</h3><p class="timeline-subheader">LlamaIndex + Nebius AI</p></header>
+    <div class="timeline-item-body"><p>Breaks down projects into actionable tasks, analyzing skill requirements and dependencies.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="scale-balanced" header="Optimization" subheader="Timefold Solver" >}}
-Generates optimal assignments respecting calendar constraints, business hours (9:00-18:00), and weekends.
-{{< /timelineItem >}}
 
-{{< /timeline >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/scale-balanced.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Optimization</h3><p class="timeline-subheader">Timefold Solver</p></header>
+    <div class="timeline-item-body"><p>Generates optimal assignments respecting calendar constraints, business hours (9:00-18:00), and weekends.</p></div>
+  </div>
+</article></div>
 
 ---
 
 ## Architecture
 
-{{< mermaid >}}
-sequenceDiagram
+<pre class="not-prose mermaid">sequenceDiagram
     actor User
     participant LLM as LlamaIndex
     participant Solver as Timefold
     participant Cal as Calendar
 
-    User->>LLM: Project description
-    LLM->>LLM: Extract tasks
-    LLM->>Solver: Task constraints
-    Solver->>Cal: Check availability
-    Cal-->>Solver: Free slots
-    Solver-->>User: Optimized schedule
-{{< /mermaid >}}
+    User-&gt;&gt;LLM: Project description
+    LLM-&gt;&gt;LLM: Extract tasks
+    LLM-&gt;&gt;Solver: Task constraints
+    Solver-&gt;&gt;Cal: Check availability
+    Cal--&gt;&gt;Solver: Free slots
+    Solver--&gt;&gt;User: Optimized schedule</pre>
 
 ---
 
 ## Features
 
-{{< alert icon="lightbulb" >}}
-**Dual-mode operation**: Works as both a Gradio web interface and an MCP tool for integration with agent platforms like Claude Desktop.
-{{< /alert >}}
+<aside class="alert"><p><strong>Dual-mode operation</strong>: Works as both a Gradio web interface and an MCP tool for integration with agent platforms like Claude Desktop.</p></aside>
 
 - Calendar integration with `.ics` file support
 - Real-time log streaming and progress indicators
@@ -79,21 +81,15 @@ sequenceDiagram
 
 ## Tech Stack
 
-{{< keywordList >}}
-{{< keyword icon="code" >}} Python 3.10+ {{< /keyword >}}
-{{< keyword icon="code" >}} Java 17+ {{< /keyword >}}
-{{< keyword icon="github" >}} LlamaIndex {{< /keyword >}}
-{{< keyword icon="scale-balanced" >}} Timefold {{< /keyword >}}
-{{< /keywordList >}}
+<div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Python 3.10+</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Java 17+</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/github.svg" alt="" width="16" height="16">LlamaIndex</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/scale-balanced.svg" alt="" width="16" height="16">Timefold</span></div>
 
 ---
 
 ## Links
 
-{{< button href="https://huggingface.co/spaces/blackopsrepl/yuga-planner" target="_blank" >}}
-{{< icon "wand-magic-sparkles" >}} Live Demo
-{{< /button >}}
+<a class="button" href="https://huggingface.co/spaces/blackopsrepl/yuga-planner" target="_blank"><img class="inline-icon" src="/icons/wand-magic-sparkles.svg" alt="" width="16" height="16" /> Live Demo</a>
 
-{{< button href="https://github.com/blackopsrepl/yuga-planner" target="_blank" >}}
-{{< icon "github" >}} GitHub
-{{< /button >}}
+<a class="button" href="https://github.com/blackopsrepl/yuga-planner" target="_blank"><img class="inline-icon" src="/icons/github.svg" alt="" width="16" height="16" /> GitHub</a>

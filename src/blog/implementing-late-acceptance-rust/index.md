@@ -9,9 +9,7 @@ showHero: false
 showTableOfContents: true
 ---
 
-{{< lead >}}
-How to escape local optima without randomness: a deterministic alternative to Simulated Annealing.
-{{< /lead >}}
+<div class="lead"><p>How to escape local optima without randomness: a deterministic alternative to Simulated Annealing.</p></div>
 
 ## The Problem with Hill Climbing
 
@@ -278,11 +276,9 @@ Next time you reach for Simulated Annealing, consider Late Acceptance first. You
 
 ## References
 
-{{< keywordList >}}
-{{< keyword icon="code" >}} Rust {{< /keyword >}}
-{{< keyword icon="star" >}} Metaheuristics {{< /keyword >}}
-{{< keyword icon="bolt" >}} Local Search {{< /keyword >}}
-{{< /keywordList >}}
+<div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Rust</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/star.svg" alt="" width="16" height="16">Metaheuristics</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Local Search</span></div>
 
 ---
 

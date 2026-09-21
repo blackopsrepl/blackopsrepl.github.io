@@ -11,19 +11,15 @@ showReadingTime: true
 showWordCount: true
 ---
 
-{{< lead >}}
-A native traditional-astrology workbench that turns a large historical rule system into inspectable calculations, local research tools, and reproducible searches.
-{{< /lead >}}
+<div class="lead"><p>A native traditional-astrology workbench that turns a large historical rule system into inspectable calculations, local research tools, and reproducible searches.</p></div>
 
 Meridian calculates, inspects, compares, archives, and exports charts using bundled Swiss Ephemeris data and a local city atlas. It is a desktop product rather than a web shell—its calculation engine, archive, resources, and interface travel together on Linux, Windows, and macOS.
 
-{{< keywordList >}}
-{{< keyword icon="globe" >}} Fully offline {{< /keyword >}}
-{{< keyword icon="sun" >}} Traditional techniques {{< /keyword >}}
-{{< keyword icon="shield" >}} Private local archive {{< /keyword >}}
-{{< keyword icon="search" >}} Bundled city atlas {{< /keyword >}}
-{{< keyword icon="code" >}} Native packages {{< /keyword >}}
-{{< /keywordList >}}
+<div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/globe.svg" alt="" width="16" height="16">Fully offline</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/sun.svg" alt="" width="16" height="16">Traditional techniques</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/shield.svg" alt="" width="16" height="16">Private local archive</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/search.svg" alt="" width="16" height="16">Bundled city atlas</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Native packages</span></div>
 
 ## Why this is a complex software problem
 
@@ -44,51 +40,60 @@ The difficulty is therefore not proving astrology’s premises. It is faithfully
 
 The chart wheel and inspector are one interactive surface: selecting a planet, aspect, sign, house, angle, or lot highlights every connected element and exposes its exact data. The remaining workspaces keep creation, research, timing, comparison, and retrieval close at hand.
 
-{{< gallery >}}
-  <img src="chart-workspace.png" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Meridian chart workspace with a selected house and inspector" />
+<div class="gallery"><img src="chart-workspace.png" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Meridian chart workspace with a selected house and inspector" />
   <img src="new-chart.png" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Meridian new chart window with local time and place inputs" />
-  <img src="ephemeris.png" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Meridian planetary ephemeris and ingress table" />
-{{< /gallery >}}
+  <img src="ephemeris.png" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Meridian planetary ephemeris and ingress table" /></div>
 
 ## One application, connected workflows
 
-{{< timeline >}}
+<div class="timeline"><article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/globe.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Calculate and inspect</h3><span class="timeline-badge">Core</span><p class="timeline-subheader">Natal, event, horary, mundane, and electional charts</p></header>
+    <div class="timeline-item-body"><p>The resizable wheel, positions list, and inspector expose the same immutable calculated chart. Whole Sign, Equal, Porphyry, Alcabitius, Placidus, Regiomontanus, Campanus, and Morinus houses are available.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="globe" header="Calculate and inspect" badge="Core" subheader="Natal, event, horary, mundane, and electional charts" >}}
-The resizable wheel, positions list, and inspector expose the same immutable calculated chart. Whole Sign, Equal, Porphyry, Alcabitius, Placidus, Regiomontanus, Campanus, and Morinus houses are available.
-{{< /timelineItem >}}
 
-{{< timelineItem icon="sun" header="Research through time" badge="Timing" subheader="Techniques that stay connected to the open chart" >}}
-Transits, secondary progressions, solar arcs, harmonics, profections, firdaria, returns, planetary hours, and bounded election searches share the same local calculation layer.
-{{< /timelineItem >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/sun.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Research through time</h3><span class="timeline-badge">Timing</span><p class="timeline-subheader">Techniques that stay connected to the open chart</p></header>
+    <div class="timeline-item-body"><p>Transits, secondary progressions, solar arcs, harmonics, profections, firdaria, returns, planetary hours, and bounded election searches share the same local calculation layer.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="link" header="Compare charts" badge="Relationships" subheader="Synastry, midpoint composite, and Davison methods" >}}
-Relationship work produces an inspectable comparison and can export its result as SVG, alongside the application’s chart-document and CSV workflows.
-{{< /timelineItem >}}
 
-{{< timelineItem icon="list" header="Keep a private archive" badge="Local" subheader="SQLite persistence with portable chart documents" >}}
-New calculations enter a local archive automatically. A `.meridian` document remains editable and portable; SVG and CSV are explicit exports rather than lossy substitutes for the chart.
-{{< /timelineItem >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/link.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Compare charts</h3><span class="timeline-badge">Relationships</span><p class="timeline-subheader">Synastry, midpoint composite, and Davison methods</p></header>
+    <div class="timeline-item-body"><p>Relationship work produces an inspectable comparison and can export its result as SVG, alongside the application’s chart-document and CSV workflows.</p></div>
+  </div>
+</article>
 
-{{< /timeline >}}
+
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/list.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Keep a private archive</h3><span class="timeline-badge">Local</span><p class="timeline-subheader">SQLite persistence with portable chart documents</p></header>
+    <div class="timeline-item-body"><p>New calculations enter a local archive automatically. A <code>.meridian</code> document remains editable and portable; SVG and CSV are explicit exports rather than lossy substitutes for the chart.</p></div>
+  </div>
+</article></div>
 
 ## Calculation integrity
 
-{{< alert icon="circle-info" cardColor="#092218" iconColor="#39ff88" textColor="#d9ffe8" >}}
-Meridian reports missing precision data as an error. It does not silently substitute an analytical ephemeris or call a remote service.
-{{< /alert >}}
+<aside class="alert" style="background: #092218; color: #d9ffe8"><p>Meridian reports missing precision data as an error. It does not silently substitute an analytical ephemeris or call a remote service.</p></aside>
 
 Civil times use IANA historical time-zone rules. Ambiguous local times require an explicit fold; nonexistent times are rejected. The calculation surface includes apparent tropical geocentric positions, traditional aspects and orbs, dignity, reception, sect, lots, antiscia, dodecatemoria, and planetary days and hours.
 
-{{< mermaid >}}
-flowchart LR
-    input[Local date, time, and place] --> time[IANA time-zone resolution]
-    time --> calc[Swiss Ephemeris calculation]
-    calc --> chart[Immutable calculated chart]
-    chart --> wheel[Interactive workspace]
-    chart --> archive[SQLite archive]
-    chart --> export[Meridian / SVG / CSV]
-{{< /mermaid >}}
+<pre class="not-prose mermaid">flowchart LR
+    input[Local date, time, and place] --&gt; time[IANA time-zone resolution]
+    time --&gt; calc[Swiss Ephemeris calculation]
+    calc --&gt; chart[Immutable calculated chart]
+    chart --&gt; wheel[Interactive workspace]
+    chart --&gt; archive[SQLite archive]
+    chart --&gt; export[Meridian / SVG / CSV]</pre>
 
 ## Where SolverForge could fit
 
@@ -139,38 +144,49 @@ For the reader, Meridian is therefore more than a niche desktop application. It 
 
 Within Meridian alone, its current search is adequate when the question is simply “which instants rank best under this electional model?” Across both the wedding and maintenance examples, the integration pattern has the same four responsibilities:
 
-{{< timeline >}}
+<div class="timeline"><article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/globe.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>The specialist system generates domain facts</h3><span class="timeline-badge">Scoring</span><p class="timeline-subheader">Candidate options with evidence attached</p></header>
+    <div class="timeline-item-body"><p>Meridian would remain responsible for ephemeris calculation, doctrine, and the testimony attached to each time. In another business domain, the source might instead be a forecast, risk model, sensor system, or pricing engine.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="globe" header="The specialist system generates domain facts" badge="Scoring" subheader="Candidate options with evidence attached" >}}
-Meridian would remain responsible for ephemeris calculation, doctrine, and the testimony attached to each time. In another business domain, the source might instead be a forecast, risk model, sensor system, or pricing engine.
-{{< /timelineItem >}}
 
-{{< timelineItem icon="list" header="The organization defines practical constraints" badge="Planning" subheader="Availability, resources, duration, dependencies, rules, and exclusions" >}}
-These are the conditions a domain score cannot settle by itself: staff availability, resource capacity, opening hours, travel or setup time, legal rules, budgets, and activities that must occur in sequence.
-{{< /timelineItem >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/list.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>The organization defines practical constraints</h3><span class="timeline-badge">Planning</span><p class="timeline-subheader">Availability, resources, duration, dependencies, rules, and exclusions</p></header>
+    <div class="timeline-item-body"><p>These are the conditions a domain score cannot settle by itself: staff availability, resource capacity, opening hours, travel or setup time, legal rules, budgets, and activities that must occur in sequence.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="scale-balanced" header="SolverForge searches for a feasible, high-quality plan" badge="Optimization" subheader="Hard constraints and competing soft preferences" >}}
-SolverForge could combine those operational requirements with the specialist rankings, reject infeasible choices, and search the remaining tradeoffs across one decision or an entire schedule. With a metaheuristic, the result is a high-quality feasible plan—not a proof that no better plan exists.
-{{< /timelineItem >}}
 
-{{< timelineItem icon="eye" header="The result stays explainable" badge="Inspection" subheader="Why this time, what it satisfies, and what was traded away" >}}
-The boundary preserves the strength of both systems: Meridian explains the domain calculation; SolverForge explains feasibility and optimization. Neither needs to hide the other behind a single opaque score.
-{{< /timelineItem >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/scale-balanced.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>SolverForge searches for a feasible, high-quality plan</h3><span class="timeline-badge">Optimization</span><p class="timeline-subheader">Hard constraints and competing soft preferences</p></header>
+    <div class="timeline-item-body"><p>SolverForge could combine those operational requirements with the specialist rankings, reject infeasible choices, and search the remaining tradeoffs across one decision or an entire schedule. With a metaheuristic, the result is a high-quality feasible plan—not a proof that no better plan exists.</p></div>
+  </div>
+</article>
 
-{{< /timeline >}}
 
-{{< alert icon="circle-info" cardColor="#092218" iconColor="#39ff88" textColor="#d9ffe8" >}}
-**Current versus potential:** Meridian’s election ranking exists today. The SolverForge planning layer described here is a natural integration path, not a claim that the two applications are already connected.
-{{< /alert >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/eye.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>The result stays explainable</h3><span class="timeline-badge">Inspection</span><p class="timeline-subheader">Why this time, what it satisfies, and what was traded away</p></header>
+    <div class="timeline-item-body"><p>The boundary preserves the strength of both systems: Meridian explains the domain calculation; SolverForge explains feasibility and optimization. Neither needs to hide the other behind a single opaque score.</p></div>
+  </div>
+</article></div>
 
-{{< mermaid >}}
-flowchart LR
-    request[Purpose, range, and location] --> meridian[Meridian]
-    meridian --> candidates[Calculated candidate instants\nwith visible testimonies]
-    reality[Calendars, resources, duration,\ndependencies, and user priorities] --> solver[SolverForge]
-    candidates --> solver
-    solver --> result[Best feasible time or sequence\nwith constraint and score explanation]
-{{< /mermaid >}}
+<aside class="alert" style="background: #092218; color: #d9ffe8"><p><strong>Current versus potential:</strong> Meridian’s election ranking exists today. The SolverForge planning layer described here is a natural integration path, not a claim that the two applications are already connected.</p></aside>
+
+<pre class="not-prose mermaid">flowchart LR
+    request[Purpose, range, and location] --&gt; meridian[Meridian]
+    meridian --&gt; candidates[Calculated candidate instants\nwith visible testimonies]
+    reality[Calendars, resources, duration,\ndependencies, and user priorities] --&gt; solver[SolverForge]
+    candidates --&gt; solver
+    solver --&gt; result[Best feasible time or sequence\nwith constraint and score explanation]</pre>
 
 [Explore SolverForge](https://solverforge.org) for the optimization engine and planning ecosystem.
 
@@ -180,8 +196,6 @@ The same offline data set is packaged into AppImage, DEB, RPM, Windows installer
 
 ## Repository
 
-{{< github repo="blackopsrepl/meridian" showThumbnail=false >}}
+<div class="github-card"><a href="https://github.com/blackopsrepl/meridian">blackopsrepl/meridian</a></div>
 
-{{< button href="https://github.com/blackopsrepl/meridian/releases/latest" target="_blank" >}}
-{{< icon "download" >}} Download Meridian
-{{< /button >}}
+<a class="button" href="https://github.com/blackopsrepl/meridian/releases/latest" target="_blank"><img class="inline-icon" src="/icons/download.svg" alt="" width="16" height="16" /> Download Meridian</a>

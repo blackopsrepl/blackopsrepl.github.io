@@ -8,9 +8,7 @@ showHero: false
 showTableOfContents: true
 ---
 
-{{< lead >}}
-SolverForge is a native planning engine for decisions that couple people, vehicles, tasks, machines, capacity, time, and cost. Model the problem in Rust or pure Python; inspect the trade-offs instead of accepting an opaque recommendation.
-{{< /lead >}}
+<div class="lead"><p>SolverForge is a native planning engine for decisions that couple people, vehicles, tasks, machines, capacity, time, and cost. Model the problem in Rust or pure Python; inspect the trade-offs instead of accepting an opaque recommendation.</p></div>
 
 ## The decision behind the software
 
@@ -18,32 +16,40 @@ Many business decisions look simple until their dependencies meet. A maintenance
 
 SolverForge takes those facts, planning variables, hard rules, and competing preferences, then searches for a feasible high-scoring plan. It is built for the gap between **the option that looks best in isolation** and **the option an organization can actually execute**.
 
-{{< keywordList >}}
-{{< keyword icon="calendar" >}} Workforce and maintenance scheduling {{< /keyword >}}
-{{< keyword icon="truck" >}} Routing and sequencing {{< /keyword >}}
-{{< keyword icon="cube" >}} Capacity and resource allocation {{< /keyword >}}
-{{< keyword icon="scale-balanced" >}} Explainable trade-offs {{< /keyword >}}
-{{< /keywordList >}}
+<div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Workforce and maintenance scheduling</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Routing and sequencing</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Capacity and resource allocation</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/scale-balanced.svg" alt="" width="16" height="16">Explainable trade-offs</span></div>
 
 ## Current product surface
 
 SolverForge is not a Java or JPype wrapper. Its solver, scoring engine, move system, and retained solve lifecycle run natively in Rust. The public surface is deliberately split so that teams can start at the level that fits their work.
 
-{{< timeline >}}
+<div class="timeline"><article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Rust runtime</h3><span class="timeline-badge">Native core</span><p class="timeline-subheader">Concrete planning and incremental scoring</p></header>
+    <div class="timeline-item-body"><p>The Rust framework provides declarative constraint streams, scalar and list planning variables, construction heuristics, local search, exact search for small finite spaces, and retained solve jobs with snapshots, telemetry, pause, resume, and cancellation.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="code" header="Rust runtime" badge="Native core" subheader="Concrete planning and incremental scoring" >}}
-The Rust framework provides declarative constraint streams, scalar and list planning variables, construction heuristics, local search, exact search for small finite spaces, and retained solve jobs with snapshots, telemetry, pause, resume, and cancellation.
-{{< /timelineItem >}}
 
-{{< timelineItem icon="code" header="SolverForge CLI" badge="Application path" subheader="Start a web, API, or command-line planning app" >}}
-`solverforge new` creates a neutral application shell. Teams then add their own facts, entities, variables, constraints, and sample data as the domain becomes clear instead of beginning from a fixed vertical template.
-{{< /timelineItem >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>SolverForge CLI</h3><span class="timeline-badge">Application path</span><p class="timeline-subheader">Start a web, API, or command-line planning app</p></header>
+    <div class="timeline-item-body"><p><code>solverforge new</code> creates a neutral application shell. Teams then add their own facts, entities, variables, constraints, and sample data as the domain becomes clear instead of beginning from a fixed vertical template.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="code" header="SolverForge Python" badge="Pure Python models" subheader="Python classes, decorators, functions, and lambdas" >}}
-Python users define planning models and constraint callbacks in Python. A native extension owns solution state in Rust for safe cloning, mutation, snapshots, and execution; users neither write Rust nor send JSON to a fixed remote solver.
-{{< /timelineItem >}}
 
-{{< /timeline >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>SolverForge Python</h3><span class="timeline-badge">Pure Python models</span><p class="timeline-subheader">Python classes, decorators, functions, and lambdas</p></header>
+    <div class="timeline-item-body"><p>Python users define planning models and constraint callbacks in Python. A native extension owns solution state in Rust for safe cloning, mutation, snapshots, and execution; users neither write Rust nor send JSON to a fixed remote solver.</p></div>
+  </div>
+</article></div>
 
 ## A business-sized example
 
@@ -92,14 +98,12 @@ def constraints(factory: ConstraintFactory):
 
 The important boundary is ownership: Python owns the model vocabulary and constraint callbacks; the native runtime owns safe state transitions, scoring, search, and lifecycle management.
 
-{{< mermaid >}}
-flowchart LR
-    facts[Business facts and limits] --> model[Rust or Python model]
-    model --> rules[Hard rules and soft preferences]
-    rules --> solver[Native SolverForge runtime]
-    solver --> plan[Feasible plan]
-    plan --> explanation[Scores, telemetry, and trade-offs]
-{{< /mermaid >}}
+<pre class="not-prose mermaid">flowchart LR
+    facts[Business facts and limits] --&gt; model[Rust or Python model]
+    model --&gt; rules[Hard rules and soft preferences]
+    rules --&gt; solver[Native SolverForge runtime]
+    solver --&gt; plan[Feasible plan]
+    plan --&gt; explanation[Scores, telemetry, and trade-offs]</pre>
 
 ## Why native execution matters
 
@@ -109,22 +113,12 @@ For planning teams, that means one decision engine can support fast native execu
 
 ## Links
 
-{{< button href="https://solverforge.org" target="_blank" >}}
-{{< icon "globe" >}} SolverForge
-{{< /button >}}
+<a class="button" href="https://solverforge.org" target="_blank"><img class="inline-icon" src="/icons/globe.svg" alt="" width="16" height="16" /> SolverForge</a>
 
-{{< button href="https://github.com/SolverForge/solverforge" target="_blank" >}}
-{{< icon "github" >}} Rust runtime
-{{< /button >}}
+<a class="button" href="https://github.com/SolverForge/solverforge" target="_blank"><img class="inline-icon" src="/icons/github.svg" alt="" width="16" height="16" /> Rust runtime</a>
 
-{{< button href="https://github.com/SolverForge/solverforge-py" target="_blank" >}}
-{{< icon "github" >}} Python bindings
-{{< /button >}}
+<a class="button" href="https://github.com/SolverForge/solverforge-py" target="_blank"><img class="inline-icon" src="/icons/github.svg" alt="" width="16" height="16" /> Python bindings</a>
 
-{{< button href="https://github.com/SolverForge/solverforge-cli" target="_blank" >}}
-{{< icon "code" >}} CLI
-{{< /button >}}
+<a class="button" href="https://github.com/SolverForge/solverforge-cli" target="_blank"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16" /> CLI</a>
 
-{{< button href="https://pypi.org/project/solverforge/" target="_blank" >}}
-{{< icon "code" >}} Python package
-{{< /button >}}
+<a class="button" href="https://pypi.org/project/solverforge/" target="_blank"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16" /> Python package</a>

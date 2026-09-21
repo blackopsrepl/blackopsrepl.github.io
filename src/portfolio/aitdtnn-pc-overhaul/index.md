@@ -11,55 +11,62 @@ showReadingTime: true
 showWordCount: true
 ---
 
-{{< lead >}}
-Preserve the original PC game. Restore the parts modern hardware and an incomplete port left behind.
-{{< /lead >}}
+<div class="lead"><p>Preserve the original PC game. Restore the parts modern hardware and an incomplete port left behind.</p></div>
 
 AITD:TNN PC Overhaul is an independent compatibility and preservation layer for the Windows release of *Alone in the Dark: The New Nightmare*. It keeps the original story, game data, sound effects, movies, and executable intact while restoring selected Dreamcast-era features and correcting presentation and input on current systems.
 
-{{< keywordList >}}
-{{< keyword icon="music" >}} Interactive Dreamcast audio {{< /keyword >}}
-{{< keyword icon="display" >}} Proportional 4:3 rendering {{< /keyword >}}
-{{< keyword icon="gamepad" >}} XInput and original rumble {{< /keyword >}}
-{{< keyword icon="film" >}} Restored movie flow {{< /keyword >}}
-{{< keyword icon="shield" >}} Fail-closed compatibility {{< /keyword >}}
-{{< /keywordList >}}
+<div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/music.svg" alt="" width="16" height="16">Interactive Dreamcast audio</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Proportional 4:3 rendering</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">XInput and original rumble</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Restored movie flow</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/shield.svg" alt="" width="16" height="16">Fail-closed compatibility</span></div>
 
 ## In the game
 
 These captures come from the supported PC build with the overhaul active: the title sequence, first playable scene, and inventory all pass through the same proportional OpenGL presentation path.
 
-{{< gallery >}}
-  <img src="title-screen.jpg" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Alone in the Dark title screen rendered through the overhaul" />
+<div class="gallery"><img src="title-screen.jpg" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Alone in the Dark title screen rendered through the overhaul" />
   <img src="first-scene.jpg" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="First playable scene with proportional 4:3 presentation and CRT treatment" />
-  <img src="inventory-menu.jpg" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Original inventory interface rendered through the compatibility layer" />
-{{< /gallery >}}
+  <img src="inventory-menu.jpg" class="grid-w50 md:grid-w50" loading="lazy" decoding="async" alt="Original inventory interface rendered through the compatibility layer" /></div>
 
 ## What the overhaul restores
 
-{{< timeline >}}
+<div class="timeline"><article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/music.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Live music and ambience</h3><span class="timeline-badge">Dreamcast</span><p class="timeline-subheader">Manatee/AICA synthesis driven by PC gameplay events</p></header>
+    <div class="timeline-item-body"><p>The Dreamcast music system follows the PC engine’s live cues. Native PC effects and FMV audio remain on their original paths, so the result is an integration rather than a replacement soundtrack.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="music" header="Live music and ambience" badge="Dreamcast" subheader="Manatee/AICA synthesis driven by PC gameplay events" >}}
-The Dreamcast music system follows the PC engine’s live cues. Native PC effects and FMV audio remain on their original paths, so the result is an integration rather than a replacement soundtrack.
-{{< /timelineItem >}}
 
-{{< timelineItem icon="display" header="Correct presentation" badge="OpenGL 3.3" subheader="A stable 4:3 signal on modern displays" >}}
-Borderless fullscreen, pillarboxing, optional MSAA and anisotropic filtering, VSync, and edge-sampling fixes remove modern-driver friction without inventing widescreen geometry.
-{{< /timelineItem >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Correct presentation</h3><span class="timeline-badge">OpenGL 3.3</span><p class="timeline-subheader">A stable 4:3 signal on modern displays</p></header>
+    <div class="timeline-item-body"><p>Borderless fullscreen, pillarboxing, optional MSAA and anisotropic filtering, VSync, and edge-sampling fixes remove modern-driver friction without inventing widescreen geometry.</p></div>
+  </div>
+</article>
 
-{{< timelineItem icon="gamepad" header="Controller support and rumble" badge="XInput" subheader="Legacy input translated for current controllers" >}}
-The packaged controller layer maps Xbox-compatible devices into the interfaces the game expects, while the game’s retained Dreamcast vibration profiles drive the modern controller motors.
-{{< /timelineItem >}}
 
-{{< timelineItem icon="film" header="Character-selection movies" badge="Restored" subheader="The verified continuation path runs in the intended order" >}}
-Character confirmation, portrait and title voice, native movie playback, and route setup are reconnected. A runtime ledger records movie requests, opens, frames, and closes for diagnosis.
-{{< /timelineItem >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Controller support and rumble</h3><span class="timeline-badge">XInput</span><p class="timeline-subheader">Legacy input translated for current controllers</p></header>
+    <div class="timeline-item-body"><p>The packaged controller layer maps Xbox-compatible devices into the interfaces the game expects, while the game’s retained Dreamcast vibration profiles drive the modern controller motors.</p></div>
+  </div>
+</article>
 
-{{< /timeline >}}
 
-{{< alert icon="shield" >}}
-**Asset boundary:** the user provides their own legitimately acquired PC installation and Dreamcast disc image. The repository does not redistribute either game’s copyrighted assets; the installer extracts the required audio data locally.
-{{< /alert >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Character-selection movies</h3><span class="timeline-badge">Restored</span><p class="timeline-subheader">The verified continuation path runs in the intended order</p></header>
+    <div class="timeline-item-body"><p>Character confirmation, portrait and title voice, native movie playback, and route setup are reconnected. A runtime ledger records movie requests, opens, frames, and closes for diagnosis.</p></div>
+  </div>
+</article></div>
+
+<aside class="alert"><p><strong>Asset boundary:</strong> the user provides their own legitimately acquired PC installation and Dreamcast disc image. The repository does not redistribute either game’s copyrighted assets; the installer extracts the required audio data locally.</p></aside>
 
 ## Preservation without rewriting the work
 
@@ -73,8 +80,6 @@ The maintained system spans 32-bit C/C++ runtime modules, OpenGL shaders, Dreamc
 
 ## Repository
 
-{{< github repo="blackopsrepl/aitdtnn-pc-overhaul" showThumbnail=false >}}
+<div class="github-card"><a href="https://github.com/blackopsrepl/aitdtnn-pc-overhaul">blackopsrepl/aitdtnn-pc-overhaul</a></div>
 
-{{< button href="https://github.com/blackopsrepl/aitdtnn-pc-overhaul/releases" target="_blank" >}}
-{{< icon "download" >}} Releases
-{{< /button >}}
+<a class="button" href="https://github.com/blackopsrepl/aitdtnn-pc-overhaul/releases" target="_blank"><img class="inline-icon" src="/icons/download.svg" alt="" width="16" height="16" /> Releases</a>

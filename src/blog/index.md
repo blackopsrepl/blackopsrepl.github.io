@@ -9,10 +9,8 @@ showAuthor: false
 showTableOfContents: false
 ---
 
-{{< lead >}}
-I write when I have something worth saying.
-Usually that means optimization in practice, system design under real constraints, AI beyond the demo stage, or technical decisions that only become visible once software meets production.
-{{< /lead >}}
+<div class="lead"><p>I write when I have something worth saying.
+Usually that means optimization in practice, system design under real constraints, AI beyond the demo stage, or technical decisions that only become visible once software meets production.</p></div>
 
 ---
 

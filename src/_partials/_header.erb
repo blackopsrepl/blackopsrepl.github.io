@@ -34,26 +34,24 @@
   </div>
 
   <div class="-my-2 md:hidden">
-    <div id="menu-button" class="block">
-      <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
-        <%= render "icon", icon: "bars" %>
-      </div>
-      <div id="menu-wrapper" class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
-        <ul class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
-          <li id="menu-close-button">
-            <span class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
-              <%= render "icon", icon: "xmark" %>
-            </span>
+    <button id="menu-button" class="block cursor-pointer hover:text-primary-600 dark:hover:text-primary-400" aria-label="Open menu" aria-expanded="false" type="button">
+      <%= render "icon", icon: "bars" %>
+    </button>
+    <div id="menu-wrapper" class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+      <ul class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+        <li>
+          <button id="menu-close-button" class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400" aria-label="Close menu" type="button">
+            <%= render "icon", icon: "xmark" %>
+          </button>
+        </li>
+        <% site.metadata.navigation.each do |item| %>
+          <li class="mt-1">
+            <a href="<%= item.path %>" class="flex items-center hover:text-primary-600 dark:hover:text-primary-400" aria-label="<%= item.name %>" title="<%= item.name %>">
+              <p class="text-bg font-bg"><%= item.name %></p>
+            </a>
           </li>
-          <% site.metadata.navigation.each do |item| %>
-            <li class="mt-1">
-              <a href="<%= item.path %>" class="flex items-center hover:text-primary-600 dark:hover:text-primary-400" aria-label="<%= item.name %>" title="<%= item.name %>">
-                <p class="text-bg font-bg"><%= item.name %></p>
-              </a>
-            </li>
-          <% end %>
-        </ul>
-      </div>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>

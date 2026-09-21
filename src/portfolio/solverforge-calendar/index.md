@@ -11,33 +11,25 @@ showReadingTime: true
 showWordCount: true
 ---
 
-{{< lead >}}
-A local-first calendar with two deliberate interfaces: a fast terminal UI for people and a strict JSON CLI for agents and automation.
-{{< /lead >}}
+<div class="lead"><p>A local-first calendar with two deliberate interfaces: a fast terminal UI for people and a strict JSON CLI for agents and automation.</p></div>
 
 SolverForge Calendar treats time as structured, operable data. It combines month, week, day, and agenda views with recurring events, local persistence, Google Calendar synchronization, and dependency links between events.
 
-{{< keywordList >}}
-{{< keyword icon="calendar" >}} Four calendar views {{< /keyword >}}
-{{< keyword icon="share-nodes" >}} Dependency-aware events {{< /keyword >}}
-{{< keyword icon="terminal" >}} JSON companion CLI {{< /keyword >}}
-{{< keyword icon="rotate" >}} Incremental Google sync {{< /keyword >}}
-{{< keyword icon="bell" >}} Desktop reminders {{< /keyword >}}
-{{< /keywordList >}}
+<div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Four calendar views</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Dependency-aware events</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">JSON companion CLI</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16">Incremental Google sync</span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/bell.svg" alt="" width="16" height="16">Desktop reminders</span></div>
 
 ## The terminal calendar
 
 The TUI keeps navigation, calendar visibility, event editing, quick-add, and synchronization available from the keyboard while background work stays out of the render loop.
 
-{{< gallery >}}
-  <img src="calendar-tui.png" class="grid-w100 md:grid-w100" loading="lazy" decoding="async" alt="SolverForge Calendar month view in the Ratatui terminal interface" />
-{{< /gallery >}}
+<div class="gallery"><img src="calendar-tui.png" class="grid-w100 md:grid-w100" loading="lazy" decoding="async" alt="SolverForge Calendar month view in the Ratatui terminal interface" /></div>
 
 ## Human and automation surfaces
 
-{{< alert icon="lightbulb" >}}
-The TUI and CLI are peers over the same model. Automation does not scrape the visual interface, and people do not have to operate a machine-oriented command protocol.
-{{< /alert >}}
+<aside class="alert"><p>The TUI and CLI are peers over the same model. Automation does not scrape the visual interface, and people do not have to operate a machine-oriented command protocol.</p></aside>
 
 The companion CLI exposes calendars, projects, events, dependencies, and Google sync as JSON-first commands. Successful operations write JSON to standard output; failures write JSON to standard error. Destructive operations require explicit flags such as `--cascade-events` or `--detach-events` instead of hiding consequences behind a prompt.
 
@@ -53,16 +45,14 @@ solverforge-calendar-cli events create \
 
 Dependencies form a directed acyclic graph. Cycle detection prevents an impossible chain from entering the model, while topological ordering makes the relationship usable by higher-level planning and automation.
 
-{{< mermaid >}}
-flowchart LR
-    tui[Ratatui TUI] --> model[Calendar model]
-    cli[JSON CLI] --> model
-    model --> db[(Local SQLite)]
-    model --> dag[Event dependency DAG]
-    model --> workers[Background worker pool]
-    workers --> google[Google Calendar]
-    workers --> notify[Desktop notifications]
-{{< /mermaid >}}
+<pre class="not-prose mermaid">flowchart LR
+    tui[Ratatui TUI] --&gt; model[Calendar model]
+    cli[JSON CLI] --&gt; model
+    model --&gt; db[(Local SQLite)]
+    model --&gt; dag[Event dependency DAG]
+    model --&gt; workers[Background worker pool]
+    workers --&gt; google[Google Calendar]
+    workers --&gt; notify[Desktop notifications]</pre>
 
 ## Operational choices
 
@@ -74,8 +64,6 @@ flowchart LR
 
 ## Repository
 
-{{< github repo="blackopsrepl/solverforge-calendar" showThumbnail=false >}}
+<div class="github-card"><a href="https://github.com/blackopsrepl/solverforge-calendar">blackopsrepl/solverforge-calendar</a></div>
 
-{{< button href="https://github.com/blackopsrepl/solverforge-calendar" target="_blank" >}}
-{{< icon "github" >}} Source and installation
-{{< /button >}}
+<a class="button" href="https://github.com/blackopsrepl/solverforge-calendar" target="_blank"><img class="inline-icon" src="/icons/github.svg" alt="" width="16" height="16" /> Source and installation</a>

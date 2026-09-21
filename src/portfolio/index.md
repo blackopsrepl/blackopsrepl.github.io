@@ -9,10 +9,8 @@ showAuthor: false
 showTableOfContents: false
 ---
 
-{{< lead >}}
-This portfolio is a curated view of the work.
-Not everything I’ve done belongs here. These are the projects with enough surface area to show the problem, the constraints, and the implementation choices.
-{{< /lead >}}
+<div class="lead"><p>This portfolio is a curated view of the work.
+Not everything I’ve done belongs here. These are the projects with enough surface area to show the problem, the constraints, and the implementation choices.</p></div>
 
 The common thread is not industry or stack.
 It is work with real constraints, meaningful tradeoffs, and enough complexity to make design choices visible.

@@ -9,57 +9,69 @@ showAuthor: false
 showTableOfContents: false
 ---
 
-{{< lead >}}
-I work best at the early and decisive stages of technically difficult projects: when the team needs clarity, sharper modeling, and better architectural judgment before expensive implementation begins.
-{{< /lead >}}
+<div class="lead"><p>I work best at the early and decisive stages of technically difficult projects: when the team needs clarity, sharper modeling, and better architectural judgment before expensive implementation begins.</p></div>
 
 This is not a generic agency services page.
 It is a focused offer for teams that want direct founder-level thinking on hard systems problems.
 
 For larger implementation or integration work, visit **[SolverForge](https://solverforge.org)**.
 
-{{< mermaid >}}
-flowchart LR
-  discovery[Technical discovery] --> framing[Problem framing]
-  framing --> strategy[Optimization strategy]
-  strategy --> review[Architecture review]
-  review --> next[Sharper next step]
-{{< /mermaid >}}
+<pre class="not-prose mermaid">flowchart LR
+  discovery[Technical discovery] --&gt; framing[Problem framing]
+  framing --&gt; strategy[Optimization strategy]
+  strategy --&gt; review[Architecture review]
+  review --&gt; next[Sharper next step]</pre>
 
 ---
 
 ## Where I can help most
 
-{{< timeline >}}
+<div class="timeline"><article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/search.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Technical Discovery</h3><span class="timeline-badge">Discovery</span></header>
+    <div class="timeline-item-body"><p>For teams trying to determine whether a difficult product or planning problem is actually worth building — and what shape a serious first version should take.</p>
 
-{{< timelineItem icon="search" header="Technical Discovery" badge="Discovery" md="true" >}}
-For teams trying to determine whether a difficult product or planning problem is actually worth building — and what shape a serious first version should take.
+<ul>
+  <li>feasibility assessment</li>
+  <li>problem framing</li>
+  <li>constraint and objective clarification</li>
+  <li>first-pass architecture direction</li>
+</ul></div>
+  </div>
+</article>
 
-- feasibility assessment
-- problem framing
-- constraint and objective clarification
-- first-pass architecture direction
-{{< /timelineItem >}}
 
-{{< timelineItem icon="scale-balanced" header="Optimization Strategy" badge="Advisory" md="true" >}}
-For scheduling, routing, allocation, and other combinatorial systems where the model is not yet strong enough, the search strategy is unclear, or the tradeoffs are poorly understood.
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/scale-balanced.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Optimization Strategy</h3><span class="timeline-badge">Advisory</span></header>
+    <div class="timeline-item-body"><p>For scheduling, routing, allocation, and other combinatorial systems where the model is not yet strong enough, the search strategy is unclear, or the tradeoffs are poorly understood.</p>
 
-- model design review
-- solver strategy
-- tradeoff analysis
-- delivery-shape recommendations
-{{< /timelineItem >}}
+<ul>
+  <li>model design review</li>
+  <li>solver strategy</li>
+  <li>tradeoff analysis</li>
+  <li>delivery-shape recommendations</li>
+</ul></div>
+  </div>
+</article>
 
-{{< timelineItem icon="code" header="Architecture Reviews" badge="Technical Review" md="true" >}}
-For teams making consequential decisions about language boundaries, runtimes, APIs, jobs, services, migrations, or prototypes that need a more experienced second pass.
 
-- Python ↔ Rust boundary decisions
-- API / job / service boundary review
-- migration and refactor direction
-- prototype or proof-of-concept critique
-{{< /timelineItem >}}
+<article class="timeline-item">
+  <div class="timeline-item-icon"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16"></div>
+  <div class="timeline-item-card">
+    <header><h3>Architecture Reviews</h3><span class="timeline-badge">Technical Review</span></header>
+    <div class="timeline-item-body"><p>For teams making consequential decisions about language boundaries, runtimes, APIs, jobs, services, migrations, or prototypes that need a more experienced second pass.</p>
 
-{{< /timeline >}}
+<ul>
+  <li>Python ↔ Rust boundary decisions</li>
+  <li>API / job / service boundary review</li>
+  <li>migration and refactor direction</li>
+  <li>prototype or proof-of-concept critique</li>
+</ul></div>
+  </div>
+</article></div>
 
 ---
 
@@ -89,7 +101,5 @@ If you want direct input on a hard technical problem, email **[info@vdistefano.s
 
 If the need is a larger implementation or integration, the right path is **[SolverForge](https://solverforge.org)**.
 
-{{< keywordList >}}
-{{< keyword icon="email" >}} [Email Vittorio](mailto:info@vdistefano.studio) {{< /keyword >}}
-{{< keyword icon="shield" >}} [Explore SolverForge](https://solverforge.org) {{< /keyword >}}
-{{< /keywordList >}}
+<div class="keyword-list"><span class="keyword-pill"><img class="inline-icon" src="/icons/email.svg" alt="" width="16" height="16"><a href="mailto:info@vdistefano.studio">Email Vittorio</a></span>
+<span class="keyword-pill"><img class="inline-icon" src="/icons/shield.svg" alt="" width="16" height="16"><a href="https://solverforge.org">Explore SolverForge</a></span></div>
