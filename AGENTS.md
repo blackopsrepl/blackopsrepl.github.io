@@ -18,6 +18,9 @@ bundle exec bridgetown build
 # Build frontend assets and the production site
 bundle exec rake deploy
 
+# Build and verify route, feed, sitemap, and search contracts
+bundle exec rake test
+
 # Create new content
 mkdir -p src/blog/my-post
 touch src/blog/my-post/index.md
@@ -32,6 +35,8 @@ touch src/portfolio/my-project/index.md
 - `src/_data/site_metadata.yml` - Site identity, navigation, and footer metadata
 - `Rakefile` - Clean, frontend, build, and deployment tasks
 - `esbuild.config.js` - Frontend bundle configuration
+- `plugins/content_route_generator.rb` - Generated taxonomies, feeds, and compatibility redirects
+- `test/site_contract_test.rb` - Published route and output contract checks
 
 ### Content Organization
 - `src/blog/` - Blog posts
