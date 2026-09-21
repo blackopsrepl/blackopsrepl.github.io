@@ -46,6 +46,10 @@
   filter: invert(64%) sepia(91%) saturate(2212%) hue-rotate(94deg) brightness(105%) contrast(106%);
 }
 
+.prose .inline-icon {
+  margin: 0;
+}
+
 .timeline {
   position: relative;
   display: flex;
@@ -232,6 +236,7 @@
 .resource-tags {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: 0.35rem;
 }
 
@@ -241,6 +246,7 @@
   border-radius: 0.3rem;
   color: rgb(var(--terminal-green));
   font-size: 0.7rem;
+  line-height: 1rem;
 }
 
 .taxonomy-page {
