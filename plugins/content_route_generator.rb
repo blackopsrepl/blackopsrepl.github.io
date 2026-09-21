@@ -1,10 +1,5 @@
 require "cgi"
 
-class SiteBuilder < Bridgetown::Builder
-  def build
-  end
-end
-
 class ContentRouteGenerator < Bridgetown::Generator
   priority :low
 
@@ -15,6 +10,7 @@ class ContentRouteGenerator < Bridgetown::Generator
     end
     tags["PyO3"] = [] unless tags.key?("PyO3")
 
+    add_feed(site, "", "/index.xml", "Recent content", resource_feed_items(site, resources))
     add_page(site, "tags", "index.md", "/tags/", "Tags", taxonomy_index(tags))
     add_feed(site, "tags", "/tags/index.xml", "Tags", taxonomy_feed_items(site, tags))
     tags.each do |label, tagged_resources|
