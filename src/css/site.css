@@ -871,8 +871,6 @@ canvas {
   }
 }
 
-.logo-text svg {
-
 .keyword-list {
   display: flex;
   flex-wrap: wrap;
