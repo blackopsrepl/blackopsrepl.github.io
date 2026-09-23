@@ -70,10 +70,6 @@ There is no HTTP listener and no remote account. The MCP host launches the serve
     Client-&gt;&gt;Server: Explicit input action
     Server-&gt;&gt;Sway: wtype / pointer / clipboard</pre>
 
-## Project identity
-
-<div class="gallery"><img src="mascot.png" loading="lazy" decoding="async" alt="computer-use-sway mascot operating a Sway desktop" /></div>
-
 ## Repository
 
 <div class="github-card"><a href="https://github.com/blackopsrepl/computer-use-sway">blackopsrepl/computer-use-sway</a></div>
