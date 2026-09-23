@@ -34,7 +34,6 @@ class SiteContractTest < Minitest::Test
       /portfolio/computer-use-sway/
       /portfolio/elphame/
       /portfolio/meridian/
-      /portfolio/solverforge-calendar/
       /portfolio/trex/
       /portfolio/yuga-planner/
       /portfolio/zoyd/zoyd/

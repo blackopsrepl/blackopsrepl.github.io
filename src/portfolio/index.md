@@ -37,7 +37,7 @@ A preservation project with a deliberately narrow boundary.
 Useful for seeing how reverse engineering, runtime integration, installer ownership, and visual restraint can serve an existing work rather than overwrite it.
 
 ### Tools around the work
-For compact examples of operability, look at trex, SolverForge Calendar, and computer-use-sway: each makes a complex system easier to inspect and control without hiding its state.
+For compact examples of operability, look at trex and computer-use-sway: each makes a complex system easier to inspect and control without hiding its state.
 
 ---
 
