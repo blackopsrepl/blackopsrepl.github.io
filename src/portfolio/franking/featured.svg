@@ -1,0 +1,13 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#000"/>
+  <g transform="translate(960 400)" stroke="#50fc00" fill="none">
+    <rect x="-240" y="-150" width="480" height="300" rx="14" stroke-width="4"/>
+    <path d="M-240-150L0 40L240-150" stroke-width="4"/>
+    <path d="M-240 150L-40-20M240 150L40-20" stroke-width="3" opacity=".55"/>
+    <path d="M-200-110H-120M-200-80H-160" stroke-width="3" opacity=".5"/>
+    <circle cx="-200" cy="110" r="9" fill="#50fc00" stroke="none"/>
+    <circle cx="-170" cy="110" r="9" fill="#50fc00" opacity=".6" stroke="none"/>
+    <circle cx="-140" cy="110" r="9" fill="#50fc00" opacity=".3" stroke="none"/>
+  </g>
+  <text x="960" y="790" text-anchor="middle" font-family="system-ui, sans-serif" font-size="110" font-weight="300"><tspan fill="#fff">Frank</tspan><tspan fill="#50fc00">ing</tspan></text>
+</svg>

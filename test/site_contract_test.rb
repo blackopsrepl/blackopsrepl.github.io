@@ -33,6 +33,8 @@ class SiteContractTest < Minitest::Test
       /portfolio/aitdtnn-pc-overhaul/
       /portfolio/computer-use-sway/
       /portfolio/elphame/
+      /portfolio/franking/
+      /portfolio/lumen/
       /portfolio/meridian/
       /portfolio/trex/
       /portfolio/yuga-planner/
