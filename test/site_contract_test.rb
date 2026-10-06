@@ -36,6 +36,8 @@ class SiteContractTest < Minitest::Test
       /portfolio/franking/
       /portfolio/lumen/
       /portfolio/meridian/
+      /portfolio/ricespace/
+      /portfolio/tranche/
       /portfolio/trex/
       /portfolio/yuga-planner/
       /portfolio/zoyd/zoyd/
