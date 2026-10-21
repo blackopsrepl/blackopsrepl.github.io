@@ -41,6 +41,7 @@ class SiteContractTest < Minitest::Test
       /portfolio/trex/
       /portfolio/yuga-planner/
       /portfolio/zoyd/zoyd/
+      /redona/
     ].each do |route|
       assert File.file?(output_file(route)), "missing published route #{route}"
     end

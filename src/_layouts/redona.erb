@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="it" dir="ltr" class="rb-document">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#022c22">
+    <title><%= data.title %></title>
+    <meta name="description" content="<%= data.description %>">
+    <meta name="author" content="<%= site.metadata.author %>">
+    <% page_url = "#{site.metadata.url.chomp("/")}#{resource.relative_url}" %>
+    <link rel="canonical" href="<%= page_url %>">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="<%= data.title %>">
+    <meta property="og:description" content="<%= data.description %>">
+    <meta property="og:url" content="<%= page_url %>">
+    <meta property="og:image" content="<%= site.metadata.url.chomp("/") %>/redona/img/baffo-microfono.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="/redona/img/favicon.svg">
+    <link rel="preload" href="/redona/fonts/Anton-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="/redona/redona.css">
+  </head>
+  <body class="rb">
+    <%= yield %>
+    <script>
+      (() => {
+        const clock = document.querySelector("[data-rb-clock]");
+        if (clock) {
+          const format = new Intl.DateTimeFormat("it-IT", { hour: "2-digit", minute: "2-digit", second: "2-digit", timeZone: "Europe/Rome" });
+          const tick = () => { clock.textContent = format.format(new Date()); };
+          tick();
+          setInterval(tick, 1000);
+        }
+        const reveal = document.querySelectorAll("[data-rb-reveal]");
+        if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          document.documentElement.classList.add("rb-motion");
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-in");
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { rootMargin: "0px 0px -8% 0px" });
+          reveal.forEach((node) => observer.observe(node));
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,393 @@
+---
+layout: redona
+title: "Redona Broadcasting · I video del tuo negozio, in onda dappertutto"
+description: "Giri fino a 5 minuti di video al giorno col telefono e ce li mandi su WhatsApp. Noi li montiamo, li sottotitoliamo e li mandiamo in onda su Instagram, TikTok, YouTube e Facebook. Uno studio di produzione a Redona, Bergamo."
+permalink: /redona/
+---
+<%
+  mail = "mailto:info@vdistefano.studio?subject=Redona%20Broadcasting%20-%20vorrei%20andare%20in%20onda"
+  ticker = [
+    "In onda da Redona, Bergamo",
+    "Mandi i video su WhatsApp, noi li mandiamo in onda",
+    "I tuoi video su Instagram · TikTok · YouTube · Facebook",
+    "Riprese vere, gente vera",
+    "Telefonate! Anzi, scriveteci",
+    "Sottotitoli · logo · formati · calendario",
+    "Porta un amico: paghi 200 euro al mese",
+    "Mola mia",
+  ]
+  truths = [
+    ["Hai il telefono pieno di video.", "E il profilo fermo a marzo."],
+    ["Montare è un secondo lavoro.", "E tu il primo ce l’hai già: dietro al bancone."],
+    ["Ogni piattaforma vuole il suo formato.", "Verticale, quadrato, 15 secondi, 60, coi sottotitoli, senza."],
+    ["L’agenzia di Milano costa come un furgone.", "E poi ti manda un PDF con scritto “strategia”."],
+    ["Il nipote che “sa fare i social”", "ha l’esame la settimana prossima."],
+  ]
+  steps = [
+    ["Giri", "Col telefono, come vengono. Storti, col cliente che entra a metà. Fino a cinque minuti al giorno: va benissimo così.", "qualsiasi telefono · max 5 min al giorno"],
+    ["Mandi", "Su WhatsApp, come mandi le foto ai parenti. Niente app nuove, niente password, niente link da caricare.", "solo WhatsApp · originali intatti"],
+    ["Montiamo", "Tagliamo nelle pause, mai a metà parola. Sottotitoli, il tuo logo, colore, chiusura con l’indirizzo.", "720×1280 · 30 fps · H.264"],
+    ["Va in onda", "Ogni video viene controllato prima che tu lo veda. Poi esce, il giorno e l’ora giusti, dove vuoi tu.", "Instagram · TikTok · YouTube · Facebook"],
+  ]
+  phones = [
+    { shop: "Il forno", caption: ["CASONCELLI", "FATTI A MANO"], hot: 1, tone: "rb-phone--forno", tag: "Reel · 19 s" },
+    { shop: "La parrucchiera", caption: ["TAGLIO E PIEGA", "IN 40 MINUTI"], hot: 0, tone: "rb-phone--salone", tag: "TikTok · 24 s" },
+    { shop: "Il bar della piazza", caption: ["APERTI ANCHE", "LA DOMENICA"], hot: 1, tone: "rb-phone--bar", tag: "Short · 15 s" },
+  ]
+  included = [
+    "Fino a 5 minuti di girato al giorno, mandati su WhatsApp",
+    "Montaggio, tagli puliti, colore e audio sistemati",
+    "Sottotitoli, il tuo logo e la chiusura con l’indirizzo",
+    "Tutti i formati: Instagram, TikTok, YouTube, Facebook",
+    "Pubblicazione a calendario, nei giorni giusti",
+    "Controllo qualità su ogni singolo video",
+    "Archivio di originali e montaggi, sempre tuo",
+  ]
+  rules = [
+    ["Solo riprese vere.", "Niente attori finti, voci finte, facce finte. In video ci sei tu, nel tuo negozio, con la tua gente. È per questo che funziona."],
+    ["Il tuo logo non si tocca.", "Usiamo quello che ci dai, com’è. Niente “ritocchini”, niente versioni inventate."],
+    ["Mai a metà parola.", "Si taglia solo nelle pause, e dopo l’ultima parola c’è sempre un respiro. Sembra poco. Si sente tantissimo."],
+    ["Nessun video senza controllo.", "Prima che tu lo veda, ogni file è già stato riprodotto, ascoltato e letto fotogramma per fotogramma."],
+    ["Pubblichiamo solo dove dici tu.", "Ogni canale lo decidi tu. Niente sorprese il lunedì mattina."],
+    ["Parli con una persona.", "Non con un ticket, non con un call center. Con uno di Redona."],
+  ]
+  automations = [
+    ["Sottotitoli", "Scritti giusti, sincronizzati, leggibili anche col volume a zero. Che è come li guarda la gente."],
+    ["Un video, tutti i formati", "Lo stesso montaggio, pronto per ogni piattaforma. Senza rifare niente."],
+    ["Un video, tante clip", "Cinque minuti di te che racconti il negozio? Ne tiriamo fuori le clip verticali migliori."],
+    ["Il calendario delle uscite", "Si pubblica con costanza, anche quando tu hai la settimana più piena dell’anno."],
+    ["Logo e chiusura", "Il tuo marchio all’inizio, indirizzo e orari alla fine. Ogni volta, uguale."],
+    ["L’archivio", "Originali, montaggi e progetti, tutto in ordine. Il video di Natale scorso? Eccolo."],
+  ]
+  shops = ["Il forno", "La parrucchiera", "Il bar della piazza", "La ferramenta", "La palestra", "La pizzeria", "Il fiorista", "L’officina", "La macelleria", "Lo studio", "La boutique", "L’enoteca"]
+  faqs = [
+    ["Devo saper usare i social?", "No. Devi saper fare il tuo lavoro. Al resto pensiamo noi."],
+    ["Come vi mando i video?", "Su WhatsApp. Solo su WhatsApp. Li mandi dal telefono con cui li hai girati e hai finito."],
+    ["Quanti video posso mandare?", "Fino a cinque minuti di girato al giorno. È più che abbastanza: i video che funzionano durano meno di un minuto."],
+    ["Mi serve un’attrezzatura speciale?", "No. Il telefono che hai in tasca basta e avanza. Se vuoi, ti diamo due dritte per riprendere meglio, ma non è obbligatorio."],
+    ["È tutto automatico?", "Il lavoro pesante sì: tagli, sottotitoli, formati, controlli, calendario. Le riprese no: restano tue, vere. E ogni video, prima di uscire, passa tutti i nostri controlli."],
+    ["I video restano miei?", "Sì. I tuoi originali restano tuoi, e i montaggi li ricevi anche tu."],
+    ["Quanto costa?", "299 euro al mese, tutto compreso, senza vincoli: il minimo è un mese. Un prezzo solo, uguale per tutti. Se ci porti un’altra attività, scendi a 200 euro al mese per tutti i mesi in cui resta con noi. Il caffè per conoscerci, a Redona, lo offriamo noi."],
+    ["Lavorate solo a Redona?", "Trasmettiamo da Redona. Ma Bergamo è piccola e internet è grande: scriveteci da dove volete."],
+  ]
+%>
+
+<div class="rb-ticker" aria-label="In onda">
+  <div class="rb-ticker__track">
+    <% 2.times do |copy| %>
+      <div class="rb-ticker__run"<%= ' aria-hidden="true"'.html_safe if copy == 1 %>>
+        <% ticker.each do |item| %>
+          <span class="rb-ticker__item"><%= item %></span><span class="rb-ticker__star" aria-hidden="true">★</span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<header class="rb-nav">
+  <div class="rb-wrap rb-nav__inner">
+    <a class="rb-brand" href="/redona/" aria-label="Redona Broadcasting">
+      <svg class="rb-brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M24 10 L32 22 L40 10" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="24" cy="10" r="3.5" fill="#eab308"/><circle cx="40" cy="10" r="3.5" fill="#eab308"/>
+        <rect x="10" y="22" width="44" height="32" rx="7" fill="#eab308"/>
+        <rect x="16" y="28" width="32" height="20" rx="3" fill="#022c22"/>
+        <circle class="rb-brand__dot" cx="23" cy="38" r="3.5" fill="#ef4444"/>
+      </svg>
+      <span class="rb-brand__name">Redona<span>Broadcasting</span></span>
+    </a>
+    <nav class="rb-nav__links" aria-label="Sezioni">
+      <a href="#come-funziona">Come funziona</a>
+      <a href="#cosa-ricevi">Cosa ricevi</a>
+      <a href="#regole">Le regole</a>
+      <a href="#prezzo">Prezzo</a>
+      <a href="#domande">Domande</a>
+    </nav>
+    <a class="rb-btn rb-btn--small" href="<%= mail %>">Scrivici</a>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <section class="rb-hero">
+    <div class="rb-wrap rb-hero__grid">
+      <div class="rb-hero__copy">
+        <p class="rb-eyebrow"><span class="rb-live"><span class="rb-live__dot"></span>In onda</span> Canale 035 · Redona, Bergamo</p>
+        <h1 class="rb-hero__title">Il tuo negozio, <mark class="rb-hl">in&nbsp;onda</mark> dappertutto.</h1>
+        <p class="rb-hero__lede">
+          Tu giri i video col telefono, come vengono, e ce li mandi su WhatsApp. Noi li trasformiamo in video
+          da professionisti &mdash; tagliati, sottotitolati, col tuo logo &mdash; e li
+          mandiamo in onda su Instagram, TikTok, YouTube e Facebook.
+          <strong>Tu torni al bancone.</strong>
+        </p>
+        <div class="rb-hero__actions">
+          <a class="rb-btn" href="<%= mail %>">Voglio andare in onda</a>
+          <a class="rb-btn rb-btn--ghost" href="#come-funziona">Come funziona &darr;</a>
+        </div>
+        <ul class="rb-chips" aria-label="Piattaforme">
+          <li>Instagram</li><li>TikTok</li><li>YouTube Shorts</li><li>Facebook</li>
+        </ul>
+      </div>
+
+      <figure class="rb-tv" aria-label="Il nostro conduttore">
+        <div class="rb-tv__antenna" aria-hidden="true"></div>
+        <div class="rb-tv__body">
+          <div class="rb-tv__screen">
+            <picture>
+              <source srcset="/redona/img/baffo-microfono.webp" type="image/webp">
+              <img src="/redona/img/baffo-microfono.jpg" width="960" height="960" alt="Il conduttore di Redona Broadcasting: occhiali, baffoni anni Novanta, antenna in testa, microfono puntato verso di te." fetchpriority="high">
+            </picture>
+            <div class="rb-tv__osd" aria-hidden="true">
+              <span class="rb-tv__ch">CH 035</span>
+              <span class="rb-tv__rec"><span></span>IN ONDA</span>
+            </div>
+            <div class="rb-tv__lower" aria-hidden="true">
+              <span class="rb-tv__lower-tag">Diretta</span>
+              <span class="rb-tv__lower-text">Redona · ore <span data-rb-clock>--:--:--</span></span>
+            </div>
+            <div class="rb-tv__scan" aria-hidden="true"></div>
+          </div>
+          <div class="rb-tv__panel" aria-hidden="true">
+            <span class="rb-tv__knob"></span><span class="rb-tv__knob"></span>
+            <span class="rb-tv__grille"></span>
+          </div>
+        </div>
+        <figcaption class="rb-note rb-note--hero">
+          <svg class="rb-note__arrow" viewBox="0 0 120 80" aria-hidden="true"><path d="M110 8 C 80 10, 40 20, 22 62" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M12 50 L22 64 L34 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Questo sono io. Il baffo è finto.<br>Il resto è tutto vero. <span class="rb-note__sig">&mdash; Vittorio</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="rb-paper rb-truths" aria-labelledby="diciamolo">
+    <div class="rb-wrap">
+      <p class="rb-kicker">Diciamolo</p>
+      <h2 id="diciamolo" class="rb-display rb-display--ink">Il tuo negozio è il più bello del quartiere.<br>Su Instagram <s>spacca</s> <span class="rb-scribble">dorme.</span></h2>
+      <ol class="rb-truths__list">
+        <% truths.each_with_index do |(head, tail), index| %>
+          <li data-rb-reveal>
+            <span class="rb-truths__n"><%= format("%02d", index + 1) %></span>
+            <p><strong><%= head %></strong> <%= tail %></p>
+          </li>
+        <% end %>
+      </ol>
+      <p class="rb-truths__punch" data-rb-reveal>Quindi facciamo così: <mark class="rb-hl rb-hl--ink">tu fai il tuo lavoro, noi facciamo la televisione.</mark></p>
+    </div>
+  </section>
+
+  <section id="come-funziona" class="rb-section rb-steps" aria-labelledby="come-funziona-title">
+    <div class="rb-wrap">
+      <div class="rb-head">
+        <p class="rb-kicker rb-kicker--yellow">Come funziona</p>
+        <h2 id="come-funziona-title" class="rb-display">Quattro passaggi.<br>Tu ne fai due.</h2>
+      </div>
+      <ol class="rb-steps__grid">
+        <% steps.each_with_index do |(verb, copy, spec), index| %>
+          <li class="rb-step<%= ' rb-step--us' if index >= 2 %>" data-rb-reveal>
+            <span class="rb-step__n" aria-hidden="true"><%= format("%02d", index + 1) %></span>
+            <span class="rb-step__who"><%= index < 2 ? "Tu" : "Noi" %></span>
+            <h3 class="rb-step__verb"><%= verb %>.</h3>
+            <p><%= copy %></p>
+            <code class="rb-step__spec"><%= spec %></code>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+  </section>
+
+  <section id="cosa-ricevi" class="rb-section rb-section--band rb-reel" aria-labelledby="cosa-ricevi-title">
+    <div class="rb-wrap">
+      <div class="rb-head rb-head--split">
+        <div>
+          <p class="rb-kicker rb-kicker--yellow">Cosa ricevi</p>
+          <h2 id="cosa-ricevi-title" class="rb-display">Video che si fermano<br>il pollice.</h2>
+        </div>
+        <p class="rb-copy">
+          Verticali, puliti, coi sottotitoli grossi che si leggono anche in tram.
+          Il tuo logo all’inizio, indirizzo e orari alla fine. Il colore sistemato,
+          l’audio pulito. Pronti per ogni piattaforma, senza che tu tocchi niente.
+        </p>
+      </div>
+      <div class="rb-phones">
+        <% phones.each_with_index do |phone, index| %>
+          <figure class="rb-phone <%= phone[:tone] %>" data-rb-reveal style="--i: <%= index %>">
+            <div class="rb-phone__screen" aria-hidden="true">
+              <div class="rb-phone__footage"><span></span><span></span><span></span></div>
+              <span class="rb-phone__logo">Il tuo logo</span>
+              <span class="rb-phone__caption">
+                <% phone[:caption].each_with_index do |line, line_index| %>
+                  <span class="<%= 'is-hot' if line_index == phone[:hot] %>"><%= line %></span>
+                <% end %>
+              </span>
+              <span class="rb-phone__bar"><span></span></span>
+            </div>
+            <figcaption><strong><%= phone[:shop] %></strong> <span><%= phone[:tag] %></span></figcaption>
+          </figure>
+        <% end %>
+      </div>
+      <p class="rb-note rb-note--center">Esempi illustrati. I tuoi saranno meglio: ci sarai tu.</p>
+    </div>
+  </section>
+
+  <section class="rb-section rb-sv" aria-labelledby="sv-title">
+    <div class="rb-wrap rb-sv__grid">
+      <div>
+        <p class="rb-kicker rb-kicker--yellow">Sotto il cofano</p>
+        <h2 id="sv-title" class="rb-display">Tecnologia da Silicon&nbsp;Valley.<br><span class="rb-mint">Caffè di Redona.</span></h2>
+        <p class="rb-copy">
+          Dietro ogni video c’è una catena di produzione che gira da sola: prende i tuoi
+          file, li monta secondo regole precise e li controlla come si controlla un
+          software. Tu vedi solo il risultato. Noi vediamo tutti i numeri.
+        </p>
+        <p class="rb-copy rb-copy--quiet">Pota, funziona.</p>
+      </div>
+      <div class="rb-term" role="img" aria-label="Il controllo qualità che ogni video deve superare prima di uscire">
+        <div class="rb-term__bar" aria-hidden="true"><span></span><span></span><span></span><em>controllo-qualità — redona</em></div>
+        <pre class="rb-term__body" aria-hidden="true"><span class="c"># ogni video, prima che tu lo veda</span>
+<span class="p">$</span> redona verify forno-casoncelli
+
+<span class="ok">✓</span> file letto dal primo all’ultimo fotogramma
+<span class="ok">✓</span> audio e video allineati        <span class="d">Δ &lt; 0,05 s</span>
+<span class="ok">✓</span> nessuna parola tagliata        <span class="d">ultima frase intera</span>
+<span class="ok">✓</span> sottotitoli riletti sul video  <span class="d">fotogramma per fotogramma</span>
+<span class="ok">✓</span> logo originale, intatto
+<span class="ok">✓</span> riproduzione su hardware vero
+<span class="ok">✓</span> formato di consegna            <span class="d">720×1280 · 30 fps · H.264</span>
+
+<span class="go">→ approvato. si va in onda.</span><span class="rb-term__cursor"></span></pre>
+      </div>
+    </div>
+  </section>
+
+  <section id="regole" class="rb-paper rb-rules" aria-labelledby="regole-title">
+    <div class="rb-wrap">
+      <p class="rb-kicker">Le regole della casa</p>
+      <h2 id="regole-title" class="rb-display rb-display--ink">Sei regole.<br>Non si discutono.</h2>
+      <ol class="rb-rules__grid">
+        <% rules.each_with_index do |(head, copy), index| %>
+          <li class="rb-rule" data-rb-reveal>
+            <span class="rb-rule__n" aria-hidden="true"><%= index + 1 %></span>
+            <h3><%= head %></h3>
+            <p><%= copy %></p>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+  </section>
+
+  <section class="rb-section rb-auto" aria-labelledby="auto-title">
+    <div class="rb-wrap">
+      <div class="rb-head">
+        <p class="rb-kicker rb-kicker--yellow">Tutto il resto</p>
+        <h2 id="auto-title" class="rb-display rb-auto__title">Lo fai due volte? <mark class="rb-hl">Lo automatizziamo.</mark></h2>
+        <p class="rb-copy">
+          I video sono solo l’inizio. Tutto quello che oggi ti ruba un’ora la sera
+          &mdash; ricopiare, ridimensionare, ricordarsi di pubblicare &mdash; può
+          andare avanti da solo. Diccelo, e lo facciamo sparire.
+        </p>
+      </div>
+      <div class="rb-auto__grid">
+        <% automations.each_with_index do |(head, copy), index| %>
+          <article class="rb-tile" data-rb-reveal>
+            <span class="rb-tile__n"><%= format("%02d", index + 1) %></span>
+            <h3><%= head %></h3>
+            <p><%= copy %></p>
+          </article>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <section class="rb-section rb-section--band rb-who" aria-labelledby="who-title">
+    <div class="rb-wrap">
+      <p class="rb-kicker rb-kicker--yellow">Per chi</p>
+      <h2 id="who-title" class="rb-display">Se hai una vetrina,<br>hai una storia.</h2>
+      <ul class="rb-who__list">
+        <% shops.each do |shop| %><li><%= shop %></li><% end %>
+        <li class="rb-who__you">Tu.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="prezzo" class="rb-section rb-price" aria-labelledby="prezzo-title">
+    <div class="rb-wrap rb-price__grid">
+      <div>
+        <p class="rb-kicker rb-kicker--yellow">Il prezzo</p>
+        <h2 id="prezzo-title" class="rb-display">Un prezzo.<br><span class="rb-mint">Uno solo.</span></h2>
+        <p class="rb-copy">
+          Niente pacchetti “base”, “pro” e “premium”. Niente preventivi da
+          aspettare una settimana. Niente sorprese in fattura. Uguale per il forno
+          e per l’officina.
+        </p>
+        <p class="rb-copy rb-copy--quiet">E non è finita qui: il primo caffè lo offriamo noi!</p>
+      </div>
+      <div class="rb-price__card" data-rb-reveal>
+        <span class="rb-price__flash" aria-hidden="true">Solo!</span>
+        <p class="rb-price__amount"><span class="rb-price__currency">€</span>299<span class="rb-price__per">al mese</span></p>
+        <ul class="rb-price__list">
+          <% included.each do |item| %><li><%= item %></li><% end %>
+        </ul>
+        <p class="rb-price__fine">Nessun vincolo: minimo un mese, poi si paga mese per mese.</p>
+        <a class="rb-btn rb-btn--ink" href="<%= mail %>">Voglio andare in onda</a>
+      </div>
+      <aside class="rb-refer" data-rb-reveal aria-labelledby="refer-title">
+        <span class="rb-refer__badge" aria-hidden="true">Porta un amico</span>
+        <div class="rb-refer__body">
+          <h3 id="refer-title" class="rb-refer__title">Porta un’altra attività.<br>Paghi <span class="rb-refer__price">200&nbsp;€</span> al mese.</h3>
+          <p>Il bar sotto casa, la parrucchiera di fronte, il cugino con l’officina. Da quando si iscrive, paghi 200 euro al mese invece di 299. Resta un mese? Per quel mese paghi 200. Resta un anno? Per un anno.</p>
+          <p class="rb-refer__fine">Uno sconto per cliente. Se l’attività che hai portato smette, il mese dopo torni a 299.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="domande" class="rb-paper rb-faq" aria-labelledby="domande-title">
+    <div class="rb-wrap rb-faq__grid">
+      <div>
+        <p class="rb-kicker">Domande</p>
+        <h2 id="domande-title" class="rb-display rb-display--ink">Le domande<br>che ci fanno al bar.</h2>
+      </div>
+      <div class="rb-faq__list">
+        <% faqs.each_with_index do |(question, answer), index| %>
+          <details class="rb-faq__item"<%= ' open' if index.zero? %>>
+            <summary><%= question %></summary>
+            <p><%= answer %></p>
+          </details>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <section class="rb-final" aria-labelledby="final-title">
+    <div class="rb-wrap rb-final__grid">
+      <div class="rb-final__art">
+        <picture>
+          <source srcset="/redona/img/baffo-pollice.webp" type="image/webp">
+          <img src="/redona/img/baffo-pollice.jpg" width="960" height="960" loading="lazy" alt="Il conduttore fa l’occhiolino, alza il pollice e mostra un video verticale sul telefono.">
+        </picture>
+        <span class="rb-sticker" aria-hidden="true">Mola<br>mia!</span>
+      </div>
+      <div>
+        <p class="rb-kicker rb-kicker--yellow">Ultima chiamata</p>
+        <h2 id="final-title" class="rb-display rb-display--xl">Telefonate!<br><span class="rb-mint">Anzi, scriveteci.</span></h2>
+        <p class="rb-copy">
+          Scrivici due righe: ti diamo il numero WhatsApp di Redona Broadcasting,
+          ci prendiamo un caffè a Redona e da lì in poi ti basta mandare i video.
+        </p>
+        <div class="rb-hero__actions">
+          <a class="rb-btn rb-btn--big" href="<%= mail %>">info@vdistefano.studio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rb-footer">
+  <div class="rb-wrap rb-footer__inner">
+    <p><strong>Redona Broadcasting</strong> &mdash; trasmette da Redona, Bergamo.</p>
+    <p>Un servizio di <strong>SolverForge</strong> &middot; P.&nbsp;IVA 04912600162 &middot; <a href="mailto:info@vdistefano.studio">info@vdistefano.studio</a></p>
+    <p>Un progetto di <a href="/">vdistefano.studio</a> &middot; <a href="/about/">chi c’è dietro</a></p>
+  </div>
+</footer>
