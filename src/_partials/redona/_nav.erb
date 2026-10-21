@@ -8,7 +8,7 @@
       <% links.each do |label, href| %><a href="<%= href %>"><%= label %></a>
       <% end %>
     </nav>
-    <a class="rb-lang" href="<%= switch[:href] %>" hreflang="<%= switch[:hreflang] %>" lang="<%= switch[:hreflang] %>"><%= switch[:label] %></a>
+    <a class="rb-lang" data-rb-lang href="<%= switch[:href] %>" hreflang="<%= switch[:hreflang] %>" lang="<%= switch[:hreflang] %>"><%= switch[:label] %></a>
     <a class="rb-btn rb-btn--small" href="<%= mail %>"><%= cta %></a>
   </div>
 </header>

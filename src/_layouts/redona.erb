@@ -80,6 +80,46 @@
           }, { threshold: 0.35 });
           clips.forEach((video) => clipObserver.observe(video));
         }
+        // Language switch keeps your place: remember which section is in view
+        // and how far into it, then restore it on the other language's page.
+        // Sections missing on the other page fall through to the next one.
+        const ORDER = ["hero", "intro", "steps", "reel", "tech", "rules", "auto", "who", "price", "faq", "final"];
+        const KEY = "rb-lang-place";
+        const sections = [...document.querySelectorAll("[data-rb-section]")];
+        const navHeight = () => document.querySelector(".rb-nav")?.offsetHeight || 0;
+        document.querySelectorAll("[data-rb-lang]").forEach((link) => link.addEventListener("click", () => {
+          const line = navHeight() + 1;
+          const current = sections.filter((s) => s.getBoundingClientRect().top <= line).pop() || sections[0];
+          if (!current) return;
+          const box = current.getBoundingClientRect();
+          const ratio = Math.min(1, Math.max(0, (line - box.top) / box.height));
+          try { sessionStorage.setItem(KEY, JSON.stringify({ key: current.dataset.rbSection, ratio, top: scrollY < 8 })); } catch (_) {}
+        }));
+        let place = null;
+        try { place = JSON.parse(sessionStorage.getItem(KEY)); sessionStorage.removeItem(KEY); } catch (_) {}
+        if (place && place.top) place = null;
+        if (place && !location.hash) {
+          const byKey = Object.fromEntries(sections.map((s) => [s.dataset.rbSection, s]));
+          const start = Math.max(0, ORDER.indexOf(place.key));
+          const exact = byKey[place.key];
+          const target = exact || ORDER.slice(start).map((k) => byKey[k]).find(Boolean);
+          if (target) {
+            const ratio = exact ? place.ratio : 0;
+            const go = () => {
+              const y = target.getBoundingClientRect().top + scrollY + target.offsetHeight * ratio - navHeight();
+              document.documentElement.style.scrollBehavior = "auto";
+              scrollTo(0, Math.max(0, Math.round(y)));
+              document.documentElement.style.scrollBehavior = "";
+              return Math.max(0, Math.round(y));
+            };
+            // Web fonts change section heights after first paint; aim again once
+            // they load, unless the reader has started scrolling in the meantime.
+            let landed = go();
+            const again = () => { if (Math.abs(scrollY - landed) < 4) landed = go(); };
+            document.fonts?.ready.then(again);
+            addEventListener("load", again, { once: true });
+          }
+        }
       })();
     </script>
   </body>
