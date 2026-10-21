@@ -1,5 +1,5 @@
 Bridgetown.configure do |config|
-  url "https://www.vdistefano.studio"
+  url "https://vdistefano.studio"
   template_engine "erb"
   permalink "pretty"
   timezone "UTC"
