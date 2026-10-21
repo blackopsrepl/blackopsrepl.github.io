@@ -25,7 +25,8 @@
     <% Array(data.preload_fonts).each do |font| %>
     <link rel="preload" href="<%= font %>" as="font" type="font/woff2" crossorigin>
     <% end %>
-    <link rel="stylesheet" href="/redona/redona.css">
+    <%# GitHub Pages caches for 10 minutes; a content hash in the URL makes every deploy fetch the new stylesheet %>
+    <link rel="stylesheet" href="/redona/redona.css?v=<%= Digest::SHA256.file(File.join(site.source, "redona/redona.css")).hexdigest[0, 12] %>">
   </head>
   <body class="rb">
     <%= yield %>
