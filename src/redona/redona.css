@@ -899,15 +899,15 @@ html, body { overflow-x: clip; }
 
 /* under the hood: the one place SolverForge shows its own colours */
 .rb-sv {
-  background-color: #0b1411;
+  background-color: var(--rb-ink);
   background-image:
-    linear-gradient(rgba(52, 211, 153, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(52, 211, 153, 0.07) 1px, transparent 1px);
+    linear-gradient(rgba(255, 210, 63, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 210, 63, 0.05) 1px, transparent 1px);
   background-size: 2rem 2rem;
   border-top: 3px solid var(--rb-ink);
   border-bottom: 3px solid var(--rb-ink);
 }
-.rb-sv .rb-copy { color: #e6efe9; }
+.rb-sv .rb-copy { color: var(--rb-text); }
 .rb-term { --rb-mint: var(--sf-green); --rb-text: var(--sf-text); background: #020f0b; border-color: rgba(52, 211, 153, 0.35); box-shadow: 0 0 0 6px rgba(52, 211, 153, 0.06), 0 30px 70px rgba(0, 0, 0, 0.5); }
 .rb-term__bar { background: #06281d; border-bottom-color: rgba(52, 211, 153, 0.2); }
 .rb-term__bar em { color: rgba(207, 233, 223, 0.6); }
