@@ -76,6 +76,6 @@ Italian only, very local, deliberately loud: Bergamo's red and yellow, a TV-shop
 
 ## Status
 
-The first client, a bakery, is live, with a paid month and delivered reels. The manual workflow runs end to end, from files to verified, auto-approved versions in the ledger. The editing skill has also passed on a second model: given only the skill and the original clips, it produced a valid plan that passed every gate. Automatic publishing to the platforms is built up to the adapter boundary but hasn't made a real post yet. WhatsApp ingestion is next.
+The first client, a bakery, is live, with a paid month and delivered reels. The manual workflow runs end to end, from files to verified, auto-approved versions in the ledger. The editing skill has also passed on a second model: given only the skill and the original clips, it produced a valid plan that passed every gate.
 
 <a class="button" href="/redona/"><img class="inline-icon" src="/icons/globe.svg" alt="" width="16" height="16" /> Redona Broadcasting (Italian)</a>
