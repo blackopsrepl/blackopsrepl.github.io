@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Redona Broadcasting">
+  <defs>
+    <linearGradient id="rbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset=".5" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <!-- antennas: the ouroboros head, opened into a V -->
+  <path d="M56 32 L38 10 M72 32 L90 10" stroke="#06140f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M56 32 L38 10 M72 32 L90 10" stroke="#34d399" stroke-width="3.2" stroke-linecap="round"/>
+  <circle cx="38" cy="10" r="6" fill="#eab308" stroke="#06140f" stroke-width="3"/>
+  <circle cx="90" cy="10" r="6" fill="#eab308" stroke="#06140f" stroke-width="3"/>
+  <!-- cabinet -->
+  <rect x="8" y="30" width="112" height="90" rx="20" fill="#eab308" stroke="#06140f" stroke-width="4.5"/>
+  <!-- screen: the SolverForge octagon -->
+  <path d="M38.5 39 H71.5 L86 53.5 V88.5 L71.5 103 H38.5 L24 88.5 V53.5 Z" fill="#022c22" stroke="#06140f" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M40.5 44 H69.5 L81 55.5 V86.5 L69.5 98 H40.5 L29 86.5 V55.5 Z" fill="none" stroke="url(#rbg)" stroke-width="5" stroke-linejoin="miter"/>
+  <!-- face: square solver nodes for eyes, target ring for the nose -->
+  <rect x="42" y="58" width="6" height="6" fill="#cfe9df"/>
+  <rect x="62" y="58" width="6" height="6" fill="#cfe9df"/>
+  <circle cx="55" cy="70" r="3.6" fill="none" stroke="#34d399" stroke-width="2"/>
+  <!-- the Baffo: handlebar moustache -->
+  <path d="M55 75.5 C50 71.5 43 71.5 39.5 75 C37 77.5 34.5 78.5 31.5 76 C30.5 74.5 31 72.5 32.5 71.8 C30 71.5 28 74 28.8 77.3 C30 82 36 84.5 42 83 C47.5 81.6 51.5 79.6 55 79 C58.5 79.6 62.5 81.6 68 83 C74 84.5 80 82 81.2 77.3 C82 74 80 71.5 77.5 71.8 C79 72.5 79.5 74.5 78.5 76 C75.5 78.5 73 77.5 70.5 75 C67 71.5 60 71.5 55 75.5 Z" fill="#f5efdd" stroke="#06140f" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- controls -->
+  <circle cx="103" cy="56" r="7.5" fill="#f5efdd" stroke="#06140f" stroke-width="3.5"/>
+  <path d="M103 49.5 V55" stroke="#06140f" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="103" cy="78" r="7.5" fill="#f5efdd" stroke="#06140f" stroke-width="3.5"/>
+  <path d="M108 74 L104.5 77" stroke="#06140f" stroke-width="3" stroke-linecap="round"/>
+  <circle class="rb-onair-dot" cx="103" cy="99" r="4.5" fill="#ef4444" stroke="#06140f" stroke-width="2.5"/>
+</svg>
