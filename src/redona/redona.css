@@ -88,17 +88,7 @@ html, body { overflow-x: clip; }
 .rb-display--xl { font-size: clamp(3.2rem, 8.4vw, 7.4rem); }
 .rb-mint { color: var(--rb-mint); }
 
-.rb-kicker, .rb-eyebrow {
-  font-family: var(--rb-mono);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--rb-deep);
-  margin-bottom: 1.1rem;
-}
-.rb-kicker--yellow, .rb-eyebrow { color: var(--rb-yellow); }
-.rb-eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; }
+.rb-onair { margin-bottom: 1.4rem; }
 
 .rb-copy {
   font-family: var(--rb-serif);
@@ -238,12 +228,19 @@ html, body { overflow-x: clip; }
 .rb-live {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.55rem;
   background: var(--rb-red);
   color: var(--rb-white);
-  border-radius: 6px;
-  padding: 0.28rem 0.6rem 0.24rem;
-  letter-spacing: 0.14em;
+  border: 2px solid var(--rb-ink);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--rb-ink);
+  font-family: var(--rb-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0.5rem 0.95rem 0.42rem;
+  transform: rotate(-2deg);
 }
 .rb-live__dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--rb-white); animation: rb-blink 1.4s steps(2, jump-none) infinite; }
 @keyframes rb-blink { 50% { opacity: 0.15; } }
@@ -419,7 +416,6 @@ html, body { overflow-x: clip; }
   border-top: 3px solid var(--rb-ink);
   border-bottom: 3px solid var(--rb-ink);
 }
-.rb-paper .rb-kicker { color: #9a6b00; }
 .rb-paper p { color: rgba(6, 20, 15, 0.82); }
 
 .rb-truths__list { list-style: none; margin: clamp(2.5rem, 5vw, 4rem) 0; border-top: 2px solid var(--rb-ink); }
@@ -638,8 +634,7 @@ html, body { overflow-x: clip; }
   transition: transform 0.2s ease, background 0.2s ease;
 }
 .rb-tile:hover { transform: translateY(-4px) rotate(-0.4deg); background: rgba(6, 78, 59, 0.8); }
-.rb-tile__n { font-family: var(--rb-mono); font-size: 0.78rem; font-weight: 700; color: var(--rb-yellow); letter-spacing: 0.12em; }
-.rb-tile h3 { font-family: var(--rb-display); font-weight: 400; text-transform: uppercase; font-size: 1.65rem; line-height: 1.02; margin: 0.6rem 0; }
+.rb-tile h3 { font-family: var(--rb-display); font-weight: 400; text-transform: uppercase; font-size: 1.65rem; line-height: 1.02; margin: 0 0 0.6rem; }
 .rb-tile p { font-family: var(--rb-serif); color: var(--rb-text); line-height: 1.6; }
 
 /* ---------- who ---------- */

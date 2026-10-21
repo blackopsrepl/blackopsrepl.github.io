@@ -112,7 +112,7 @@ permalink: /redona/
   <section class="rb-hero">
     <div class="rb-wrap rb-hero__grid">
       <div class="rb-hero__copy">
-        <p class="rb-eyebrow"><span class="rb-live"><span class="rb-live__dot"></span>In onda</span> Canale 035 · Redona, Bergamo</p>
+        <p class="rb-onair"><span class="rb-live"><span class="rb-live__dot"></span>In onda da Redona</span></p>
         <h1 class="rb-hero__title">Il tuo negozio, <mark class="rb-hl">in&nbsp;onda</mark> dappertutto.</h1>
         <p class="rb-hero__lede">
           Tu giri i video col telefono, come vengono, e ce li mandi su WhatsApp. Noi li trasformiamo in video
@@ -162,7 +162,6 @@ permalink: /redona/
 
   <section class="rb-paper rb-truths" aria-labelledby="diciamolo">
     <div class="rb-wrap">
-      <p class="rb-kicker">Diciamolo</p>
       <h2 id="diciamolo" class="rb-display rb-display--ink">Il tuo negozio è il più bello del quartiere.<br>Su Instagram <s>spacca</s> <span class="rb-scribble">dorme.</span></h2>
       <ol class="rb-truths__list">
         <% truths.each_with_index do |(head, tail), index| %>
@@ -179,7 +178,6 @@ permalink: /redona/
   <section id="come-funziona" class="rb-section rb-steps" aria-labelledby="come-funziona-title">
     <div class="rb-wrap">
       <div class="rb-head">
-        <p class="rb-kicker rb-kicker--yellow">Come funziona</p>
         <h2 id="come-funziona-title" class="rb-display">Quattro passaggi.<br>Tu ne fai due.</h2>
       </div>
       <ol class="rb-steps__grid">
@@ -200,7 +198,6 @@ permalink: /redona/
     <div class="rb-wrap">
       <div class="rb-head rb-head--split">
         <div>
-          <p class="rb-kicker rb-kicker--yellow">Cosa ricevi</p>
           <h2 id="cosa-ricevi-title" class="rb-display">Video che fermano<br>il pollice.</h2>
         </div>
         <p class="rb-copy">
@@ -233,7 +230,6 @@ permalink: /redona/
   <section class="rb-section rb-sv" aria-labelledby="sv-title">
     <div class="rb-wrap rb-sv__grid">
       <div>
-        <p class="rb-kicker rb-kicker--yellow">Sotto il cofano</p>
         <h2 id="sv-title" class="rb-display">Tecnologia da Silicon&nbsp;Valley.<br><span class="rb-mint">Caffè di Redona.</span></h2>
         <p class="rb-copy">
           Dietro ogni video c’è una catena di produzione che gira da sola: prende i tuoi
@@ -262,7 +258,6 @@ permalink: /redona/
 
   <section id="regole" class="rb-paper rb-rules" aria-labelledby="regole-title">
     <div class="rb-wrap">
-      <p class="rb-kicker">Le regole della casa</p>
       <h2 id="regole-title" class="rb-display rb-display--ink">Sei regole.<br>Non si discutono.</h2>
       <ol class="rb-rules__grid">
         <% rules.each_with_index do |(head, copy), index| %>
@@ -279,7 +274,6 @@ permalink: /redona/
   <section class="rb-section rb-auto" aria-labelledby="auto-title">
     <div class="rb-wrap">
       <div class="rb-head">
-        <p class="rb-kicker rb-kicker--yellow">Tutto il resto</p>
         <h2 id="auto-title" class="rb-display rb-auto__title">Lo fai due volte? <mark class="rb-hl">Lo automatizziamo.</mark></h2>
         <p class="rb-copy">
           I video sono solo l’inizio. Tutto quello che oggi ti ruba un’ora la sera
@@ -288,9 +282,8 @@ permalink: /redona/
         </p>
       </div>
       <div class="rb-auto__grid">
-        <% automations.each_with_index do |(head, copy), index| %>
+        <% automations.each do |head, copy| %>
           <article class="rb-tile" data-rb-reveal>
-            <span class="rb-tile__n"><%= format("%02d", index + 1) %></span>
             <h3><%= head %></h3>
             <p><%= copy %></p>
           </article>
@@ -301,7 +294,6 @@ permalink: /redona/
 
   <section class="rb-section rb-section--band rb-who" aria-labelledby="who-title">
     <div class="rb-wrap">
-      <p class="rb-kicker rb-kicker--yellow">Per chi</p>
       <h2 id="who-title" class="rb-display">Se hai una vetrina,<br>hai una storia.</h2>
       <ul class="rb-who__list">
         <% shops.each do |shop| %><li><%= shop %></li><% end %>
@@ -313,7 +305,6 @@ permalink: /redona/
   <section id="prezzo" class="rb-section rb-price" aria-labelledby="prezzo-title">
     <div class="rb-wrap rb-price__grid">
       <div>
-        <p class="rb-kicker rb-kicker--yellow">Il prezzo</p>
         <h2 id="prezzo-title" class="rb-display">Un prezzo.<br><span class="rb-mint">Uno solo.</span></h2>
         <p class="rb-copy">
           Niente pacchetti “base”, “pro” e “premium”. Niente preventivi da
@@ -345,7 +336,6 @@ permalink: /redona/
   <section id="domande" class="rb-paper rb-faq" aria-labelledby="domande-title">
     <div class="rb-wrap rb-faq__grid">
       <div>
-        <p class="rb-kicker">Domande</p>
         <h2 id="domande-title" class="rb-display rb-display--ink">Le domande<br>che ci fanno al bar.</h2>
       </div>
       <div class="rb-faq__list">
@@ -369,7 +359,6 @@ permalink: /redona/
         <span class="rb-sticker" aria-hidden="true">Mola<br>mia!</span>
       </div>
       <div>
-        <p class="rb-kicker rb-kicker--yellow">Ultima chiamata</p>
         <h2 id="final-title" class="rb-display rb-display--xl">Telefonate!<br><span class="rb-mint">Anzi, scriveteci.</span></h2>
         <p class="rb-copy">
           Scrivici due righe: ti diamo il numero WhatsApp di Redona Broadcasting,
