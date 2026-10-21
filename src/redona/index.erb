@@ -30,9 +30,9 @@ permalink: /redona/
     ["Va in onda", "Ogni video viene controllato prima che tu lo veda. Poi esce, il giorno e l’ora giusti, dove vuoi tu.", "Instagram · TikTok · YouTube · Facebook"],
   ]
   phones = [
-    { shop: "Il forno", caption: ["CASONCELLI", "FATTI A MANO"], hot: 1, tone: "rb-phone--forno", tag: "Reel · 19 s" },
-    { shop: "La parrucchiera", caption: ["TAGLIO E PIEGA", "IN 40 MINUTI"], hot: 0, tone: "rb-phone--salone", tag: "TikTok · 24 s" },
-    { shop: "Il bar della piazza", caption: ["APERTI ANCHE", "LA DOMENICA"], hot: 1, tone: "rb-phone--bar", tag: "Short · 15 s" },
+    { clip: "oreni-laboratorio", title: "Il laboratorio", tag: "Reel · Instagram", alt: "Mani che tagliano l’impasto su un banco infarinato, poi un carrello di teglie pronte per il forno." },
+    { clip: "oreni-fave", title: "Le fave dei morti", tag: "TikTok", alt: "Un cesto di fave dei morti appena sfornate, coi sottotitoli: le produciamo nel nostro laboratorio, dieci chili al giorno circa." },
+    { clip: "oreni-castagnaccio", title: "Il castagnaccio", tag: "YouTube Shorts", alt: "Una teglia di castagnaccio col cartellino Oreni 1946, coi sottotitoli: il periodo è quello giusto, venite a trovarci." },
   ]
   included = [
     "Fino a 5 minuti di girato al giorno, mandati su WhatsApp",
@@ -202,22 +202,18 @@ permalink: /redona/
       </div>
       <div class="rb-phones">
         <% phones.each_with_index do |phone, index| %>
-          <figure class="rb-phone <%= phone[:tone] %>" data-rb-reveal style="--i: <%= index %>">
-            <div class="rb-phone__screen" aria-hidden="true">
-              <div class="rb-phone__footage"><span></span><span></span><span></span></div>
-              <span class="rb-phone__logo">Il tuo logo</span>
-              <span class="rb-phone__caption">
-                <% phone[:caption].each_with_index do |line, line_index| %>
-                  <span class="<%= 'is-hot' if line_index == phone[:hot] %>"><%= line %></span>
-                <% end %>
-              </span>
-              <span class="rb-phone__bar"><span></span></span>
+          <figure class="rb-phone" data-rb-reveal style="--i: <%= index %>">
+            <div class="rb-phone__screen">
+              <video class="rb-phone__video" src="/redona/reel/<%= phone[:clip] %>.mp4" poster="/redona/reel/<%= phone[:clip] %>.jpg" width="540" height="960" muted loop playsinline preload="none" disablepictureinpicture data-rb-clip aria-label="<%= phone[:alt] %>"></video>
+              <span class="rb-phone__notch" aria-hidden="true"></span>
+              <span class="rb-phone__glare" aria-hidden="true"></span>
+              <span class="rb-phone__bar" aria-hidden="true"><span></span></span>
             </div>
-            <figcaption><strong><%= phone[:shop] %></strong> <span><%= phone[:tag] %></span></figcaption>
+            <figcaption><strong><%= phone[:title] %></strong> <span><%= phone[:tag] %></span></figcaption>
           </figure>
         <% end %>
       </div>
-      <p class="rb-note rb-note--center">Esempi illustrati. I tuoi saranno meglio: ci sarai tu.</p>
+      <p class="rb-note rb-note--center">Girati al bancone da un nostro cliente, un forno di Bergamo. Montati da noi.</p>
     </div>
   </section>
 

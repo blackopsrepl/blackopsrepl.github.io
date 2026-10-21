@@ -509,66 +509,28 @@ html, body { overflow-x: clip; }
   border: 10px solid var(--rb-ink);
   box-shadow: 0 0 0 2px rgba(255, 210, 63, 0.35), 10px 14px 0 rgba(0, 0, 0, 0.35);
   overflow: hidden;
-  background: #222;
+  background: #111;
+  isolation: isolate;
 }
-.rb-phone__footage { position: absolute; inset: 0; }
-.rb-phone__footage span { position: absolute; border-radius: 50%; filter: blur(2px); }
-.rb-phone--forno .rb-phone__footage { background: radial-gradient(circle at 50% 60%, #f4c27a, #b5652a 45%, #4a2412 100%); }
-.rb-phone--forno .rb-phone__footage span:nth-child(1) { width: 62%; height: 26%; left: 18%; top: 46%; background: radial-gradient(#fbe3b0, #d99a52); border-radius: 46% 54% 40% 60%; }
-.rb-phone--forno .rb-phone__footage span:nth-child(2) { width: 30%; height: 13%; left: 8%; top: 30%; background: radial-gradient(#fbe3b0, #c98543); }
-.rb-phone--forno .rb-phone__footage span:nth-child(3) { width: 34%; height: 14%; left: 58%; top: 26%; background: radial-gradient(#ffeccc, #d28d48); }
-.rb-phone--salone .rb-phone__footage { background: linear-gradient(160deg, #e9d6ee, #b98fc4 40%, #3f2a4f); }
-.rb-phone--salone .rb-phone__footage span:nth-child(1) { width: 56%; height: 34%; left: 22%; top: 24%; background: radial-gradient(circle at 40% 30%, #5a3a2a, #24130c); border-radius: 50% 50% 44% 44%; }
-.rb-phone--salone .rb-phone__footage span:nth-child(2) { width: 40%; height: 26%; left: 30%; top: 44%; background: radial-gradient(#f2c9a8, #c58f6b); }
-.rb-phone--salone .rb-phone__footage span:nth-child(3) { width: 90%; height: 30%; left: 5%; top: 66%; background: #1c1220; border-radius: 40% 40% 0 0; }
-.rb-phone--bar .rb-phone__footage { background: linear-gradient(180deg, #8fd3c1, #2d7f6a 50%, #10372d); }
-.rb-phone--bar .rb-phone__footage span:nth-child(1) { width: 46%; height: 22%; left: 27%; top: 44%; background: radial-gradient(circle at 50% 30%, #f6ead2, #c99d6b 70%); border-radius: 18% 18% 48% 48%; }
-.rb-phone--bar .rb-phone__footage span:nth-child(2) { width: 30%; height: 8%; left: 35%; top: 42%; background: #6b3b1c; }
-.rb-phone--bar .rb-phone__footage span:nth-child(3) { width: 70%; height: 7%; left: 15%; top: 62%; background: #f2efe6; border-radius: 50%; }
-.rb-phone__logo {
+.rb-phone__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.rb-phone__notch {
   position: absolute;
-  top: 9%; left: 50%;
+  top: 2.2%; left: 50%;
+  width: 26%; height: 2.6%;
   transform: translateX(-50%);
-  font-family: var(--rb-mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--rb-white);
-  border: 1.5px solid rgba(255, 255, 255, 0.85);
   border-radius: 999px;
-  padding: 0.2rem 0.55rem;
-  background: rgba(0, 0, 0, 0.25);
-  white-space: nowrap;
+  background: var(--rb-ink);
+  z-index: 2;
 }
-.rb-phone__caption {
+.rb-phone__glare {
   position: absolute;
-  left: 6%; right: 6%; bottom: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: var(--rb-display);
-  font-size: clamp(1rem, 2.6vw, 1.7rem);
-  line-height: 1.04;
-  text-align: center;
-  color: #fff8e7;
-  -webkit-text-stroke: 1.6px #000;
-  paint-order: stroke fill;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(125deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 28%, transparent 42%);
 }
-.rb-phone__caption span { display: block; }
-.rb-phone__caption .is-hot { color: var(--rb-yellow-hi); }
-.rb-motion .rb-phone__caption span { opacity: 0; transform: translateY(0.4em) scale(0.9); }
-.rb-motion .rb-phone.is-in .rb-phone__caption span { animation: rb-pop 4.8s calc(var(--i) * 0.5s) ease-out infinite; }
-.rb-motion .rb-phone.is-in .rb-phone__caption span + span { animation-delay: calc(var(--i) * 0.5s + 0.45s); }
-@keyframes rb-pop {
-  0% { opacity: 0; transform: translateY(0.4em) scale(0.9); }
-  8%, 82% { opacity: 1; transform: none; }
-  92%, 100% { opacity: 0; transform: none; }
-}
-.rb-phone__bar { position: absolute; left: 8%; right: 8%; bottom: 7%; height: 4px; border-radius: 4px; background: rgba(255, 255, 255, 0.3); overflow: hidden; }
-.rb-phone__bar span { display: block; height: 100%; width: 100%; background: var(--rb-white); transform-origin: left; transform: scaleX(0.35); }
-.rb-motion .rb-phone.is-in .rb-phone__bar span { animation: rb-progress 4.8s calc(var(--i) * 0.5s) linear infinite; }
-@keyframes rb-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.rb-phone__bar { position: absolute; left: 8%; right: 8%; bottom: 4%; height: 3px; border-radius: 3px; background: rgba(255, 255, 255, 0.35); overflow: hidden; z-index: 2; }
+.rb-phone__bar span { display: block; height: 100%; width: 100%; background: var(--rb-white); transform-origin: left; transform: scaleX(var(--p, 0)); }
 .rb-phone figcaption { margin-top: 1.1rem; text-align: center; display: grid; gap: 0.15rem; }
 .rb-phone figcaption strong { font-family: var(--rb-display); font-weight: 400; text-transform: uppercase; font-size: 1.35rem; letter-spacing: 0.03em; }
 .rb-phone figcaption span { font-family: var(--rb-mono); font-size: 0.74rem; color: var(--rb-mint); letter-spacing: 0.08em; text-transform: uppercase; }
@@ -898,6 +860,7 @@ html, body { overflow-x: clip; }
   .rb-phones { grid-template-columns: repeat(3, minmax(9.5rem, 1fr)); overflow-x: auto; padding: 1rem 0.5rem 1.5rem; margin: 0 -1rem; scroll-snap-type: x mandatory; }
   .rb-phone { scroll-snap-align: center; }
   .rb-phone__screen { border-width: 7px; border-radius: 22px; }
+  .rb-phone__notch { height: 2.2%; }
   .rb-truths__list li { grid-template-columns: 2.6rem 1fr; }
   .rb-faq__item p { padding-right: 0; }
   .rb-sticker { width: 6.4rem; height: 6.4rem; font-size: 1.3rem; right: -0.3rem; }

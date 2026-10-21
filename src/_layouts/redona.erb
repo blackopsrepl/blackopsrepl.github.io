@@ -44,6 +44,35 @@
           }, { rootMargin: "0px 0px -8% 0px" });
           reveal.forEach((node) => observer.observe(node));
         }
+        const clips = document.querySelectorAll("[data-rb-clip]");
+        if (clips.length && "IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          const playing = new Set();
+          const track = () => {
+            playing.forEach((video) => {
+              if (video.duration) {
+                video.parentElement.style.setProperty("--p", (video.currentTime / video.duration).toFixed(4));
+              }
+            });
+            if (playing.size) requestAnimationFrame(track);
+          };
+          const clipObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              const video = entry.target;
+              if (entry.isIntersecting) {
+                video.preload = "auto";
+                video.play().then(() => {
+                  const wasIdle = !playing.size;
+                  playing.add(video);
+                  if (wasIdle) requestAnimationFrame(track);
+                }).catch(() => {});
+              } else {
+                video.pause();
+                playing.delete(video);
+              }
+            });
+          }, { threshold: 0.35 });
+          clips.forEach((video) => clipObserver.observe(video));
+        }
       })();
     </script>
   </body>
