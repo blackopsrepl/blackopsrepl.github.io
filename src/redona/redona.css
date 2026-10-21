@@ -96,7 +96,11 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+/* A fixed root size: Firefox picks the default font size per language group,
+   so a reader with a 14px Western default would see /redona/ at 14px and
+   /redona/zh/ at the 16px Chinese default, every rem 14% apart. Pinning it
+   makes both languages one layout; browser zoom still scales everything. */
+html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 html, body { overflow-x: clip; }
 
 .rb {
@@ -303,12 +307,15 @@ html, body { overflow-x: clip; }
 /* ---------- hero ---------- */
 
 .rb-hero { padding: clamp(3rem, 7vw, 6.5rem) 0 clamp(4.5rem, 9vw, 8rem); }
-.rb-hero__grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+/* Top-aligned, not centred: the TV must not move when the copy beside it is
+   longer in one language than the other. */
+.rb-hero__grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
 .rb-hero__title {
   font-family: var(--rb-display);
   font-weight: 400;
   text-transform: uppercase;
-  font-size: clamp(3.2rem, 7.6vw, 7.2rem);
+  /* capped so "IL TUO NEGOZIO," always holds one line: three lines in both languages */
+  font-size: clamp(2.6rem, 6.4vw, 6.3rem);
   line-height: 0.94;
   letter-spacing: 0.003em;
   margin: 0.4rem 0 1.8rem;
@@ -892,7 +899,17 @@ html, body { overflow-x: clip; }
   .rb-price__card { max-width: 34rem; transform: none; }
   .rb-refer { grid-template-columns: 1fr; padding: 1.5rem 1.3rem; }
   .rb-refer__badge { width: 6.6rem; height: 6.6rem; font-size: 1.15rem; }
-  .rb-tv { max-width: 34rem; margin: 3.4rem auto 7.5rem; width: 100%; }
+  /* Stacked: the TV comes straight after the headline, so it opens the
+     first screen on a phone and sits at the same height in every language
+     (the paragraph below it is the part whose length varies). */
+  .rb-hero__grid { row-gap: 0; }
+  .rb-hero__copy { display: contents; }
+  .rb-onair { order: 1; }
+  .rb-hero__title { order: 2; margin-bottom: 0; }
+  .rb-tv { order: 3; max-width: 34rem; margin: 3.6rem auto 7.5rem; width: 100%; }
+  .rb-hero__lede { order: 4; }
+  .rb-hero__actions { order: 5; }
+  .rb-chips { order: 6; }
   .rb-note--hero { right: 0.5rem; bottom: -7.6rem; }
   .rb-final__art { max-width: 30rem; }
 }
