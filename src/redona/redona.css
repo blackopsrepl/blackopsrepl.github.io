@@ -12,14 +12,53 @@
   font-family: "rb-zh-display";
   src: url("/redona/fonts/rb-zh-display.woff2") format("woff2");
   font-weight: 400;
-  font-display: swap;
+  font-display: block;
+  unicode-range: U+3000-303F, U+4E00-9FFF, U+FF00-FFEF, U+201C-201D;
 }
 
 @font-face {
   font-family: "rb-zh-note";
   src: url("/redona/fonts/rb-zh-note.woff2") format("woff2");
   font-weight: 400;
-  font-display: swap;
+  font-display: block;
+  unicode-range: U+3000-303F, U+4E00-9FFF, U+FF00-FFEF, U+201C-201D;
+  size-adjust: 77%; /* ideographs to Bangers' cap height: 0.741 / 0.961 */
+}
+
+/* Chinese body text: bundled Noto fonts trimmed to the page's characters.
+   unicode-range keeps them to Chinese glyphs, so Latin words in the same line
+   keep the Italian page's faces; size-adjust lines Chinese up with that Latin. */
+@font-face {
+  font-family: "rb-zh-sans";
+  src: url("/redona/fonts/rb-zh-sans-400.woff2") format("woff2");
+  font-weight: 100 549;
+  font-display: block;
+  size-adjust: 92%;
+  unicode-range: U+3000-303F, U+4E00-9FFF, U+FF00-FFEF, U+201C-201D;
+}
+@font-face {
+  font-family: "rb-zh-sans";
+  src: url("/redona/fonts/rb-zh-sans-700.woff2") format("woff2");
+  font-weight: 550 900;
+  font-display: block;
+  size-adjust: 92%;
+  unicode-range: U+3000-303F, U+4E00-9FFF, U+FF00-FFEF, U+201C-201D;
+}
+@font-face {
+  font-family: "rb-zh-switch";
+  src: url("/redona/fonts/rb-zh-switch.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: block;
+  size-adjust: 92%;
+  unicode-range: U+4E2D, U+6587;
+}
+@font-face {
+  font-family: "rb-zh-serif";
+  src: url("/redona/fonts/rb-zh-serif-400.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: block;
+  size-adjust: 92%;
+  unicode-range: U+3000-303F, U+4E00-9FFF, U+FF00-FFEF, U+201C-201D;
 }
 
 @font-face {
@@ -695,17 +734,14 @@ html, body { overflow-x: clip; }
   line-height: 1.35;
 }
 .rb-price__list li::before {
-  content: "✓";
+  content: "";
   position: absolute;
   left: 0; top: 0.55rem;
-  display: grid;
-  place-items: center;
   width: 1.3rem; height: 1.3rem;
   border-radius: 50%;
-  background: var(--rb-ink);
-  color: var(--rb-yellow);
-  font-size: 0.75rem;
-  font-weight: 800;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23ffc61a' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 72% no-repeat,
+    var(--rb-ink);
 }
 .rb-price__fine { font-family: var(--rb-mono); font-size: 0.8rem; color: rgba(28, 10, 12, 0.75) !important; margin-bottom: 1.4rem; }
 .rb-btn--ink { background: var(--rb-ink); color: var(--rb-yellow) !important; box-shadow: 4px 4px 0 rgba(28, 10, 12, 0.35); }
@@ -917,7 +953,7 @@ html, body { overflow-x: clip; }
 
 .rb-lang {
   flex: none;
-  font-family: var(--rb-sans), "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  font-family: "rb-zh-switch", var(--rb-sans);
   font-weight: 700;
   font-size: 0.92rem;
   line-height: 1;
@@ -938,20 +974,16 @@ html, body { overflow-x: clip; }
    subset display fonts. Body text uses the reader's system Chinese face. */
 
 html:lang(zh) {
-  --rb-cjk: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
-  --rb-display: "Anton", "rb-zh-display", var(--rb-cjk);
-  --rb-sans: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, var(--rb-cjk);
-  --rb-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, var(--rb-cjk);
+  --rb-mono: "rb-zh-sans", "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+  --rb-display: "Anton", "rb-zh-display", Impact, sans-serif;
+  --rb-sans: "rb-zh-sans", "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --rb-serif: "rb-zh-serif", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
 }
-html:lang(zh) .rb-display { line-height: 1.12; }
 /* HuangYou is a lighter stroke than Anton; a hairline outline evens the weight */
 html:lang(zh) :is(.rb-display, .rb-hero__title, .rb-refer__title, .rb-step__verb, .rb-honest__gift) { -webkit-text-stroke: 0.025em currentColor; paint-order: stroke fill; }
 html:lang(zh) .rb-who__list li { -webkit-text-stroke-width: 1.5px; }
 html:lang(zh) :is(.rb-display, .rb-hero__title) [lang="it"], html:lang(zh) .rb-hero__title .rb-hl { -webkit-text-stroke: 0; }
-html:lang(zh) .rb-hero__title { line-height: 1.1; }
-html:lang(zh) .rb-refer__title { line-height: 1.2; }
-html:lang(zh) .rb-copy, html:lang(zh) .rb-hero__lede, html:lang(zh) .rb-step p, html:lang(zh) .rb-faq__item p { line-height: 1.8; }
-.rb-note:lang(zh) { font-family: "Bangers", "rb-zh-note", var(--rb-serif); font-style: normal; letter-spacing: 0.02em; font-size: 1.2rem; }
+.rb-note:lang(zh) { font-family: "Bangers", "rb-zh-note", "rb-zh-serif", serif; font-style: normal; letter-spacing: 0.02em; }
 .rb-honest__gift {
   font-family: var(--rb-display);
   font-size: clamp(1.5rem, 3.4vw, 2.4rem);
@@ -969,4 +1001,17 @@ html:lang(zh) .rb-copy, html:lang(zh) .rb-hero__lede, html:lang(zh) .rb-step p, 
 }
 @media (max-width: 360px) {
   .rb .rb-brand__word { display: none; }
+}
+
+/* Symbols are drawn, not typed: no font on the page carries ★ or ✓, so
+   typing them would hand them to whatever symbol font the phone has.
+   The price list's check is drawn the same way, in its own rule. */
+.rb-ticker__star {
+  display: inline-block;
+  width: 0.72em;
+  height: 0.72em;
+  background: var(--rb-red);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1.8l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 18l-6.4 3.4L7 14.3l-5.3-5 7.2-.9z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1.8l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 18l-6.4 3.4L7 14.3l-5.3-5 7.2-.9z'/%3E%3C/svg%3E") center / contain no-repeat;
+  vertical-align: -0.04em;
 }

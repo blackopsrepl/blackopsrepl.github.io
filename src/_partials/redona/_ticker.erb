@@ -3,7 +3,7 @@
     <% 2.times do |copy| %>
       <div class="rb-ticker__run"<%= ' aria-hidden="true"'.html_safe if copy == 1 %>>
         <% items.each do |item| %>
-          <span class="rb-ticker__item"><%= item %></span><span class="rb-ticker__star" aria-hidden="true">★</span>
+          <span class="rb-ticker__item"><%= item %></span><span class="rb-ticker__star" aria-hidden="true"></span>
         <% end %>
       </div>
     <% end %>
