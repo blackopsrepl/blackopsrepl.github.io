@@ -1,0 +1,238 @@
+---
+layout: redona
+lang: zh-Hans
+og_locale: zh_CN
+title: "Redona Broadcasting · 你的店，in onda 到处播"
+description: "用手机拍视频，用 WhatsApp 发给我们。我们剪好、配字幕、加上你的 logo，发到 Instagram、TikTok、YouTube 和 Facebook。299 欧一个月。贝加莫 Redona 的视频工作室。"
+permalink: /redona/zh/
+preload_fonts:
+  - /redona/fonts/rb-zh-display.woff2
+---
+<%
+  mail = "mailto:hello@solverforge.ai?subject=Redona%20Broadcasting%20-%20vorrei%20andare%20in%20onda%20(zh)"
+  ticker = [
+    "In onda da Redona, Bergamo",
+    "用 WhatsApp 发视频，我们帮你上节目",
+    "Instagram · TikTok · YouTube · Facebook",
+    "299 欧一个月，什么都包",
+    "介绍一家店，每月 200 欧",
+    "Mola mia",
+  ]
+  steps = [
+    ["拍", "用手机拍，怎么拍都行。拍歪了、客人走进来了，都没关系。一天最多五分钟。", "任何手机 · 每天最多 5 分钟"],
+    ["发", "用 WhatsApp 发给我们，跟给家里人发照片一样。不用装新 App，不用密码。", "只用 WhatsApp · 原片不动"],
+    ["剪", "只在停顿的地方剪，不会把话剪断。加字幕、你的 logo、调颜色，最后放上地址。", "720×1280 · 30 fps · H.264"],
+    ["上节目", "每条视频你看到之前，我们都检查过。然后在对的日子、对的时间发出去。", "Instagram · TikTok · YouTube · Facebook"],
+  ]
+  phones = [
+    { clip: "oreni-laboratorio", title: "Il laboratorio", tag: "Reel · Instagram", alt: "在撒了面粉的台子上切面团，然后是一架等着进烤箱的烤盘。" },
+    { clip: "oreni-fave", title: "Le fave dei morti", tag: "TikTok", alt: "一篮刚出炉的 fave dei morti，配着意大利语字幕。" },
+    { clip: "oreni-castagnaccio", title: "Il castagnaccio", tag: "YouTube Shorts", alt: "一盘栗子蛋糕 castagnaccio，旁边是 Oreni 1946 的价签，配着意大利语字幕。" },
+  ]
+  included = [
+    "每天最多 5 分钟素材，用 WhatsApp 发",
+    "剪辑，颜色和声音都调好",
+    "字幕、你的 logo、结尾放上地址",
+    "所有格式：Instagram、TikTok、YouTube、Facebook",
+    "按日程发布，不会断",
+    "每条视频都检查过",
+    "原片和成片都存着，永远是你的",
+  ]
+  shops = ["面包店", "理发店", "酒吧", "美甲店", "餐馆", "五金店", "服装店", "水果店"]
+  faqs = [
+    ["我要会玩社交媒体吗？", "不用。你会做生意就行，剩下的我们来。"],
+    ["视频怎么发给你们？", "用 WhatsApp，只用 WhatsApp。用拍视频的那部手机直接发，就完事了。"],
+    ["能发多少？", "每天最多五分钟素材。够用了：好的视频一般不到一分钟。"],
+    ["视频是我的吗？", "是你的。原片是你的，剪好的视频你也会拿到。"],
+    ["你们说中文吗？", "不说。但意大利语我们说得很好，慢慢说，说清楚。你的视频要说给意大利客人听，这正是我们的本事。"],
+  ]
+%>
+
+<%= render "redona/ticker", items: ticker, label: "In onda" %>
+
+<%= render "redona/nav",
+      home: "/redona/zh/", home_label: "Redona Broadcasting，回到顶部", nav_label: "目录",
+      links: [["怎么做", "#zuo"], ["视频", "#shipin"], ["价格", "#jiage"], ["问题", "#wenti"]],
+      switch: { label: "Italiano", href: "/redona/", hreflang: "it" },
+      mail: mail, cta: "Scrivici" %>
+
+<main id="main-content">
+
+  <section class="rb-hero">
+    <div class="rb-wrap rb-hero__grid">
+      <div class="rb-hero__copy">
+        <p class="rb-onair"><span class="rb-live"><span class="rb-live__dot"></span>In onda da Redona</span></p>
+        <h1 class="rb-hero__title">你的店，<mark class="rb-hl" lang="it">in&nbsp;onda</mark> 到处播。</h1>
+        <p class="rb-hero__lede">
+          你用手机拍视频，随便拍，用 WhatsApp 发给我们。我们剪好、配上字幕、加上你的 logo，
+          发到 Instagram、TikTok、YouTube 和 Facebook。
+          <strong>你回柜台，继续忙。</strong>
+        </p>
+        <div class="rb-hero__actions">
+          <a class="rb-btn" href="<%= mail %>">我要上节目</a>
+          <a class="rb-btn rb-btn--ghost" href="#zuo">怎么做 &darr;</a>
+        </div>
+        <ul class="rb-chips" aria-label="平台">
+          <li>Instagram</li><li>TikTok</li><li>YouTube Shorts</li><li>Facebook</li>
+        </ul>
+      </div>
+
+      <figure class="rb-tv" aria-label="我们的主持人">
+        <div class="rb-tv__antenna" aria-hidden="true"></div>
+        <div class="rb-tv__body">
+          <div class="rb-tv__screen">
+            <picture>
+              <source srcset="/redona/img/baffo-microfono.webp" type="image/webp">
+              <img src="/redona/img/baffo-microfono.jpg" width="960" height="960" alt="Redona Broadcasting 的主持人：戴眼镜，九十年代的大胡子，头上一根天线，话筒对着你。" fetchpriority="high">
+            </picture>
+            <div class="rb-tv__osd" aria-hidden="true">
+              <span class="rb-tv__ch">CH 035</span>
+              <span class="rb-tv__rec"><span></span>IN ONDA</span>
+            </div>
+            <div class="rb-tv__lower" aria-hidden="true">
+              <span class="rb-tv__lower-tag">Diretta</span>
+              <span class="rb-tv__lower-text">Redona · ore <span data-rb-clock>--:--:--</span></span>
+            </div>
+            <div class="rb-tv__scan" aria-hidden="true"></div>
+          </div>
+          <div class="rb-tv__panel" aria-hidden="true">
+            <span class="rb-tv__knob"></span><span class="rb-tv__knob"></span>
+            <span class="rb-tv__grille"></span>
+          </div>
+        </div>
+        <figcaption class="rb-note rb-note--hero" lang="it">
+          <svg class="rb-note__arrow" viewBox="0 0 120 80" aria-hidden="true"><path d="M110 8 C 80 10, 40 20, 22 62" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M12 50 L22 64 L34 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Questo sono io.<br>I baffi sono finti.<br>Il resto è vero. <span class="rb-note__sig">&mdash; Vittorio</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="rb-paper rb-honest" aria-labelledby="laoshi">
+    <div class="rb-wrap">
+      <h2 id="laoshi" class="rb-display rb-display--ink">先说清楚：<br>我们不会说中文。</h2>
+      <p class="rb-honest__gift">这一页中文，是我们的见面礼。</p>
+      <ol class="rb-truths__list">
+        <li data-rb-reveal><span class="rb-truths__n">01</span><p><strong>你在贝加莫开店，</strong>每天用意大利语招呼客人。我们也是。</p></li>
+        <li data-rb-reveal><span class="rb-truths__n">02</span><p><strong>你的客人是意大利人，</strong>你的视频就得说地道的意大利语。这个，我们最拿手。</p></li>
+        <li data-rb-reveal><span class="rb-truths__n">03</span><p><strong>所以：</strong>中文写在这里，生意我们用意大利语谈。慢慢说，说清楚。</p></li>
+      </ol>
+      <p class="rb-truths__punch" data-rb-reveal lang="it"><mark class="rb-hl rb-hl--ink">Piano piano, ci capiamo.</mark></p>
+    </div>
+  </section>
+
+  <section id="zuo" class="rb-section rb-steps" aria-labelledby="zuo-title">
+    <div class="rb-wrap">
+      <div class="rb-head">
+        <h2 id="zuo-title" class="rb-display">四步。<br>你只做两步。</h2>
+      </div>
+      <ol class="rb-steps__grid">
+        <% steps.each_with_index do |(verb, copy, spec), index| %>
+          <li class="rb-step<%= ' rb-step--us' if index >= 2 %>" data-rb-reveal>
+            <span class="rb-step__n" aria-hidden="true"><%= format("%02d", index + 1) %></span>
+            <span class="rb-step__who"><%= index < 2 ? "你" : "我们" %></span>
+            <h3 class="rb-step__verb"><%= verb %>。</h3>
+            <p><%= copy %></p>
+            <code class="rb-step__spec"><%= spec %></code>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+  </section>
+
+  <section id="shipin" class="rb-section rb-section--band rb-reel" aria-labelledby="shipin-title">
+    <div class="rb-wrap">
+      <div class="rb-head rb-head--split">
+        <div>
+          <h2 id="shipin-title" class="rb-display">让人停下手指的视频。</h2>
+        </div>
+        <p class="rb-copy">
+          竖屏，干净，字幕够大，坐公交也看得清。开头是你的 logo，结尾是地址和营业时间。
+          颜色调好，声音干净。每个平台都能直接发，你什么都不用碰。
+        </p>
+      </div>
+      <%= render "redona/phones", phones: phones, note: "贝加莫一家面包店在柜台拍的，我们剪的。字幕是意大利语，说给他们的客人听。" %>
+    </div>
+  </section>
+
+  <section class="rb-section rb-section--band rb-who" aria-labelledby="who-title">
+    <div class="rb-wrap">
+      <h2 id="who-title" class="rb-display">有门面，<br>就有故事。</h2>
+      <ul class="rb-who__list">
+        <% shops.each do |shop| %><li><%= shop %></li><% end %>
+        <li class="rb-who__you">你。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="jiage" class="rb-section rb-price" aria-labelledby="jiage-title">
+    <div class="rb-wrap rb-price__grid">
+      <div>
+        <h2 id="jiage-title" class="rb-display">一个价。<br><span class="rb-mint">就一个。</span></h2>
+        <p class="rb-copy">
+          没有“基础版”“高级版”。不用等一个星期的报价。账单上没有意外。
+          面包店和修车铺，一样的价钱。
+        </p>
+        <p class="rb-copy rb-copy--quiet" lang="it">E non è finita qui: il primo caffè lo offriamo noi!</p>
+      </div>
+      <div class="rb-price__card" data-rb-reveal>
+        <span class="rb-price__flash" aria-hidden="true">Solo!</span>
+        <p class="rb-price__amount"><span class="rb-price__currency">€</span>299<span class="rb-price__per">每月</span></p>
+        <ul class="rb-price__list">
+          <% included.each do |item| %><li><%= item %></li><% end %>
+        </ul>
+        <p class="rb-price__fine">没有合同：最少一个月，之后按月付。</p>
+        <a class="rb-btn rb-btn--ink" href="<%= mail %>">我要上节目</a>
+      </div>
+      <aside class="rb-refer" data-rb-reveal aria-labelledby="refer-title">
+        <span class="rb-refer__badge" aria-hidden="true" lang="it">Porta un amico</span>
+        <div class="rb-refer__body">
+          <h3 id="refer-title" class="rb-refer__title">介绍一家店，<br>你每月只付 <span class="rb-refer__price">200&nbsp;€</span>。</h3>
+          <p>隔壁的酒吧，对面的理发店，开修车铺的表哥。他们加入以后，你每月付 200 欧，不是 299。他们待一个月，你省一个月；待一年，你省一年。</p>
+          <p class="rb-refer__fine">每个客户限一个折扣。介绍来的店不做了，下个月恢复 299。</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="wenti" class="rb-paper rb-faq" aria-labelledby="wenti-title">
+    <div class="rb-wrap rb-faq__grid">
+      <div>
+        <h2 id="wenti-title" class="rb-display rb-display--ink">大家<br>常问的。</h2>
+      </div>
+      <div class="rb-faq__list">
+        <% faqs.each_with_index do |(question, answer), index| %>
+          <details class="rb-faq__item"<%= ' open' if index.zero? %>>
+            <summary><%= question %></summary>
+            <p><%= answer %></p>
+          </details>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <section class="rb-final" aria-labelledby="final-title">
+    <div class="rb-wrap rb-final__grid">
+      <div class="rb-final__art">
+        <picture>
+          <source srcset="/redona/img/baffo-pollice.webp" type="image/webp">
+          <img src="/redona/img/baffo-pollice.jpg" width="960" height="960" loading="lazy" alt="主持人眨眼，竖起大拇指，手机上放着一条竖屏视频。">
+        </picture>
+        <span class="rb-sticker" aria-hidden="true" lang="it">Mola<br>mia!</span>
+      </div>
+      <div>
+        <h2 id="final-title" class="rb-display rb-display--xl" lang="it">Telefonate!<br><span class="rb-mint">Anzi, scriveteci.</span></h2>
+        <p class="rb-copy">
+          给我们写两行，用意大利语就行。我们在 Redona 请你喝杯咖啡，
+          之后你只要发视频。
+        </p>
+        <div class="rb-hero__actions">
+          <a class="rb-btn rb-btn--big" href="<%= mail %>">hello@solverforge.ai</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<%= render "redona/footer" %>

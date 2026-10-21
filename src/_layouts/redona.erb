@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" dir="ltr" class="rb-document">
+<html lang="<%= data.lang || "it" %>" dir="ltr" class="rb-document">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +9,12 @@
     <meta name="author" content="<%= site.metadata.author %>">
     <% page_url = "#{site.metadata.url.chomp("/")}#{resource.relative_url}" %>
     <link rel="canonical" href="<%= page_url %>">
+    <% base = site.metadata.url.chomp("/") %>
+    <link rel="alternate" hreflang="it" href="<%= base %>/redona/">
+    <link rel="alternate" hreflang="zh-Hans" href="<%= base %>/redona/zh/">
+    <link rel="alternate" hreflang="x-default" href="<%= base %>/redona/">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="it_IT">
+    <meta property="og:locale" content="<%= data.og_locale || "it_IT" %>">
     <meta property="og:title" content="<%= data.title %>">
     <meta property="og:description" content="<%= data.description %>">
     <meta property="og:url" content="<%= page_url %>">
@@ -18,6 +22,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/svg+xml" href="/redona/img/favicon.svg">
     <link rel="preload" href="/redona/fonts/Anton-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <% Array(data.preload_fonts).each do |font| %>
+    <link rel="preload" href="<%= font %>" as="font" type="font/woff2" crossorigin>
+    <% end %>
     <link rel="stylesheet" href="/redona/redona.css">
   </head>
   <body class="rb">

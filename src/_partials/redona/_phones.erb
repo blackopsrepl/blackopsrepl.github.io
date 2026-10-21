@@ -1,0 +1,14 @@
+<div class="rb-phones">
+  <% phones.each_with_index do |phone, index| %>
+    <figure class="rb-phone" data-rb-reveal style="--i: <%= index %>">
+      <div class="rb-phone__screen">
+        <video class="rb-phone__video" src="/redona/reel/<%= phone[:clip] %>.mp4" poster="/redona/reel/<%= phone[:clip] %>.jpg" width="540" height="960" muted loop playsinline preload="none" disablepictureinpicture data-rb-clip aria-label="<%= phone[:alt] %>"></video>
+        <span class="rb-phone__notch" aria-hidden="true"></span>
+        <span class="rb-phone__glare" aria-hidden="true"></span>
+        <span class="rb-phone__bar" aria-hidden="true"><span></span></span>
+      </div>
+      <figcaption><strong><%= phone[:title] %></strong> <span><%= phone[:tag] %></span></figcaption>
+    </figure>
+  <% end %>
+</div>
+<p class="rb-note rb-note--center"><%= note %></p>

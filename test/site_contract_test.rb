@@ -43,6 +43,7 @@ class SiteContractTest < Minitest::Test
       /portfolio/yuga-planner/
       /portfolio/zoyd/zoyd/
       /redona/
+      /redona/zh/
     ].each do |route|
       assert File.file?(output_file(route)), "missing published route #{route}"
     end
@@ -82,6 +83,14 @@ class SiteContractTest < Minitest::Test
       links = REXML::XPath.match(document, "//item/link").map(&:text)
       refute links.any? { |link| link.include?("huggingface.co") }, "external demo leaked into #{file}"
     end
+  end
+
+  def test_chinese_page_glyphs_are_in_the_subset_fonts
+    page = File.read(output_file("/redona/zh/"), encoding: "UTF-8")
+    subset = File.read(File.join(OUTPUT, "redona/fonts/zh-glyphs.txt"), encoding: "UTF-8")
+    cjk = /[\u3000-\u303F\u4E00-\u9FFF\uFF00-\uFFEF]/
+    missing = page.scan(cjk).uniq - subset.scan(cjk).uniq
+    assert_empty missing, "run script/redona-zh-fonts.py: subset lacks #{missing.join}"
   end
 
   private

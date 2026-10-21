@@ -1,0 +1,14 @@
+<header class="rb-nav">
+  <div class="rb-wrap rb-nav__inner">
+    <a class="rb-brand" href="<%= home %>" aria-label="<%= home_label %>">
+      <img class="rb-brand__mark" src="/redona/img/mark.svg" width="128" height="128" alt="">
+      <img class="rb-brand__word" src="/redona/img/wordmark.svg" width="372" height="160" alt="">
+    </a>
+    <nav class="rb-nav__links" aria-label="<%= nav_label %>">
+      <% links.each do |label, href| %><a href="<%= href %>"><%= label %></a>
+      <% end %>
+    </nav>
+    <a class="rb-lang" href="<%= switch[:href] %>" hreflang="<%= switch[:hreflang] %>" lang="<%= switch[:hreflang] %>"><%= switch[:label] %></a>
+    <a class="rb-btn rb-btn--small" href="<%= mail %>"><%= cta %></a>
+  </div>
+</header>
