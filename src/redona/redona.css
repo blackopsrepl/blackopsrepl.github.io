@@ -12,7 +12,7 @@
   /* Bergamo: giallo e rosso, the city's colours since the XV century. */
   --rb-bg: #b4121f;
   --rb-bg-2: #7e0a15;
-  --rb-screen: #013424;
+  --rb-screen: #5a0710;
   --rb-mint: #ffd23f;
   --rb-emerald: #10b981;
   --rb-deep: #b4121f;
@@ -920,3 +920,5 @@ html, body { overflow-x: clip; }
 .rb-who__list li::after { color: var(--rb-ink); }
 .rb-who__list li:hover { color: var(--rb-bg); }
 .rb-who__list .rb-who__you { color: var(--rb-bg); }
+
+.rb-sticker { background: var(--rb-yellow); color: var(--rb-ink); }
