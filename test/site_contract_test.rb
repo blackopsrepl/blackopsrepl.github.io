@@ -7,15 +7,16 @@ require "uri"
 class SiteContractTest < Minitest::Test
   OUTPUT = File.expand_path("../output", __dir__)
   EXTERNAL_DEMO_SLUGS = %w[
+    delivery-routing-rust
     employee-scheduling
-    employee-scheduling-rust
+    field-service-routing-rust
     flight-crew-scheduling-java
+    lesson-timetabling-rust
     maintenance-scheduling
     meeting-scheduling
     order-picking
     portfolio-optimization
     vehicle-routing
-    vehicle-routing-rust
     vm-placement
   ].freeze
 
