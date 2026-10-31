@@ -31,7 +31,7 @@ Franking is a ratatui TUI email client with an app-owned mail layer. Accounts, e
   <div class="timeline-item-icon"><img class="inline-icon" src="/icons/eye.svg" alt="" width="16" height="16"></div>
   <div class="timeline-item-card">
     <header><h3>Reader</h3><span class="timeline-badge">MIME</span><p class="timeline-subheader">Structured content, attachments, invitations</p></header>
-    <div class="timeline-item-body"><p>Raw messages are parsed once and rendered as structured content with one canonical HTML-first path. Attachments preview in place, save individually, or write out as an archive, and <code>text/calendar</code> events show their summary and timezone and can be handed to Planner123.</p></div>
+    <div class="timeline-item-body"><p>Raw messages are parsed once and rendered as structured content with one canonical HTML-first path. Attachments preview in place, save individually, or write out as an archive, and <code>text/calendar</code> events show their summary and timezone and can be handed to <a href="/portfolio/planner123/">Planner123</a>.</p></div>
   </div>
 </article>
 

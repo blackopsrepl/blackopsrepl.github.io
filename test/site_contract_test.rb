@@ -36,6 +36,7 @@ class SiteContractTest < Minitest::Test
       /portfolio/franking/
       /portfolio/lumen/
       /portfolio/meridian/
+      /portfolio/planner123/
       /portfolio/redona-broadcasting/
       /portfolio/ricespace/
       /portfolio/tranche/

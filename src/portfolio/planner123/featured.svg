@@ -1,0 +1,15 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#000"/>
+  <g transform="translate(960 400)" stroke="#50fc00" fill="none">
+    <rect x="-260" y="-170" width="520" height="340" rx="14" stroke-width="4"/>
+    <path d="M-260-110H260" stroke-width="4"/>
+    <path d="M-156-110V170M-52-110V170M52-110V170M156-110V170" stroke-width="2" opacity=".45"/>
+    <path d="M-260-17H260M-260 77H260" stroke-width="2" opacity=".45"/>
+    <path d="M-170-200V-140M170-200V-140" stroke-width="6" stroke-linecap="round"/>
+    <rect x="-146" y="-100" width="84" height="38" rx="4" fill="#50fc00" stroke="none"/>
+    <rect x="62" y="-7" width="84" height="38" rx="4" fill="#50fc00" stroke="none"/>
+    <rect x="-42" y="87" width="84" height="38" rx="4" stroke-width="3" stroke-dasharray="10 7"/>
+    <path d="M-230 150C-180 60 -120 140 -50 108" stroke-width="3" opacity=".6" stroke-dasharray="4 8" stroke-linecap="round"/>
+  </g>
+  <text x="960" y="790" text-anchor="middle" font-family="system-ui, sans-serif" font-size="110" font-weight="300"><tspan fill="#fff">Planner</tspan><tspan fill="#50fc00" dx="6">123</tspan></text>
+</svg>
