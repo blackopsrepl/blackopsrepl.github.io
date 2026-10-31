@@ -5,5 +5,6 @@ draft: false
 description: "SolverForge Quickstart for the Portfolio Optimization problem"
 tags: ["Optimization", "Demo", "Python"]
 external_url: "https://huggingface.co/spaces/blackopsrepl/portfolio-optimization-python"
-published: false
+config:
+  output: false
 ---

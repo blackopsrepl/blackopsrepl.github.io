@@ -5,5 +5,6 @@ draft: false
 description: "SolverForge Quickstart for the Maintenance Scheduling problem"
 tags: ["Optimization", "Demo", "Python"]
 external_url: "https://huggingface.co/spaces/blackopsrepl/maintenance-scheduling-python"
-published: false
+config:
+  output: false
 ---

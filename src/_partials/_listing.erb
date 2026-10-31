@@ -1,5 +1,5 @@
 <% items = site.resources.select do |item|
-  item.relative_url.start_with?("/#{section}/") && item.relative_url != "/#{section}/" && item.data.layout == "article" && item.data.draft != true && (item.write? || item.data.external_url)
+  item.relative_path.to_s.start_with?("#{section}/") && item.relative_path.to_s != "#{section}/index.md" && item.data.layout == "article" && item.data.draft != true && (item.write? || item.data.external_url)
 end %>
 <% items = items.sort_by { |item| item.data.date ? item.data.date.to_time.to_i : 0 }.reverse %>
 <section class="resource-list">
@@ -14,7 +14,7 @@ end %>
           <article class="resource-card">
             <% if featured %>
               <a class="resource-thumb" href="<%= link_url %>"<%= ' target="_blank" rel="noopener noreferrer"' if external %> aria-label="<%= item.data.title %>">
-                <img src="<%= item.relative_url %>featured.png" alt="" loading="lazy" decoding="async">
+                <img src="/<%= directory %>/featured.png" alt="" loading="lazy" decoding="async">
               </a>
             <% end %>
           <div class="resource-card-body">

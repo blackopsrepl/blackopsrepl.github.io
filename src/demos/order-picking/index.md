@@ -5,5 +5,6 @@ draft: false
 description: "SolverForge Quickstart for the Order Picking problem"
 tags: ["Optimization", "Demo", "Python"]
 external_url: "https://huggingface.co/spaces/blackopsrepl/order-picking-python"
-published: false
+config:
+  output: false
 ---

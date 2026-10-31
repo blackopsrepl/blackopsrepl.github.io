@@ -5,5 +5,6 @@ draft: false
 description: "SolverForge Quickstart for the Employee Scheduling problem"
 tags: ["Optimization", "Demo", "Python"]
 external_url: "https://huggingface.co/spaces/blackopsrepl/employee-scheduling-python"
-published: false
+config:
+  output: false
 ---

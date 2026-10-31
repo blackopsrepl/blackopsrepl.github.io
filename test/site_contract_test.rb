@@ -54,6 +54,14 @@ class SiteContractTest < Minitest::Test
     end
   end
 
+  def test_demos_listing_links_every_external_demo
+    html = File.read(output_file("/demos/"), encoding: "UTF-8")
+    cards = html.scan(/<article class="resource-card">/).length
+
+    assert_equal EXTERNAL_DEMO_SLUGS.length, cards, "demos listing card count"
+    assert_equal EXTERNAL_DEMO_SLUGS.length, html.scan(%r{<h3><a href="https://huggingface\.co/spaces/}).length
+  end
+
   def test_search_index_contains_only_searchable_pages
     entries = JSON.parse(File.read(File.join(OUTPUT, "index.json")))
     permalinks = entries.map { |entry| entry.fetch("permalink") }

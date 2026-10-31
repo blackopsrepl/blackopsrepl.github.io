@@ -5,5 +5,6 @@ draft: false
 description: "SolverForge Quickstart for the Employee Scheduling problem"
 tags: ["Optimization", "Demo", "Rust"]
 external_url: "https://huggingface.co/spaces/SolverForge/employee-scheduling-rust"
-published: false
+config:
+  output: false
 ---

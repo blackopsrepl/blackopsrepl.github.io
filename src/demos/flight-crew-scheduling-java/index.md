@@ -5,5 +5,6 @@ draft: false
 description: "SolverForge Quickstart for Flight Crew Scheduling using Java"
 tags: ["Optimization", "Demo", "Java", "Aviation"]
 external_url: "https://huggingface.co/spaces/blackopsrepl/flight-crew-scheduling-java"
-published: false
+config:
+  output: false
 ---

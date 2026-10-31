@@ -5,5 +5,6 @@ draft: false
 description: "SolverForge Quickstart for the Vehicle Routing problem"
 tags: ["Optimization", "Demo", "Rust"]
 external_url: "https://huggingface.co/spaces/SolverForge/vehicle-routing-rust-pre"
-published: false
+config:
+  output: false
 ---
