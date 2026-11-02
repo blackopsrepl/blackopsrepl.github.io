@@ -14,7 +14,7 @@ showDate: false
   <div class="about-actions">
     <a class="about-primary" href="https://solverforge.org" target="_blank" rel="noopener noreferrer">Explore SolverForge</a>
     <a class="about-secondary" href="/portfolio/">Selected work</a>
-    <a class="about-secondary" href="mailto:info@vdistefano.studio">Email</a>
+    <a class="about-secondary" href="mailto:hello@solverforge.ai">Email</a>
   </div>
 
   <div class="about-rail">
@@ -132,7 +132,7 @@ The throughline: I am comfortable where hard domains, ambiguous tradeoffs, and t
 ## Contact
 
 <div class="contact-actions">
-  <a href="mailto:info@vdistefano.studio" class="contact-btn"><img class="inline-icon" src="/icons/email.svg" alt="" width="16" height="16"> Email</a>
+  <a href="mailto:hello@solverforge.ai" class="contact-btn"><img class="inline-icon" src="/icons/email.svg" alt="" width="16" height="16"> Email</a>
   <a href="https://solverforge.org" target="_blank" rel="noopener noreferrer" class="contact-btn"><img class="inline-icon" src="/icons/globe.svg" alt="" width="16" height="16"> SolverForge</a>
   <a href="/portfolio/" class="contact-btn"><img class="inline-icon" src="/icons/code.svg" alt="" width="16" height="16"> Selected work</a>
 </div>
