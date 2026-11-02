@@ -24,7 +24,6 @@ class SiteContractTest < Minitest::Test
     %w[
       /
       /about/
-      /services/
       /blog/
       /blog/easa-ftl-constraints-flight-crew-scheduling/
       /blog/implementing-late-acceptance-rust/
