@@ -103,6 +103,14 @@ class SiteContractTest < Minitest::Test
     assert_empty missing, "run script/redona-zh-fonts.py: subset lacks #{missing.join}"
   end
 
+  def test_home_plays_the_studio_reel
+    html = File.read(output_file("/"), encoding: "UTF-8")
+    assert_includes html, '<source src="/video/studio-07.mp4"'
+    assert_includes html, 'poster="/video/studio-07.jpg"'
+    assert File.file?(output_file("/video/studio-07.mp4")), "reel video not published"
+    assert File.file?(output_file("/video/studio-07.jpg")), "reel poster not published"
+  end
+
   private
 
   def output_file(route)
